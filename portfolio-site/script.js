@@ -36,7 +36,7 @@ $('#projectGrid').innerHTML = siteContent.projects.map((project, i) => `
 `).join('');
 
 const gameImagePath = (file) => file
-  .replace(/\\\\/g, '/')
+  .replace(/\\/g, '/')
   .split('/')
   .map(part => encodeURIComponent(part))
   .join('/');
