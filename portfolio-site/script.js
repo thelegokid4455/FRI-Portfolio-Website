@@ -128,8 +128,16 @@ renderGameGallery();
 
 $('#experienceTimeline').innerHTML = siteContent.experience.map(item => `
   <article class="timeline-item">
-    <div class="period">${esc(item.period)}</div>
-    <div><h3 class="role">${esc(item.role)}</h3><div class="company">${esc(item.company)}</div><p>${esc(item.description)}</p></div>
+    <div class="experience-visual">
+      <img src="${esc(item.visual)}" alt="${esc(item.visualAlt || item.company + ' visual')}" loading="lazy" decoding="async">
+      <span class="experience-visual-label">WORK / EXPERIENCE</span>
+    </div>
+    <div class="experience-copy">
+      <div class="period">${esc(item.period)}</div>
+      <h3 class="role">${esc(item.role)}</h3>
+      <div class="company">${esc(item.company)}</div>
+      <p>${esc(item.description)}</p>
+    </div>
   </article>
 `).join('');
 
