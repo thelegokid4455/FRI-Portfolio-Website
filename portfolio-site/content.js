@@ -1,14 +1,13 @@
 // EDIT THIS FILE to update the content on your portfolio.
 // Keep the same field names so the site renders correctly.
 const siteContent = {
-  nameFull: "Ir. Farhan Ramadhani Irsyad Samad Suhaeb, S.Tr.Kom.",
-  nameShort: "Farhan Irsyad",
+  nameFull: "Farhan Ramadhani Irsyad",
+  nameShort: "Farhan Ramadhani Irsyad",
   headline: "Unity / VR Simulation Developer",
   availability: "Makassar, Indonesia · Open to remote / relocation opportunities",
   summary: "Unity/C# developer specializing in VR, simulation, gameplay systems and interactive training applications. Experience developing government and enterprise training systems for PC, VR and Android — including heavy-vehicle simulation with Arduino hardware controls, large-scale real-world environments and medical VR.",
   about: "I build interactive systems that sit between games, simulation and real-world training. My work combines gameplay programming, vehicle and physics systems, VR/XR interaction, performance optimization, 3D pipelines and hardware integration. I enjoy turning complex requirements into modular, usable software and working closely with artists, domain experts and non-technical stakeholders.",
   metrics: [
-    ["100 km", "real-world driving environment"],
     ["PC · VR · Android", "cross-platform delivery"],
     ["C# / Unity", "core development stack"],
     ["2024", "Unity Certified User — Programmer"]
