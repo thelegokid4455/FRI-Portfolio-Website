@@ -20,8 +20,7 @@ const siteContent = {
       image: "assets/selected-works/heavy-vehicle-simulator.jpg",
       description: "Training simulation for heavy and construction vehicles, including VR support and physical control integration for runway-repair scenarios.",
       tags: ["Unity", "C#", "VR", "Arduino", "Vehicle Systems"],
-      accent: "green",
-      links: [{label:"Case Study", url:"#contact"}]
+      accent: "green"
     },
     {
       title: "Driving & Convoy Simulator",
@@ -30,8 +29,7 @@ const siteContent = {
       image: "assets/selected-works/driving-simulator.jpg",
       description: "Real-world-scale driving simulator with a ~100 km Jakarta environment, route selection, vehicle handling and convoy training scenarios.",
       tags: ["Unity", "C#", "Optimization", "Large Environments", "VR"],
-      accent: "blue",
-      links: [{label:"Case Study", url:"#contact"}]
+      accent: "blue"
     },
     {
       title: "Medical VR Simulation",
@@ -40,8 +38,7 @@ const siteContent = {
       image: "assets/selected-works/medical-vr-simulation.jpg",
       description: "Interactive medical training experience built in Unity/C# for a pharmaceutical client, designed with Android deployment in mind.",
       tags: ["Unity", "C#", "VR", "Android", "Interactive Systems"],
-      accent: "blue",
-      links: [{label:"Case Study", url:"#contact"}]
+      accent: "blue"
     },
     {
       title: "Gameplay & Mobile Projects",
@@ -50,8 +47,7 @@ const siteContent = {
       image: "assets/selected-works/necrospore.jpg",
       description: "Gameplay systems and prototypes across mobile and PC projects, including multiplayer FPS, strategic ship-battle games, top-down shooters and an endless-runner title.",
       tags: ["Unity", "C#", "Gameplay", "Multiplayer", "Mobile", "PC"],
-      accent: "green",
-      links: [{label:"View portfolio links", url:"https://linktr.ee/thelegokid4455"}]
+      accent: "green"
     }
   ],
   experience: [
