@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Unity / VR Simulation Developer portfolio — Farhan Ramadhani Irsyad Samad Suhaeb." />
+  <meta property="og:title" content="Farhan Irsyad — Unity / VR Simulation Developer" />
+  <meta property="og:description" content="Unity, C#, VR/XR, simulation, gameplay systems and interactive training applications." />
+  <meta property="og:type" content="website" />
+  <title>Farhan Irsyad — Unity / VR Simulation Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="brand-mark">FI</span>
+      <span class="brand-text" data-content="nameShort"></span>
+    </a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="header-cta" href="#contact">Contact</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="eyebrow"><span class="status-dot"></span><span data-content="availability"></span></div>
+      <h1><span data-content="nameFull"></span><br><span class="accent" data-content="headline"></span></h1>
+      <p class="hero-copy" data-content="summary"></p>
+      <div class="hero-actions">
+        <a class="button primary" href="#work">View selected work <span>↗</span></a>
+        <a class="button secondary" href="assets/FRI-Resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
+      </div>
+      <div class="hero-metrics" id="heroMetrics"></div>
+    </section>
+
+    <section id="work" class="section-shell section">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">01 / SELECTED WORK</p>
+          <h2>Projects built for <span class="accent">real constraints.</span></h2>
+        </div>
+        <p class="section-note">Simulation systems, VR experiences, large environments, gameplay and hardware integration.</p>
+      </div>
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <section id="experience" class="section-shell section">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">02 / EXPERIENCE</p>
+          <h2>From <span class="accent">games</span> to production systems.</h2>
+        </div>
+      </div>
+      <div class="timeline" id="experienceTimeline"></div>
+    </section>
+
+    <section id="skills" class="section-shell section split-section">
+      <div>
+        <p class="kicker">03 / TECHNICAL STACK</p>
+        <h2>Systems first.<br><span class="accent">Performance always.</span></h2>
+        <p class="body-copy">I work across gameplay code, simulation systems, VR/XR interaction, optimization, 3D pipelines and real-world hardware integration.</p>
+      </div>
+      <div class="skills-panel" id="skillsPanel"></div>
+    </section>
+
+    <section id="about" class="section-shell section about-section">
+      <div>
+        <p class="kicker">04 / ABOUT</p>
+        <h2>Technical thinking with a <span class="accent">builder mindset.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p data-content="about"></p>
+        <div class="facts" id="facts"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-shell section contact-section">
+      <div class="contact-card">
+        <p class="kicker">05 / CONTACT</p>
+        <h2>Have a game, simulation or interactive system to build?</h2>
+        <p>Open to Unity development, simulation, VR/XR and interactive 3D opportunities.</p>
+        <div class="contact-links" id="contactLinks"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-shell">
+    <span>© <span id="year"></span> <span data-content="nameShort"></span></span>
+    <span>Built with HTML, CSS & JavaScript.</span>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
