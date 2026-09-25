@@ -33,7 +33,6 @@ $('#projectGrid').innerHTML = siteContent.projects.map((project, i) => `
       <p class="project-desc">${esc(project.description)}</p>
       <div class="tags">${project.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
     </div>
-    ${project.links?.length ? `<div class="project-links">${project.links.map(l => `<a class="project-link" href="${esc(l.url)}" target="_blank" rel="noreferrer">${esc(l.label)} ↗</a>`).join('')}</div>` : ''}
   </article>
 `).join('');
 
