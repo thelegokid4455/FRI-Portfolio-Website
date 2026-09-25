@@ -12,21 +12,20 @@ $('#heroMetrics').innerHTML = siteContent.metrics.map(([value,label]) => `
   <div class="metric"><span class="metric-value">${esc(value)}</span><span class="metric-label">${esc(label)}</span></div>
 `).join('');
 
-const visualFor = (accent, category, index) => {
-  const ring = accent === 'blue' ? 'var(--accent-2)' : 'var(--accent)';
+const visualFor = (project, index) => {
+  const ring = project.accent === 'blue' ? 'var(--accent-2)' : 'var(--accent)';
   const label = ['SIM / 01','SIM / 02','VR / 03','GAME / 04'][index] || 'PROJECT';
   return `<div class="project-visual">
-    <div class="visual-grid"></div>
-    <div class="visual-ring" style="border-color:${ring};"></div>
-    <div class="visual-tag">${esc(label)} · ${esc(category)}</div>
-    <div class="visual-bar"><span></span><span></span><span></span></div>
+    <img class="project-image" src="${esc(project.image)}" alt="${esc(project.title)} thumbnail" loading="lazy" decoding="async">
+    <div class="project-image-overlay"></div>
+    <div class="visual-tag">${esc(label)} · ${esc(project.category)}</div>
   </div>`;
 };
 
 $('#projectGrid').innerHTML = siteContent.projects.map((project, i) => `
   <article class="project-card">
     <div>
-      ${visualFor(project.accent, project.category, i)}
+      ${visualFor(project, i)}
       <div class="project-meta">
         <div><h3 class="project-title">${esc(project.title)}</h3></div>
         <span class="project-year">${esc(project.year)}</span>

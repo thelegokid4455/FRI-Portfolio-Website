@@ -17,45 +17,41 @@ const siteContent = {
       title: "Heavy Vehicle Simulator",
       year: "2023",
       category: "TRAINING / VR",
+      image: "assets/selected-works/heavy-vehicle-simulator.jpg",
       description: "Training simulation for heavy and construction vehicles, including VR support and physical control integration for runway-repair scenarios.",
       tags: ["Unity", "C#", "VR", "Arduino", "Vehicle Systems"],
       accent: "green",
-      links: [
-        {label:"Case Study", url:"#contact"}
-      ]
+      links: [{label:"Case Study", url:"#contact"}]
     },
     {
       title: "Driving & Convoy Simulator",
       year: "2024",
       category: "LARGE-SCALE SIMULATION",
+      image: "assets/selected-works/driving-simulator.jpg",
       description: "Real-world-scale driving simulator with a ~100 km Jakarta environment, route selection, vehicle handling and convoy training scenarios.",
       tags: ["Unity", "C#", "Optimization", "Large Environments", "VR"],
       accent: "blue",
-      links: [
-        {label:"Case Study", url:"#contact"}
-      ]
+      links: [{label:"Case Study", url:"#contact"}]
     },
     {
       title: "Medical VR Simulation",
       year: "2022",
       category: "MEDICAL / VR",
+      image: "assets/selected-works/medical-vr-simulation.jpg",
       description: "Interactive medical training experience built in Unity/C# for a pharmaceutical client, designed with Android deployment in mind.",
       tags: ["Unity", "C#", "VR", "Android", "Interactive Systems"],
       accent: "blue",
-      links: [
-        {label:"Case Study", url:"#contact"}
-      ]
+      links: [{label:"Case Study", url:"#contact"}]
     },
     {
       title: "Gameplay & Mobile Projects",
       year: "2021–2022",
       category: "GAME DEVELOPMENT",
+      image: "assets/selected-works/necrospore.jpg",
       description: "Gameplay systems and prototypes across mobile and PC projects, including multiplayer FPS, strategic ship-battle games, top-down shooters and an endless-runner title.",
       tags: ["Unity", "C#", "Gameplay", "Multiplayer", "Mobile", "PC"],
       accent: "green",
-      links: [
-        {label:"View portfolio links", url:"https://linktr.ee/thelegokid4455"}
-      ]
+      links: [{label:"View portfolio links", url:"https://linktr.ee/thelegokid4455"}]
     }
   ],
   experience: [
