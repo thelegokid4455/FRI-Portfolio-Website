@@ -1,0 +1,1568 @@
+{
+  "profile": "https://thelegokid4455.itch.io/",
+  "projects": [
+    {
+      "title": "dagon-shows-no-mercy",
+      "url": "https://ray-ark.itch.io/dagon-shows-no-mercy",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzI2NjQ1ODIwLnBuZw==/original/KmN%2Bz8.png",
+          "file": "dagon-shows-no-mercy\\images\\KmN+z8.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzI2NjQ2MTcwLnBuZw==/original/kULR6b.png",
+          "file": "dagon-shows-no-mercy\\images\\kULR6b.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzI2Njg4NjcxLnBuZw==/original/OvGT25.png",
+          "file": "dagon-shows-no-mercy\\images\\OvGT25.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzI2NjQ2NDg4LnBuZw==/original/8KL9dS.png",
+          "file": "dagon-shows-no-mercy\\images\\8KL9dS.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzI2Njg4Njc0LnBuZw==/original/QEz9GS.png",
+          "file": "dagon-shows-no-mercy\\images\\QEz9GS.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzI2NjQ2MTgzLnBuZw==/original/JxGbmq.png",
+          "file": "dagon-shows-no-mercy\\images\\JxGbmq.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzI2NjQ2MTg3LnBuZw==/original/vkglrC.png",
+          "file": "dagon-shows-no-mercy\\images\\vkglrC.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzI0MjM5MDExLnBuZw==/original/WgKTdq.png",
+          "file": "dagon-shows-no-mercy\\images\\WgKTdq.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE3Ny5wbmc=/original/TFIJxr.png",
+          "file": "dagon-shows-no-mercy\\images\\TFIJxr.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yNjY4ODY4MC5wbmc=/original/%2BIKQwn.png",
+          "file": "dagon-shows-no-mercy\\images\\+IKQwn.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE5MC5wbmc=/original/0Mz1vx.png",
+          "file": "dagon-shows-no-mercy\\images\\0Mz1vx.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTEyNy5wbmc=/original/OacQ63.png",
+          "file": "dagon-shows-no-mercy\\images\\OacQ63.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTE0MC5wbmc=/original/47oGlV.png",
+          "file": "dagon-shows-no-mercy\\images\\47oGlV.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE3Ny5wbmc=/original/TYLa63.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE3Ny5wbmc=/original/TYLa63.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE3Ny5wbmc=/original/7vcz%2F8.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE3Ny5wbmc=/original/7vcz%2F8.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yNjY4ODY4MC5wbmc=/original/%2BvtTDj.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yNjY4ODY4MC5wbmc=/original/%2BvtTDj.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yNjY4ODY4MC5wbmc=/original/VkRsw7.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yNjY4ODY4MC5wbmc=/original/VkRsw7.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE5MC5wbmc=/original/jZ4PTA.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE5MC5wbmc=/original/jZ4PTA.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE5MC5wbmc=/original/wV9lYy.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTQ5NjE5MC5wbmc=/original/wV9lYy.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTEyNy5wbmc=/original/g2cAuf.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTEyNy5wbmc=/original/g2cAuf.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTEyNy5wbmc=/original/pfXSJN.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTEyNy5wbmc=/original/pfXSJN.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTE0MC5wbmc=/original/KTe84o.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTE0MC5wbmc=/original/KTe84o.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTE0MC5wbmc=/original/Qf%2BRha.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDA2MjE3MS8yOTUxNTE0MC5wbmc=/original/Qf%2BRha.png"
+        }
+      ]
+    },
+    {
+      "title": "shift-7",
+      "url": "https://ray-ark.itch.io/shift-7",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzIzNjQyODM3LnBuZw==/original/FxgrXE.png",
+          "file": "shift-7\\images\\FxgrXE.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIzNjQyODk1LnBuZw==/original/2Li83N.png",
+          "file": "shift-7\\images\\2Li83N.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyNi5wbmc=/original/6ZfRaw.png",
+          "file": "shift-7\\images\\6ZfRaw.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxOS5wbmc=/original/7DquB%2B.png",
+          "file": "shift-7\\images\\7DquB+.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNi5wbmc=/original/4t0Mbl.png",
+          "file": "shift-7\\images\\4t0Mbl.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNC5wbmc=/original/BaB2z0.png",
+          "file": "shift-7\\images\\BaB2z0.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMy5wbmc=/original/RwPLx8.png",
+          "file": "shift-7\\images\\RwPLx8.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyOC5wbmc=/original/O9vxgr.png",
+          "file": "shift-7\\images\\O9vxgr.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxMS5wbmc=/original/UHCvfT.png",
+          "file": "shift-7\\images\\UHCvfT.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMi5wbmc=/original/Tr4rXa.png",
+          "file": "shift-7\\images\\Tr4rXa.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyNi5wbmc=/original/%2BTS5i%2F.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyNi5wbmc=/original/%2BTS5i%2F.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyNi5wbmc=/original/jb9NqW.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyNi5wbmc=/original/jb9NqW.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxOS5wbmc=/original/bTHdV4.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxOS5wbmc=/original/bTHdV4.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxOS5wbmc=/original/47sgUS.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxOS5wbmc=/original/47sgUS.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNi5wbmc=/original/VTuU7u.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNi5wbmc=/original/VTuU7u.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNi5wbmc=/original/%2FBclDx.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNi5wbmc=/original/%2FBclDx.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNC5wbmc=/original/7DIzPw.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNC5wbmc=/original/7DIzPw.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNC5wbmc=/original/8b9v4I.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxNC5wbmc=/original/8b9v4I.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMy5wbmc=/original/nnVsqe.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMy5wbmc=/original/nnVsqe.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMy5wbmc=/original/LKmdfn.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMy5wbmc=/original/LKmdfn.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyOC5wbmc=/original/pBFb%2Bx.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyOC5wbmc=/original/pBFb%2Bx.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyOC5wbmc=/original/coTvt%2B.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyOC5wbmc=/original/coTvt%2B.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxMS5wbmc=/original/79Kqi7.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxMS5wbmc=/original/79Kqi7.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxMS5wbmc=/original/97jmz0.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUxMS5wbmc=/original/97jmz0.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMi5wbmc=/original/JPqntA.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMi5wbmc=/original/JPqntA.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMi5wbmc=/original/iAx9KP.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMzk2Mzk0Ni8yMzY0OTUyMi5wbmc=/original/iAx9KP.png"
+        }
+      ]
+    },
+    {
+      "title": "banyu",
+      "url": "https://ray-ark.itch.io/banyu",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMwODE4LnBuZw==/original/gfrWDk.png",
+          "file": "banyu\\images\\gfrWDk.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMxODgwLnBuZw==/original/EpNevj.png",
+          "file": "banyu\\images\\EpNevj.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMxOTE3LnBuZw==/original/OA3xJ8.png",
+          "file": "banyu\\images\\OA3xJ8.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMxMDA5LnBuZw==/original/2kXbOa.png",
+          "file": "banyu\\images\\2kXbOa.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMxOTY3LnBuZw==/original/jRcc3q.png",
+          "file": "banyu\\images\\jRcc3q.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMxMDg3LnBuZw==/original/zlcoym.png",
+          "file": "banyu\\images\\zlcoym.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMxOTg4LnBuZw==/original/AcCvu4.png",
+          "file": "banyu\\images\\AcCvu4.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMxMTg1LnBuZw==/original/xvIA4f.png",
+          "file": "banyu\\images\\xvIA4f.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMyMTMzLnBuZw==/original/dso0qD.png",
+          "file": "banyu\\images\\dso0qD.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTMyMTU4LnBuZw==/original/YeVSP7.png",
+          "file": "banyu\\images\\YeVSP7.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTY5NTY0LnBuZw==/original/U%2FIZgH.png",
+          "file": "banyu\\images\\IZgH.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1nLzIxMTIyMTY2LnBuZw==/original/LPhQkw.png",
+          "file": "banyu\\images\\LPhQkw.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1nLzIxMTIyMTY2LnBuZw==/original/SFhyDW.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1nLzIxMTIyMTY2LnBuZw==/original/SFhyDW.png"
+        }
+      ]
+    },
+    {
+      "title": "nexus-bloom",
+      "url": "https://ray-ark.itch.io/nexus-bloom",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzE3Nzk0MDE1LnBuZw==/original/uNl5JF.png",
+          "file": "nexus-bloom\\images\\uNl5JF.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OC5wbmc=/original/oi7m%2BO.png",
+          "file": "nexus-bloom\\images\\oi7m+O.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ni5wbmc=/original/x2dIvY.png",
+          "file": "nexus-bloom\\images\\x2dIvY.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OS5wbmc=/original/zPGx1s.png",
+          "file": "nexus-bloom\\images\\zPGx1s.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ny5wbmc=/original/eTDfDT.png",
+          "file": "nexus-bloom\\images\\eTDfDT.png"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/embed/n9lg_wuROzc",
+          "downloaded": false
+        }
+      ],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OC5wbmc=/original/fqiVZm.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OC5wbmc=/original/fqiVZm.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OC5wbmc=/original/F%2F2uO7.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OC5wbmc=/original/F%2F2uO7.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ni5wbmc=/original/QGbss3.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ni5wbmc=/original/QGbss3.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ni5wbmc=/original/9c0Edh.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ni5wbmc=/original/9c0Edh.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OS5wbmc=/original/F5TpMf.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OS5wbmc=/original/F5TpMf.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OS5wbmc=/original/Ry7YRQ.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDA5OS5wbmc=/original/Ry7YRQ.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ny5wbmc=/original/GMu8jE.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ny5wbmc=/original/GMu8jE.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ny5wbmc=/original/LNboI%2F.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjk3NDgxNi8xNzc5NDE0Ny5wbmc=/original/LNboI%2F.png"
+        },
+        {
+          "kind": "video",
+          "url": "https://www.youtube.com/embed/n9lg_wuROzc",
+          "error": "yt-dlp is not installed"
+        }
+      ]
+    },
+    {
+      "title": "necrospore",
+      "url": "https://ray-ark.itch.io/necrospore",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzE1NDc4OTUxLnBuZw==/original/lz40p1.png",
+          "file": "necrospore\\images\\lz40p1.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ3ODg5MS5qcGc=/original/xI4EW3.jpg",
+          "file": "necrospore\\images\\xI4EW3.jpg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTI5Ny5wbmc=/original/vAh%2B8n.png",
+          "file": "necrospore\\images\\vAh+8n.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTMwMy5wbmc=/original/PAa68a.png",
+          "file": "necrospore\\images\\PAa68a.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTIwMy5qcGc=/original/uBEKA2.jpg",
+          "file": "necrospore\\images\\uBEKA2.jpg"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/embed/IYZOilgmV9o",
+          "downloaded": false
+        }
+      ],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ3ODg5MS5qcGc=/original/IR3Jr6.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ3ODg5MS5qcGc=/original/IR3Jr6.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ3ODg5MS5qcGc=/original/KvKW9S.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ3ODg5MS5qcGc=/original/KvKW9S.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTI5Ny5wbmc=/original/cnPJYf.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTI5Ny5wbmc=/original/cnPJYf.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTI5Ny5wbmc=/original/FciLDu.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTI5Ny5wbmc=/original/FciLDu.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTMwMy5wbmc=/original/q8s8z4.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTMwMy5wbmc=/original/q8s8z4.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTMwMy5wbmc=/original/xrf4qH.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTMwMy5wbmc=/original/xrf4qH.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTIwMy5qcGc=/original/%2FPSMVg.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTIwMy5qcGc=/original/%2FPSMVg.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTIwMy5qcGc=/original/byrzDW.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjU5OTA0NS8xNTQ4OTIwMy5qcGc=/original/byrzDW.jpg"
+        },
+        {
+          "kind": "video",
+          "url": "https://www.youtube.com/embed/IYZOilgmV9o",
+          "error": "yt-dlp is not installed"
+        }
+      ]
+    },
+    {
+      "title": "salvias-scroll-atelier",
+      "url": "https://thelegokid4455.itch.io/salvias-scroll-atelier",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzEyMDE5NDAxLnBuZw==/original/cQA3Za.png",
+          "file": "salvias-scroll-atelier\\images\\cQA3Za.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUwMi5wbmc=/original/r3QByI.png",
+          "file": "salvias-scroll-atelier\\images\\r3QByI.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTU2OS5wbmc=/original/GBILWZ.png",
+          "file": "salvias-scroll-atelier\\images\\GBILWZ.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUzMC5wbmc=/original/YQhWX6.png",
+          "file": "salvias-scroll-atelier\\images\\YQhWX6.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYzNC5wbmc=/original/a1qNxm.png",
+          "file": "salvias-scroll-atelier\\images\\a1qNxm.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUxMy5wbmc=/original/yVbRXU.png",
+          "file": "salvias-scroll-atelier\\images\\yVbRXU.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYxMS5wbmc=/original/66KyiG.png",
+          "file": "salvias-scroll-atelier\\images\\66KyiG.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUwMi5wbmc=/original/VMdoRf.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUwMi5wbmc=/original/VMdoRf.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUwMi5wbmc=/original/RjeN8I.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUwMi5wbmc=/original/RjeN8I.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTU2OS5wbmc=/original/wHrMVS.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTU2OS5wbmc=/original/wHrMVS.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTU2OS5wbmc=/original/6yAvsr.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTU2OS5wbmc=/original/6yAvsr.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUzMC5wbmc=/original/8SAhJb.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUzMC5wbmc=/original/8SAhJb.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUzMC5wbmc=/original/lZNpvW.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUzMC5wbmc=/original/lZNpvW.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYzNC5wbmc=/original/kz4sQq.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYzNC5wbmc=/original/kz4sQq.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYzNC5wbmc=/original/ZPBYPY.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYzNC5wbmc=/original/ZPBYPY.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUxMy5wbmc=/original/Bclj3C.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUxMy5wbmc=/original/Bclj3C.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUxMy5wbmc=/original/G6zPSY.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTUxMy5wbmc=/original/G6zPSY.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYxMS5wbmc=/original/9QRddn.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYxMS5wbmc=/original/9QRddn.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYxMS5wbmc=/original/9PQH40.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMjA0MzQ0Ny8xMjAxOTYxMS5wbmc=/original/9PQH40.png"
+        }
+      ]
+    },
+    {
+      "title": "lontara-warrior",
+      "url": "https://thelegokid4455.itch.io/lontara-warrior",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzExNjk1Njg3LnBuZw==/original/bt24%2Bl.png",
+          "file": "lontara-warrior\\images\\bt24+l.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1Mi5wbmc=/original/5EU7PK.png",
+          "file": "lontara-warrior\\images\\5EU7PK.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MS5wbmc=/original/dzoHWd.png",
+          "file": "lontara-warrior\\images\\dzoHWd.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY3My5wbmc=/original/43ln7Y.png",
+          "file": "lontara-warrior\\images\\43ln7Y.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MC5wbmc=/original/IvXFfR.png",
+          "file": "lontara-warrior\\images\\IvXFfR.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1Mi5wbmc=/original/st%2B11T.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1Mi5wbmc=/original/st%2B11T.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1Mi5wbmc=/original/llQD8u.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1Mi5wbmc=/original/llQD8u.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MS5wbmc=/original/1xR3R7.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MS5wbmc=/original/1xR3R7.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MS5wbmc=/original/goX5yj.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MS5wbmc=/original/goX5yj.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY3My5wbmc=/original/6Uhrep.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY3My5wbmc=/original/6Uhrep.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY3My5wbmc=/original/TKWWAX.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY3My5wbmc=/original/TKWWAX.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MC5wbmc=/original/mZicGG.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MC5wbmc=/original/mZicGG.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MC5wbmc=/original/WLeal%2F.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTk4OTM2NC8xMTY5NTY1MC5wbmc=/original/WLeal%2F.png"
+        }
+      ]
+    },
+    {
+      "title": "roots-run-deep",
+      "url": "https://thelegokid4455.itch.io/roots-run-deep",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkyOS5wbmc=/original/YyXSTL.png",
+          "file": "roots-run-deep\\images\\YyXSTL.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMC5wbmc=/original/1nFGLM.png",
+          "file": "roots-run-deep\\images\\1nFGLM.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMS5wbmc=/original/XYNR%2F4.png",
+          "file": "roots-run-deep\\images\\4.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMy5wbmc=/original/J87oJY.png",
+          "file": "roots-run-deep\\images\\J87oJY.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzNC5wbmc=/original/hs5kwd.png",
+          "file": "roots-run-deep\\images\\hs5kwd.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkyOS5wbmc=/original/day6Iz.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkyOS5wbmc=/original/day6Iz.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkyOS5wbmc=/original/xBiCzE.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkyOS5wbmc=/original/xBiCzE.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMC5wbmc=/original/Z0bpaC.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMC5wbmc=/original/Z0bpaC.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMC5wbmc=/original/XYzds9.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMC5wbmc=/original/XYzds9.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMS5wbmc=/original/sn2%2B63.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMS5wbmc=/original/sn2%2B63.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMS5wbmc=/original/ms957h.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMS5wbmc=/original/ms957h.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMy5wbmc=/original/W%2Buc3J.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMy5wbmc=/original/W%2Buc3J.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMy5wbmc=/original/4jVM2X.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzMy5wbmc=/original/4jVM2X.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzNC5wbmc=/original/npnH49.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzNC5wbmc=/original/npnH49.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzNC5wbmc=/original/qrMHyQ.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTkwOTYwMi8xMTIyNDkzNC5wbmc=/original/qrMHyQ.png"
+        }
+      ]
+    },
+    {
+      "title": "petaroenk",
+      "url": "https://thelegokid4455.itch.io/petaroenk",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzEwNDEzMTkyLnBuZw==/original/rEXpLe.png",
+          "file": "petaroenk\\images\\rEXpLe.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyMy5wbmc=/original/QmsS5%2B.png",
+          "file": "petaroenk\\images\\QmsS5+.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzExNy5wbmc=/original/ZxMs%2Fp.png",
+          "file": "petaroenk\\images\\p.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyNy5wbmc=/original/BidyT5.png",
+          "file": "petaroenk\\images\\BidyT5.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzE0NC5wbmc=/original/Pr1KMr.png",
+          "file": "petaroenk\\images\\Pr1KMr.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyMy5wbmc=/original/eZldA0.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyMy5wbmc=/original/eZldA0.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyMy5wbmc=/original/jXEvrV.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyMy5wbmc=/original/jXEvrV.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzExNy5wbmc=/original/6MS6%2Fk.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzExNy5wbmc=/original/6MS6%2Fk.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzExNy5wbmc=/original/wtxrwJ.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzExNy5wbmc=/original/wtxrwJ.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyNy5wbmc=/original/CHex0q.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyNy5wbmc=/original/CHex0q.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyNy5wbmc=/original/4FDJdY.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzEyNy5wbmc=/original/4FDJdY.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzE0NC5wbmc=/original/iH9IG7.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzE0NC5wbmc=/original/iH9IG7.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzE0NC5wbmc=/original/J%2FAbr9.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTc3MTI4OS8xMDQxMzE0NC5wbmc=/original/J%2FAbr9.png"
+        }
+      ]
+    },
+    {
+      "title": "mangalam",
+      "url": "https://thelegokid4455.itch.io/mangalam",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzc1MjI4NDkuanBn/original/%2FGWXRE.jpg",
+          "file": "mangalam\\images\\GWXRE.jpg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzk2LmpwZw==/original/UbQlgy.jpg",
+          "file": "mangalam\\images\\UbQlgy.jpg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg3LmpwZw==/original/GHKsIe.jpg",
+          "file": "mangalam\\images\\GHKsIe.jpg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg5LmpwZWc=/original/75WYNN.jpeg",
+          "file": "mangalam\\images\\75WYNN.jpeg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg4LmpwZWc=/original/OIm4%2BP.jpeg",
+          "file": "mangalam\\images\\OIm4+P.jpeg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyODAzLmpwZWc=/original/yQJQQz.jpeg",
+          "file": "mangalam\\images\\yQJQQz.jpeg"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/embed/PxzA05rdWO8",
+          "downloaded": false
+        }
+      ],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzk2LmpwZw==/original/4ktlzV.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzk2LmpwZw==/original/4ktlzV.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzk2LmpwZw==/original/Tv6YEH.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzk2LmpwZw==/original/Tv6YEH.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg3LmpwZw==/original/BoRXsl.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg3LmpwZw==/original/BoRXsl.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg3LmpwZw==/original/BaqWfi.jpg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg3LmpwZw==/original/BaqWfi.jpg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg5LmpwZWc=/original/8SqJWu.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg5LmpwZWc=/original/8SqJWu.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg5LmpwZWc=/original/%2FAxtpQ.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg5LmpwZWc=/original/%2FAxtpQ.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg4LmpwZWc=/original/jiDN55.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg4LmpwZWc=/original/jiDN55.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg4LmpwZWc=/original/N1rJGn.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyNzg4LmpwZWc=/original/N1rJGn.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyODAzLmpwZWc=/original/54GESa.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyODAzLmpwZWc=/original/54GESa.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyODAzLmpwZWc=/original/lexjUO.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTI5MzA1NC83NTIyODAzLmpwZWc=/original/lexjUO.jpeg"
+        },
+        {
+          "kind": "video",
+          "url": "https://www.youtube.com/embed/PxzA05rdWO8",
+          "error": "yt-dlp is not installed"
+        }
+      ]
+    },
+    {
+      "title": "lucid",
+      "url": "https://thelegokid4455.itch.io/lucid",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzY3OTgzOTYucG5n/original/mKDo%2Fi.png",
+          "file": "lucid\\images\\i.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4MjU1LmpwZWc=/original/q%2F6QoW.jpeg",
+          "file": "lucid\\images\\6QoW.jpeg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk1LmpwZWc=/original/49%2BGEv.jpeg",
+          "file": "lucid\\images\\49+GEv.jpeg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk0LmpwZWc=/original/aHNnPe.jpeg",
+          "file": "lucid\\images\\aHNnPe.jpeg"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4MjU1LmpwZWc=/original/wVCAlO.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4MjU1LmpwZWc=/original/wVCAlO.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4MjU1LmpwZWc=/original/vUku%2Bx.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4MjU1LmpwZWc=/original/vUku%2Bx.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk1LmpwZWc=/original/BzXCQp.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk1LmpwZWc=/original/BzXCQp.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk1LmpwZWc=/original/vPSTYN.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk1LmpwZWc=/original/vPSTYN.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk0LmpwZWc=/original/cmQZnN.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk0LmpwZWc=/original/cmQZnN.jpeg"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk0LmpwZWc=/original/m63meh.jpeg",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTE2ODI2Ni82Nzk4Mjk0LmpwZWc=/original/m63meh.jpeg"
+        }
+      ]
+    },
+    {
+      "title": "mister-bakso",
+      "url": "https://thelegokid4455.itch.io/mister-bakso",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzYwNzg1NzYucG5n/original/DUi2HN.png",
+          "file": "mister-bakso\\images\\DUi2HN.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1nLzYwNzg1NzYucG5n/original/h7YrwS.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1nLzYwNzg1NzYucG5n/original/h7YrwS.png"
+        }
+      ]
+    },
+    {
+      "title": "food-melody-indonesian-edition",
+      "url": "https://thelegokid4455.itch.io/food-melody-indonesian-edition",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzYwNjc0NTYucG5n/original/V2csZQ.png",
+          "file": "food-melody-indonesian-edition\\images\\V2csZQ.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQ0LnBuZw==/original/wsqcDK.png",
+          "file": "food-melody-indonesian-edition\\images\\wsqcDK.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDM5LnBuZw==/original/X7BxaV.png",
+          "file": "food-melody-indonesian-edition\\images\\X7BxaV.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQwLnBuZw==/original/um3iYK.png",
+          "file": "food-melody-indonesian-edition\\images\\um3iYK.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQyLnBuZw==/original/Hm1XCe.png",
+          "file": "food-melody-indonesian-edition\\images\\Hm1XCe.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQxLnBuZw==/original/yh1pQa.png",
+          "file": "food-melody-indonesian-edition\\images\\yh1pQa.png"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/embed/R0_5fiVEPZU",
+          "downloaded": false
+        }
+      ],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQ0LnBuZw==/original/%2BOk8UR.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQ0LnBuZw==/original/%2BOk8UR.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQ0LnBuZw==/original/2WMTfx.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQ0LnBuZw==/original/2WMTfx.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDM5LnBuZw==/original/Xtn57D.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDM5LnBuZw==/original/Xtn57D.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDM5LnBuZw==/original/r4ouFo.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDM5LnBuZw==/original/r4ouFo.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQwLnBuZw==/original/aN2hrG.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQwLnBuZw==/original/aN2hrG.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQwLnBuZw==/original/yVna0v.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQwLnBuZw==/original/yVna0v.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQyLnBuZw==/original/hdJijo.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQyLnBuZw==/original/hdJijo.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQyLnBuZw==/original/WmPqto.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQyLnBuZw==/original/WmPqto.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQxLnBuZw==/original/RnG8a%2B.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQxLnBuZw==/original/RnG8a%2B.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQxLnBuZw==/original/qIp8YY.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvMTA1OTM5Ny82MDY3NDQxLnBuZw==/original/qIp8YY.png"
+        },
+        {
+          "kind": "video",
+          "url": "https://www.youtube.com/embed/R0_5fiVEPZU",
+          "error": "yt-dlp is not installed"
+        }
+      ]
+    },
+    {
+      "title": "upscroll-bullet-hell-starter-pack",
+      "url": "https://thelegokid4455.itch.io/upscroll-bullet-hell-starter-pack",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDMucG5n/original/JEDdAj.png",
+          "file": "upscroll-bullet-hell-starter-pack\\images\\JEDdAj.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDAucG5n/original/%2FdCwlu.png",
+          "file": "upscroll-bullet-hell-starter-pack\\images\\dCwlu.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDEucG5n/original/%2F%2FTOos.png",
+          "file": "upscroll-bullet-hell-starter-pack\\images\\TOos.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDIucG5n/original/tru%2Fp6.png",
+          "file": "upscroll-bullet-hell-starter-pack\\images\\p6.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDMucG5n/original/1sYoBW.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDMucG5n/original/1sYoBW.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDMucG5n/original/Y6FkWz.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDMucG5n/original/Y6FkWz.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDAucG5n/original/ZUPYZ7.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDAucG5n/original/ZUPYZ7.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDAucG5n/original/9VgJ7E.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDAucG5n/original/9VgJ7E.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDEucG5n/original/9oLNZ2.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDEucG5n/original/9oLNZ2.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDEucG5n/original/jG69rU.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDEucG5n/original/jG69rU.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDIucG5n/original/dNb3l7.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDIucG5n/original/dNb3l7.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDIucG5n/original/jBQtto.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTk3NjQxLzU2NzcyNDIucG5n/original/jBQtto.png"
+        }
+      ]
+    },
+    {
+      "title": "surup",
+      "url": "https://thelegokid4455.itch.io/surup",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzYwNjc1NDcuanBn/original/NwlwpP.jpg",
+          "file": "surup\\images\\NwlwpP.jpg"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzcucG5n/original/8kP2rq.png",
+          "file": "surup\\images\\8kP2rq.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzgucG5n/original/YjJwoi.png",
+          "file": "surup\\images\\YjJwoi.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzkucG5n/original/FS2Tyj.png",
+          "file": "surup\\images\\FS2Tyj.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzYucG5n/original/NN%2Bpl6.png",
+          "file": "surup\\images\\NN+pl6.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxODAucG5n/original/HBpezY.png",
+          "file": "surup\\images\\HBpezY.png"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/embed/1TNZnQMSGOc",
+          "downloaded": false
+        }
+      ],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzcucG5n/original/1mHnFL.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzcucG5n/original/1mHnFL.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzcucG5n/original/Imp%2FwI.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzcucG5n/original/Imp%2FwI.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzgucG5n/original/M%2Bp19K.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzgucG5n/original/M%2Bp19K.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzgucG5n/original/N2zjTr.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzgucG5n/original/N2zjTr.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzkucG5n/original/uICTqZ.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzkucG5n/original/uICTqZ.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzkucG5n/original/JBetEy.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzkucG5n/original/JBetEy.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzYucG5n/original/lEGKCN.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzYucG5n/original/lEGKCN.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzYucG5n/original/Yw1qCb.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxNzYucG5n/original/Yw1qCb.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxODAucG5n/original/0e9Nxx.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxODAucG5n/original/0e9Nxx.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxODAucG5n/original/pQM%2FPW.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvOTY2Mzk2LzU0ODQxODAucG5n/original/pQM%2FPW.png"
+        },
+        {
+          "kind": "video",
+          "url": "https://www.youtube.com/embed/1TNZnQMSGOc",
+          "error": "yt-dlp is not installed"
+        }
+      ]
+    },
+    {
+      "title": "samurai-suit-x",
+      "url": "https://thelegokid4455.itch.io/samurai-suit-x",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODcucG5n/original/Iea%2Fjo.png",
+          "file": "samurai-suit-x\\images\\jo.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDQucG5n/original/yfFYiA.png",
+          "file": "samurai-suit-x\\images\\yfFYiA.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDUucG5n/original/yvUQNd.png",
+          "file": "samurai-suit-x\\images\\yvUQNd.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODgucG5n/original/1McEf%2F.png",
+          "file": "samurai-suit-x\\images\\png"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://www.youtube.com/embed/H0mcQdNvUWk",
+          "downloaded": false
+        }
+      ],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODcucG5n/original/42rWj2.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODcucG5n/original/42rWj2.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODcucG5n/original/%2BGw3w9.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODcucG5n/original/%2BGw3w9.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDQucG5n/original/EjCVYV.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDQucG5n/original/EjCVYV.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDQucG5n/original/Cb4Y0u.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDQucG5n/original/Cb4Y0u.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDUucG5n/original/QXTf6s.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDUucG5n/original/QXTf6s.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDUucG5n/original/gnb2f6.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE2MDUucG5n/original/gnb2f6.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODgucG5n/original/R4MxvI.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODgucG5n/original/R4MxvI.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODgucG5n/original/S9lFCF.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvODQ2MzAwLzQ3NTE1ODgucG5n/original/S9lFCF.png"
+        },
+        {
+          "kind": "video",
+          "url": "https://www.youtube.com/embed/H0mcQdNvUWk",
+          "error": "yt-dlp is not installed"
+        }
+      ]
+    },
+    {
+      "title": "hitam-game",
+      "url": "https://thelegokid4455.itch.io/hitam-game",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MzUucG5n/original/TXEv%2FG.png",
+          "file": "hitam-game\\images\\G.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjYucG5n/original/fWQr%2FK.png",
+          "file": "hitam-game\\images\\K.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjcucG5n/original/rbX1K0.png",
+          "file": "hitam-game\\images\\rbX1K0.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjgucG5n/original/7nMMS1.png",
+          "file": "hitam-game\\images\\7nMMS1.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjkucG5n/original/ktg6t8.png",
+          "file": "hitam-game\\images\\ktg6t8.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MzUucG5n/original/tXrHk6.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MzUucG5n/original/tXrHk6.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MzUucG5n/original/cQ6bqx.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MzUucG5n/original/cQ6bqx.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjYucG5n/original/XZZvZG.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjYucG5n/original/XZZvZG.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjYucG5n/original/MR1Lx6.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjYucG5n/original/MR1Lx6.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjcucG5n/original/XTOnk4.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjcucG5n/original/XTOnk4.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjcucG5n/original/Afb4Ei.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjcucG5n/original/Afb4Ei.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjgucG5n/original/yAdDdR.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjgucG5n/original/yAdDdR.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjgucG5n/original/h4r9U8.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjgucG5n/original/h4r9U8.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjkucG5n/original/6wUcwD.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjkucG5n/original/6wUcwD.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjkucG5n/original/wDUwlC.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDgzMTI1LzI0OTE0MjkucG5n/original/wDUwlC.png"
+        }
+      ]
+    },
+    {
+      "title": "minitank-shooter",
+      "url": "https://thelegokid4455.itch.io/minitank-shooter",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0ODA0LnBuZw==/original/loQn18.png",
+          "file": "minitank-shooter\\images\\loQn18.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0Nzg3LnBuZw==/original/aFL4z6.png",
+          "file": "minitank-shooter\\images\\aFL4z6.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0ODA0LnBuZw==/original/VmEcMR.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0ODA0LnBuZw==/original/VmEcMR.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0ODA0LnBuZw==/original/FDuBB3.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0ODA0LnBuZw==/original/FDuBB3.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0Nzg3LnBuZw==/original/RjSfMT.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0Nzg3LnBuZw==/original/RjSfMT.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0Nzg3LnBuZw==/original/AH%2FlRZ.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNTczNDI1LzIxMjM0Nzg3LnBuZw==/original/AH%2FlRZ.png"
+        }
+      ]
+    },
+    {
+      "title": "office-backrooms",
+      "url": "https://thelegokid4455.itch.io/office-backrooms",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDUucG5n/original/H%2FM2AD.png",
+          "file": "office-backrooms\\images\\M2AD.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDQucG5n/original/Abq0%2Bc.png",
+          "file": "office-backrooms\\images\\Abq0+c.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDMucG5n/original/T2LyqY.png",
+          "file": "office-backrooms\\images\\T2LyqY.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDIucG5n/original/9yHQK0.png",
+          "file": "office-backrooms\\images\\9yHQK0.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDEucG5n/original/8l0zr8.png",
+          "file": "office-backrooms\\images\\8l0zr8.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDUucG5n/original/kI2YPi.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDUucG5n/original/kI2YPi.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDUucG5n/original/ZND4n%2F.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDUucG5n/original/ZND4n%2F.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDQucG5n/original/vLyknn.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDQucG5n/original/vLyknn.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDQucG5n/original/9yhd%2FW.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDQucG5n/original/9yhd%2FW.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDMucG5n/original/B7hyco.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDMucG5n/original/B7hyco.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDMucG5n/original/48v1bD.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDMucG5n/original/48v1bD.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDIucG5n/original/KnmgEe.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDIucG5n/original/KnmgEe.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDIucG5n/original/dUn85M.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDIucG5n/original/dUn85M.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDEucG5n/original/UM2gFz.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDEucG5n/original/UM2gFz.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDEucG5n/original/bJI33o.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNDU2ODYxLzIzODc3NDEucG5n/original/bJI33o.png"
+        }
+      ]
+    },
+    {
+      "title": "demo-warplanes",
+      "url": "https://thelegokid4455.itch.io/demo-warplanes",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzQ1MzgyNjUucG5n/original/8Uua1W.png",
+          "file": "demo-warplanes\\images\\8Uua1W.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1nLzQ1MzgyNjUucG5n/original/Qskr%2Bv.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1nLzQ1MzgyNjUucG5n/original/Qskr%2Bv.png"
+        }
+      ]
+    },
+    {
+      "title": "frida",
+      "url": "https://thelegokid4455.itch.io/frida",
+      "images": [
+        {
+          "url": "https://img.itch.zone/aW1nLzM2NTg2MDkucG5n/original/LF00lN.png",
+          "file": "frida\\images\\LF00lN.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTAucG5n/original/BiVqEB.png",
+          "file": "frida\\images\\BiVqEB.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTEucG5n/original/DZCY4g.png",
+          "file": "frida\\images\\DZCY4g.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTIucG5n/original/qHSlsw.png",
+          "file": "frida\\images\\qHSlsw.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NjE0MDkucG5n/original/ydImob.png",
+          "file": "frida\\images\\ydImob.png"
+        },
+        {
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2ODgwNTYucG5n/original/8wE%2F8m.png",
+          "file": "frida\\images\\8m.png"
+        }
+      ],
+      "videos": [],
+      "failures": [
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTAucG5n/original/csNbFF.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTAucG5n/original/csNbFF.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTAucG5n/original/ODItpX.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTAucG5n/original/ODItpX.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTEucG5n/original/Y%2FWACj.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTEucG5n/original/Y%2FWACj.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTEucG5n/original/zrKFor.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTEucG5n/original/zrKFor.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTIucG5n/original/a7cwRW.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTIucG5n/original/a7cwRW.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTIucG5n/original/Wctg6V.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NTg1OTIucG5n/original/Wctg6V.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NjE0MDkucG5n/original/It9mps.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NjE0MDkucG5n/original/It9mps.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NjE0MDkucG5n/original/guGv7I.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2NjE0MDkucG5n/original/guGv7I.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2ODgwNTYucG5n/original/WSSbvt.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2ODgwNTYucG5n/original/WSSbvt.png"
+        },
+        {
+          "kind": "image",
+          "url": "https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2ODgwNTYucG5n/original/syCNoi.png",
+          "error": "404 Client Error: Not Found for url: https://img.itch.zone/aW1hZ2UvNjcxMjMwLzM2ODgwNTYucG5n/original/syCNoi.png"
+        }
+      ]
+    }
+  ],
+  "generated_at": "2026-09-26T06:56:18+0800"
+}
