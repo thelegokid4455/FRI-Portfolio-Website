@@ -191,3 +191,83 @@ h2 { margin: 0; font-size: clamp(36px, 5vw, 68px); line-height: 1; letter-spacin
 .visual-stat small{color:var(--muted);font-size:11px;margin-top:4px}
 @media(max-width:900px){.visual-lab-grid{grid-template-columns:1fr 1fr;min-height:0}.visual-feature,.visual-feature-wide{min-height:360px}.visual-stack{grid-column:1 / -1;grid-template-columns:1fr 1fr;grid-template-rows:1fr;min-height:180px}}
 @media(max-width:560px){.visual-lab-grid{grid-template-columns:1fr}.visual-feature,.visual-feature-wide{min-height:300px}.visual-stack{grid-column:auto;min-height:150px}.visual-feature-copy strong{font-size:18px}}
+
+/* Photo-backed portfolio hero */
+.hero-photo-hero{
+  position:relative;
+  width:min(calc(100% - 32px),1240px);
+  min-height:calc(100vh - 40px);
+  margin:20px auto 0;
+  padding:clamp(120px,14vh,170px) 56px 72px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:30px;
+  isolation:isolate;
+}
+.hero-photo,.hero-photo-blur,.hero-photo-overlay{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+}
+.hero-photo{z-index:-3}
+.hero-photo img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center center;
+}
+.hero-photo-blur{
+  z-index:-2;
+  width:64%;
+  right:auto;
+  filter:blur(22px) saturate(.78);
+  transform:scale(1.08);
+  background:url("assets/hero-mahjong.jpg?v=20260926") center center / cover no-repeat;
+  clip-path:polygon(0 0,100% 0,86% 100%,0 100%);
+  opacity:.9;
+}
+.hero-photo-overlay{
+  z-index:-1;
+  background:
+    linear-gradient(90deg,rgba(7,8,11,.97) 0%,rgba(7,8,11,.88) 31%,rgba(7,8,11,.48) 57%,rgba(7,8,11,.08) 100%),
+    linear-gradient(180deg,rgba(7,8,11,.2),rgba(7,8,11,.28));
+}
+.hero-content{position:relative;z-index:2;width:min(760px,100%);text-shadow:0 2px 20px rgba(0,0,0,.3)}
+.hero-photo-hero h1{max-width:760px}
+.hero-photo-hero .hero-copy{color:#d8dce4}
+.hero-photo-hero .hero-metrics{max-width:760px}
+.hero-photo-hero .metric{border-top-color:rgba(255,255,255,.16)}
+.hero-photo-hero .button.secondary{background:rgba(7,8,11,.38);backdrop-filter:blur(10px)}
+.hero-photo-hero .eyebrow{color:#d0d4dc}
+
+@media(max-width:850px){
+  .hero-photo-hero{
+    width:min(calc(100% - 28px),var(--max));
+    min-height:86vh;
+    padding:120px 28px 58px;
+    margin-top:10px;
+  }
+  .hero-photo-blur{width:82%;opacity:.8}
+  .hero-photo-overlay{
+    background:
+      linear-gradient(90deg,rgba(7,8,11,.94),rgba(7,8,11,.68) 58%,rgba(7,8,11,.18)),
+      linear-gradient(180deg,rgba(7,8,11,.2),rgba(7,8,11,.5));
+  }
+}
+@media(max-width:560px){
+  .hero-photo-hero{
+    min-height:88vh;
+    padding:110px 20px 42px;
+    border-radius:24px;
+  }
+  .hero-photo img{object-position:58% center}
+  .hero-photo-blur{width:100%;filter:blur(26px);opacity:.72}
+  .hero-photo-overlay{
+    background:
+      linear-gradient(180deg,rgba(7,8,11,.7) 0%,rgba(7,8,11,.82) 54%,rgba(7,8,11,.9) 100%);
+  }
+  .hero-photo-hero .hero-copy{font-size:15px}
+}
