@@ -273,3 +273,95 @@ h2 { margin: 0; font-size: clamp(36px, 5vw, 68px); line-height: 1; letter-spacin
   }
   .hero-photo-hero .hero-copy{font-size:15px}
 }
+
+/* Photo-backed technical stack */
+.tech-stack-section{
+  position:relative;
+  width:min(calc(100% - 32px),1240px);
+  min-height:620px;
+  margin:20px auto 0;
+  padding:clamp(70px,8vw,100px) 56px;
+  display:grid;
+  grid-template-columns:.88fr 1.12fr;
+  gap:64px;
+  align-items:center;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:30px;
+  isolation:isolate;
+  background:#07080b;
+}
+.tech-stack-photo{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    url("assets/visual-lab-models.jpg?v=20260926")
+    center center / cover no-repeat;
+  filter:brightness(.58) saturate(.78);
+  transform:scale(1.02);
+}
+.tech-stack-overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(90deg,rgba(7,8,11,.96) 0%,rgba(7,8,11,.91) 30%,rgba(7,8,11,.62) 58%,rgba(7,8,11,.28) 100%),
+    linear-gradient(180deg,rgba(7,8,11,.42),rgba(7,8,11,.56));
+}
+.tech-stack-section > div:not(.tech-stack-photo):not(.tech-stack-overlay){
+  position:relative;
+  z-index:2;
+}
+.tech-stack-section h2{
+  max-width:600px;
+  text-shadow:0 2px 22px rgba(0,0,0,.45);
+}
+.tech-stack-section .body-copy{
+  color:#d1d5dd;
+}
+.tech-stack-panel{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.tech-stack-panel .skill-group{
+  background:rgba(7,8,11,.52);
+  border-color:rgba(255,255,255,.14);
+  backdrop-filter:blur(12px);
+  box-shadow:0 14px 45px rgba(0,0,0,.18);
+}
+.tech-stack-panel .skill-group h3{
+  color:var(--text);
+}
+.tech-stack-panel .skill-group p{
+  color:#b8bec9;
+}
+@media(max-width:850px){
+  .tech-stack-section{
+    width:min(calc(100% - 28px),var(--max));
+    min-height:0;
+    grid-template-columns:1fr;
+    gap:34px;
+    padding:70px 28px;
+    margin-top:10px;
+  }
+  .tech-stack-photo{
+    background-position:64% center;
+    filter:brightness(.48) saturate(.72);
+  }
+  .tech-stack-overlay{
+    background:
+      linear-gradient(180deg,rgba(7,8,11,.84) 0%,rgba(7,8,11,.78) 45%,rgba(7,8,11,.92) 100%);
+  }
+}
+@media(max-width:560px){
+  .tech-stack-section{
+    padding:58px 20px;
+    border-radius:24px;
+  }
+  .tech-stack-photo{
+    background-position:65% center;
+  }
+  .tech-stack-panel{
+    grid-template-columns:1fr;
+  }
+}
