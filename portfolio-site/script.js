@@ -153,3 +153,37 @@ $('#facts').innerHTML = siteContent.facts.map(([label,value]) => `
 $('#contactLinks').innerHTML = siteContent.contact.map(link => `
   <a class="contact-link" href="${esc(link.url)}" ${link.url.startsWith('mailto:') ? '' : 'target="_blank" rel="noreferrer"'}>${esc(link.label)} ↗</a>
 `).join('');
+
+
+/* Portfolio utility controls */
+const progressBar = $('#readingProgress');
+const backToTop = $('#backToTop');
+
+const updateScrollUI = () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  if (progressBar) progressBar.style.width = `${progress}%`;
+  if (backToTop) backToTop.classList.toggle('is-visible', window.scrollY > 700);
+};
+window.addEventListener('scroll', updateScrollUI, {passive:true});
+updateScrollUI();
+
+if (backToTop) {
+  backToTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+}
+
+const visitorCount = $('#visitorCount');
+if (visitorCount) {
+  fetch('https://countapi.mileshilliard.com/api/v1/hit/thelegokid4455-portfolio-visits-2026', {cache:'no-store'})
+    .then(response => {
+      if (!response.ok) throw new Error('Visitor counter unavailable');
+      return response.json();
+    })
+    .then(data => {
+      const count = Number(data.value ?? data.count);
+      if (Number.isFinite(count)) visitorCount.textContent = count.toLocaleString();
+    })
+    .catch(() => {
+      visitorCount.textContent = '—';
+    });
+}
