@@ -75,6 +75,8 @@ const siteContent = {
     {label:"Email", url:"mailto:farhan.r.irsyad@gmail.com"},
     {label:"LinkedIn", url:"https://www.linkedin.com/in/thelegokid4455/"},
     {label:"GitHub", url:"https://github.com/thelegokid4455/FRI-Portfolio-Website"},
+    {label:"Sketchfab", url:"https://sketchfab.com/thelegokid4455"},
+    {label:"Instagram", url:"https://www.instagram.com/fri.devmode/"},
     {label:"Linktree", url:"https://linktr.ee/thelegokid4455"},
     {label:"Portfolio PDF", url:"https://shorturl.at/ZeDXY"}
   ]
