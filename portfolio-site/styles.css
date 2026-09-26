@@ -369,3 +369,16 @@ h2 { margin: 0; font-size: clamp(36px, 5vw, 68px); line-height: 1; letter-spacin
     grid-template-columns:1fr;
   }
 }
+
+/* Recruiter-friendly navigation polish */
+.skip-link{position:fixed;left:16px;top:-60px;z-index:1000;padding:10px 14px;border-radius:10px;background:var(--accent);color:#07080b;font:600 11px var(--mono);transition:top .2s ease;}
+.skip-link:focus{top:16px;}
+.reading-progress{position:fixed;left:0;top:0;width:0;height:2px;background:var(--accent);z-index:9999;box-shadow:0 0 14px rgba(185,255,101,.35);}
+.footer-main{align-items:center;}
+.visitor-counter{display:inline-flex;align-items:center;gap:7px;color:#8d95a2;}
+.visitor-counter strong{color:#dfe4eb;font-weight:600;letter-spacing:.02em;}
+.counter-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px rgba(185,255,101,.5);}
+.back-to-top{position:fixed;right:22px;bottom:22px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:rgba(10,11,15,.84);backdrop-filter:blur(12px);color:var(--text);font:500 18px var(--mono);cursor:pointer;z-index:100;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s ease,visibility .2s ease,transform .2s ease,border-color .2s ease;}
+.back-to-top.is-visible{opacity:1;visibility:visible;transform:translateY(0);}
+.back-to-top:hover{border-color:rgba(185,255,101,.55);color:var(--accent);}
+@media(max-width:560px){.footer-main{align-items:flex-start;}.visitor-counter{margin-top:4px;}.back-to-top{right:16px;bottom:16px;}}
