@@ -17,7 +17,7 @@ const siteContent = {
       title: "Heavy Vehicle Simulator",
       year: "2023",
       category: "TRAINING / VR",
-      image: "assets/selected-works/heavy-vehicle-simulator.jpg",
+      image: "assets/experience/heavy-vehicle-real.jpg",
       description: "Training simulation for heavy and construction vehicles, including VR support and physical control integration for runway-repair scenarios.",
       tags: ["Unity", "C#", "VR", "Arduino", "Vehicle Systems"],
       accent: "green"
@@ -52,7 +52,7 @@ const siteContent = {
   ],
   experience: [
     {period:"2026 — Present", role:"Director / Founder", company:"Ave Ludum Studio · Makassar", description:"Lead game-development projects and advise clients and developers on technical architecture, production workflows and project execution.", visual:"assets/experience/ave-ludum-logo.svg", visualAlt:"Game studio workspace template for Ave Ludum Studio in Makassar."},
-    {period:"2025 — Present", role:"Manager, Information Systems & Technology", company:"Universitas Negeri Makassar · Makassar", description:"Developed 3D simulations and interactive visualizations for institutional projects, and designed a modular CSL/OSCE examination timer system with configurable station rotation, timing and duration.", visual:"https://icei.ac.id/media/logo/e39643f0-ed99-4008-8f94-4b25f757c76f.jpg", visualAlt:"Universitas Negeri Makassar emblem."},
+    {period:"2025 — Present", role:"Manager, Information Systems & Technology", company:"Universitas Negeri Makassar · Makassar", description:"Developed 3D simulations and interactive visualizations for institutional projects, and designed a modular CSL/OSCE examination timer system with configurable station rotation, timing and duration.", visual:"assets/experience/unm-phinisi.jpg", visualAlt:"Universitas Negeri Makassar Phinisi building in Makassar."},
     {period:"Jul 2023 — Jul 2024", role:"Software Programmer", company:"PT. Maxxima Innovative · Surabaya", description:"Developed Unity/C# training simulations for government clients across PC and VR, including heavy-vehicle simulation, a ~100 km real-world driving simulator, hardware integration and performance optimization.", visual:"assets/experience/heavy-vehicle-real.jpg", visualAlt:"Heavy vehicle simulator control station with triple-monitor driving simulation and physical controls."},
     {period:"Apr 2022 — Sep 2022", role:"Junior Game Programmer", company:"Octaverse Studio · Yogyakarta", description:"Contributed to mobile and PC projects including multiplayer FPS and strategic ship-battle games, plus an endless-runner mobile title.", visual:"assets/experience/octaverse-real.jpg", visualAlt:"Octaverse game artwork showing two armed characters in a stylized action scene."},
     {period:"Oct 2021 — Oct 2022", role:"Game Programmer", company:"Dhelangan Studio · Yogyakarta", description:"Built medical VR and gameplay systems in Unity/C#, supported commissioned and in-house projects, and contributed to 3D asset production.", visual:"https://www.dhelangan.com/logo.png", visualAlt:"Dhelangan Studio logo."}
