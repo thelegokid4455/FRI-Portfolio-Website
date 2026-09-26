@@ -14,8 +14,9 @@ $('#heroMetrics').innerHTML = siteContent.metrics.map(([value,label]) => `
 
 const visualFor = (project, index) => {
   const label = ['SIM / 01','SIM / 02','VR / 03','GAME / 04'][index] || 'PROJECT';
+  const imageSrc = `${project.image}${project.image.includes("?") ? "&" : "?"}v=20260926`;
   return `<div class="project-visual">
-    <img class="project-image" src="${esc(project.image)}" alt="${esc(project.title)} thumbnail" loading="lazy" decoding="async">
+    <img class="project-image" src="${esc(imageSrc)}" alt="${esc(project.title)} thumbnail" loading="eager" decoding="async">
     <div class="project-image-overlay"></div>
     <div class="visual-tag">${esc(label)} · ${esc(project.category)}</div>
   </div>`;
