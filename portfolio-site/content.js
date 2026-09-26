@@ -26,7 +26,7 @@ const siteContent = {
       title: "Driving & Convoy Simulator",
       year: "2024",
       category: "LARGE-SCALE SIMULATION",
-      image: "assets/selected-works/driving-simulator.jpg",
+      image: "assets/selected-works/driving-simulator-hero.jpg",
       description: "Real-world-scale driving simulator with a ~100 km Jakarta environment, route selection, vehicle handling and convoy training scenarios.",
       tags: ["Unity", "C#", "Optimization", "Large Environments", "VR"],
       accent: "blue"
