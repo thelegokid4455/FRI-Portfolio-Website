@@ -6,40 +6,29 @@ A lightweight, responsive, dependency-free portfolio website for a Unity / VR Si
 
 The main editable content is in **`content.js`**. You can change:
 
-- name, headline and summary
-- project titles, descriptions, tags and links
+- name, headline, intro and about text
+- the hero button (`cv`) and email address
+- project titles, descriptions, images and tags
+- the games list
 - work experience
-- technical skills
-- education / facts
-- contact links
+- skills, facts and contact links
 
 The layout and design are in **`index.html`** and **`styles.css`**.
 
-### Adding real project images
+### Project images
 
-Replace the generated project visual blocks in `script.js` with image tags, or extend each project object in `content.js` with an `image` property and render it from `/assets/projects/`.
+Set `image` (and `imageAlt`) on a project in `content.js`. Use real JPEGs around 1200–1600px wide; small images (320px) look blurry on large screens.
 
-### Adding YouTube demos
+### Games
 
-Add a project link such as:
+Each game in `content.js` points at `assets/games/<slug>/1.jpg`, `2.jpg`, ... and `shots` says how many screenshots exist. Keep the screenshots landscape JPEGs about 960px wide. Only the first screenshot loads with the page; the rest load when someone flips through. Add `video` with a YouTube link to show a Trailer link.
 
-```js
-{ label: "Watch demo", url: "https://www.youtube.com/watch?v=YOUR_ID" }
-```
+`assets/itch_media_archive/` is the raw itch.io download the thumbnails were made from. The site does not load it.
+
+### CV
+
+To link a CV from the hero, add it as `assets/FRI-Resume.pdf` and set `cv` in `content.js` to `{label: "Download CV", url: "assets/FRI-Resume.pdf"}`.
 
 ## Publish
 
-This is a static site, so it can be hosted on Vercel, Cloudflare Pages, Netlify, GitHub Pages or similar services.
-
-Recommended developer workflow:
-
-1. Create a GitHub repository.
-2. Upload the contents of this folder.
-3. Connect the repository to Vercel.
-4. Add your custom domain in the Vercel project settings.
-
-Every push to GitHub can then redeploy the website automatically.
-
-## Included CV
-
-`assets/FRI-Resume.pdf` is the current CV used as the source for the copy.
+This is a static site. The GitHub Actions workflow in `.github/workflows/deploy-pages.yml` deploys this folder to GitHub Pages on every push to `main`.

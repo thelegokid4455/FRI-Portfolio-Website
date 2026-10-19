@@ -1,5 +1,6 @@
 const $ = (selector) => document.querySelector(selector);
-const esc = (value) => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc = (value) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const external = 'target="_blank" rel="noopener"';
 
 document.querySelectorAll('[data-content]').forEach(el => {
   const key = el.dataset.content;
@@ -8,182 +9,144 @@ document.querySelectorAll('[data-content]').forEach(el => {
 
 $('#year').textContent = new Date().getFullYear();
 
-$('#heroMetrics').innerHTML = siteContent.metrics.map(([value,label]) => `
-  <div class="metric"><span class="metric-value">${esc(value)}</span><span class="metric-label">${esc(label)}</span></div>
-`).join('');
+const mailto = `mailto:${siteContent.email}`;
+$('#emailButton').href = mailto;
+$('#contactEmail').href = mailto;
+$('#contactEmail').textContent = siteContent.email;
+if (siteContent.cv) {
+  $('#cvButton').href = siteContent.cv.url;
+  $('#cvButton').textContent = `${siteContent.cv.label} ↗`;
+} else {
+  $('#cvButton').remove();
+}
 
-const visualFor = (project, index) => {
-  const label = ['SIM / 01','SIM / 02','VR / 03','GAME / 04'][index] || 'PROJECT';
-  const imageSrc = `${project.image}${project.image.includes("?") ? "&" : "?"}v=20260926`;
-  return `<div class="project-visual">
-    <img class="project-image" src="${esc(imageSrc)}" alt="${esc(project.title)} thumbnail" loading="eager" decoding="async">
-    <div class="project-image-overlay"></div>
-    <div class="visual-tag">${esc(label)} · ${esc(project.category)}</div>
-  </div>`;
-};
-
-$('#projectGrid').innerHTML = siteContent.projects.map((project, i) => `
-  <article class="project-card">
-    <div>
-      ${visualFor(project, i)}
-      <div class="project-meta">
-        <div><h3 class="project-title">${esc(project.title)}</h3></div>
-        <span class="project-year">${esc(project.year)}</span>
-      </div>
-      <p class="project-desc">${esc(project.description)}</p>
-      <div class="tags">${project.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>
+/* Selected work */
+$('#projectGrid').innerHTML = siteContent.projects.map(project => `
+  <article class="project">
+    <figure class="project-image">
+      <img src="${esc(project.image)}" alt="${esc(project.imageAlt || project.title)}" loading="lazy" decoding="async">
+    </figure>
+    <div class="project-body">
+      <p class="project-meta">${esc(project.year)} · ${esc(project.category)}</p>
+      <h3>${esc(project.title)}</h3>
+      ${project.client ? `<p class="project-client">${esc(project.client)}</p>` : ''}
+      <p>${esc(project.description)}</p>
+      <p class="project-tags">${project.tags.map(esc).join(', ')}</p>
     </div>
   </article>
 `).join('');
 
-const gameImagePath = (file) => file
-  .replace(/\\/g, '/')
-  .split('/')
-  .map(part => encodeURIComponent(part))
-  .join('/');
+/* Games: only the first screenshot loads up front; the rest load when someone flips through */
+const shotSrc = (game, n) => `assets/games/${game.slug}/${n}.jpg`;
 
-const renderGameGallery = async () => {
-  const gallery = $('#gameGallery');
-  if (!gallery) return;
+$('#gameGallery').innerHTML = siteContent.games.map(game => {
+  const count = Math.max(1, game.shots || 1);
+  const shots = Array.from({length: count}, (_, i) => i === 0
+    ? `<img class="shot is-active" src="${esc(shotSrc(game, 1))}" alt="${esc(game.title)} screenshot 1" loading="lazy" decoding="async">`
+    : `<img class="shot" data-src="${esc(shotSrc(game, i + 1))}" alt="${esc(game.title)} screenshot ${i + 1}" decoding="async">`
+  ).join('');
+  const controls = count > 1 ? `
+    <button class="shot-btn shot-prev" type="button" aria-label="Previous screenshot of ${esc(game.title)}">‹</button>
+    <button class="shot-btn shot-next" type="button" aria-label="Next screenshot of ${esc(game.title)}">›</button>
+    <span class="shot-count" aria-hidden="true">1 / ${count}</span>` : '';
+  return `<article class="game">
+    <div class="game-media">
+      <a class="game-shots" href="${esc(game.url)}" ${external} tabindex="-1" aria-hidden="true">${shots}</a>
+      ${controls}
+    </div>
+    <h3 class="game-title"><a href="${esc(game.url)}" ${external}>${esc(game.title)}</a></h3>
+    <p class="game-links"><a href="${esc(game.url)}" ${external}>itch.io</a>${game.video ? ` · <a href="${esc(game.video)}" ${external}>Trailer</a>` : ''}</p>
+  </article>`;
+}).join('');
 
-  try {
-    const response = await fetch('assets/itch_media_archive/manifest.json');
-    if (!response.ok) throw new Error('Could not load itch.io media manifest.');
-    const manifest = await response.json();
+document.querySelectorAll('.game').forEach(card => {
+  const shots = [...card.querySelectorAll('.shot')];
+  if (shots.length < 2) return;
+  const counter = card.querySelector('.shot-count');
+  let current = 0;
 
-    gallery.innerHTML = manifest.projects.map((project, index) => {
-      const images = (project.images || []).filter(item => item && item.file);
-      if (!images.length) return '';
+  const load = (img) => { if (img.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; } };
+  const show = (next) => {
+    current = (next + shots.length) % shots.length;
+    load(shots[current]);
+    load(shots[(current + 1) % shots.length]);
+    shots.forEach((img, i) => img.classList.toggle('is-active', i === current));
+    counter.textContent = `${current + 1} / ${shots.length}`;
+  };
 
-      return `<article class="game-card" data-game-index="${index}" data-game-url="${esc(project.url || '#')}">
-        <div class="game-carousel">
-          <div class="game-slides">
-            ${images.map((item, imageIndex) => `
-              <img class="game-slide${imageIndex === 0 ? ' is-active' : ''}" src="assets/itch_media_archive/${gameImagePath(item.file)}" alt="${esc(project.title)} screenshot ${imageIndex + 1}" loading="${imageIndex === 0 ? 'eager' : 'lazy'}" decoding="async">
-            `).join('')}
-          </div>
-          ${images.length > 1 ? `
-            <button class="game-carousel-btn game-carousel-prev" type="button" aria-label="Previous image">‹</button>
-            <button class="game-carousel-btn game-carousel-next" type="button" aria-label="Next image">›</button>
-            <div class="game-carousel-dots" aria-hidden="true">
-              ${images.map((_, imageIndex) => `<span class="game-carousel-dot${imageIndex === 0 ? ' is-active' : ''}"></span>`).join('')}
-            </div>
-          ` : ''}
-        </div>
-        <div class="game-card-shade"></div>
-        <div class="game-card-title">${esc(project.title)}</div>
-        <div class="game-card-link">itch.io ↗</div>
-      </article>`;
-    }).join('');
+  // Warm up the next screenshot when the pointer arrives, so the first click feels instant
+  card.addEventListener('pointerenter', () => load(shots[1]), {once: true});
+  card.querySelector('.shot-prev').addEventListener('click', () => show(current - 1));
+  card.querySelector('.shot-next').addEventListener('click', () => show(current + 1));
 
-    gallery.querySelectorAll('.game-card').forEach(card => {
-      const slides = [...card.querySelectorAll('.game-slide')];
-      if (slides.length < 2) {
-        card.addEventListener('click', () => window.open(card.dataset.gameUrl, '_blank', 'noopener,noreferrer'));
-        return;
-      }
+  let touchX = null;
+  const media = card.querySelector('.game-media');
+  media.addEventListener('touchstart', e => { touchX = e.changedTouches[0].clientX; }, {passive: true});
+  media.addEventListener('touchend', e => {
+    if (touchX === null) return;
+    const delta = e.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(delta) > 35) { e.preventDefault(); show(current + (delta < 0 ? 1 : -1)); }
+  });
+});
 
-      const dots = [...card.querySelectorAll('.game-carousel-dot')];
-      let current = 0;
-
-      const showSlide = (next) => {
-        current = (next + slides.length) % slides.length;
-        slides.forEach((slide, i) => slide.classList.toggle('is-active', i === current));
-        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === current));
-      };
-
-      card.querySelector('.game-carousel-prev').addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        showSlide(current - 1);
-      });
-
-      card.querySelector('.game-carousel-next').addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        showSlide(current + 1);
-      });
-
-      let touchStartX = 0;
-      card.addEventListener('touchstart', event => { touchStartX = event.changedTouches[0].clientX; }, {passive:true});
-      card.addEventListener('touchend', event => {
-        const delta = event.changedTouches[0].clientX - touchStartX;
-        if (Math.abs(delta) > 35) {
-          event.preventDefault();
-          showSlide(current + (delta < 0 ? 1 : -1));
-        }
-      }, {passive:false});
-
-      card.addEventListener('click', event => {
-        if (event.target.closest('.game-carousel-btn')) return;
-        window.open(card.dataset.gameUrl, '_blank', 'noopener,noreferrer');
-      });
-    });
-  } catch (error) {
-    gallery.innerHTML = '<p class="section-note">Game media could not be loaded right now.</p>';
-    console.error(error);
-  }
-};
-
-renderGameGallery();
+/* Experience */
+const initials = (name) => name.split('·')[0].trim().split(/\s+/).filter(w => /^[A-Z]/.test(w)).slice(0, 2).map(w => w[0]).join('');
 
 $('#experienceTimeline').innerHTML = siteContent.experience.map(item => `
-  <article class="timeline-item">
-    <div class="experience-visual">
-      <img src="${esc(item.visual)}" alt="${esc(item.visualAlt || item.company + ' visual')}" loading="lazy" decoding="async">
-      <span class="experience-visual-label">WORK / EXPERIENCE</span>
+  <li class="job">
+    <div class="job-logo" data-initials="${esc(initials(item.company))}">
+      <img src="${esc(item.visual)}" alt="${esc(item.visualAlt || item.company)}" loading="lazy" decoding="async">
     </div>
-    <div class="experience-copy">
-      <div class="period">${esc(item.period)}</div>
-      <h3 class="role">${esc(item.role)}</h3>
-      <div class="company">${esc(item.company)}</div>
+    <p class="job-period">${esc(item.period)}</p>
+    <div class="job-body">
+      <h3>${esc(item.role)}</h3>
+      <p class="job-company">${esc(item.company)}</p>
       <p>${esc(item.description)}</p>
     </div>
-  </article>
+  </li>
 `).join('');
 
-$('#skillsPanel').innerHTML = siteContent.skills.map(([name,desc]) => `
-  <article class="skill-group"><h3>${esc(name)}</h3><p>${esc(desc)}</p></article>
+// External logos can disappear; show the company's initials instead of a broken image
+document.querySelectorAll('.job-logo img').forEach(img => {
+  const fail = () => img.parentElement.classList.add('is-missing');
+  if (img.complete && img.naturalWidth === 0) fail();
+  else img.addEventListener('error', fail);
+});
+
+/* About */
+$('#skillsPanel').innerHTML = siteContent.skills.map(([name, desc]) => `
+  <div><dt>${esc(name)}</dt><dd>${esc(desc)}</dd></div>
 `).join('');
 
-$('#facts').innerHTML = siteContent.facts.map(([label,value]) => `
-  <div class="fact"><span class="fact-label">${esc(label)}</span><span class="fact-value">${esc(value)}</span></div>
+$('#facts').innerHTML = siteContent.facts.map(([label, value]) => `
+  <div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>
 `).join('');
 
 $('#contactLinks').innerHTML = siteContent.contact.map(link => `
-  <a class="contact-link" href="${esc(link.url)}" ${link.url.startsWith('mailto:') ? '' : 'target="_blank" rel="noreferrer"'}>${esc(link.label)} ↗</a>
+  <li><a href="${esc(link.url)}" ${external}>${esc(link.label)} ↗</a></li>
 `).join('');
 
-
-/* Portfolio utility controls */
-const progressBar = $('#readingProgress');
+/* Header shadow + back to top */
+const header = $('.site-header');
 const backToTop = $('#backToTop');
-
-const updateScrollUI = () => {
-  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
-  if (progressBar) progressBar.style.width = `${progress}%`;
-  if (backToTop) backToTop.classList.toggle('is-visible', window.scrollY > 700);
+const onScroll = () => {
+  header.classList.toggle('is-scrolled', window.scrollY > 8);
+  backToTop.classList.toggle('is-visible', window.scrollY > 900);
 };
-window.addEventListener('scroll', updateScrollUI, {passive:true});
-updateScrollUI();
+window.addEventListener('scroll', onScroll, {passive: true});
+onScroll();
+backToTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 
-if (backToTop) {
-  backToTop.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
-}
-
+/* Visit counter (third-party; fails quietly) */
 const visitorCount = $('#visitorCount');
-if (visitorCount) {
-  fetch('https://countapi.mileshilliard.com/api/v1/hit/thelegokid4455-portfolio-visits-2026', {cache:'no-store'})
-    .then(response => {
-      if (!response.ok) throw new Error('Visitor counter unavailable');
-      return response.json();
-    })
-    .then(data => {
-      const count = Number(data.value ?? data.count);
-      if (Number.isFinite(count)) visitorCount.textContent = count.toLocaleString();
-    })
-    .catch(() => {
-      visitorCount.textContent = '—';
-    });
-}
+fetch('https://countapi.mileshilliard.com/api/v1/hit/thelegokid4455-portfolio-visits-2026', {cache: 'no-store'})
+  .then(response => {
+    if (!response.ok) throw new Error('Visitor counter unavailable');
+    return response.json();
+  })
+  .then(data => {
+    const count = Number(data.value ?? data.count);
+    if (Number.isFinite(count)) visitorCount.textContent = count.toLocaleString();
+  })
+  .catch(() => { visitorCount.closest('.visitor-counter').hidden = true; });

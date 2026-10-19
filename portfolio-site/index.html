@@ -6,7 +6,7 @@
   <meta name="description" content="Farhan Ramadhani Irsyad — Unity / VR Simulation Developer in Indonesia specializing in Unity, C#, VR/XR, game development, training simulation, gameplay systems and interactive 3D applications." />
   <meta name="author" content="Farhan Ramadhani Irsyad" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="theme-color" content="#07080b" />
+  <meta name="theme-color" content="#f4f1ea" />
   <link rel="canonical" href="https://thelegokid4455.github.io/FRI-Portfolio-Website/" />
   <meta property="og:title" content="Farhan Ramadhani Irsyad — Unity / VR Simulation Developer" />
   <meta property="og:description" content="Unity/C# developer specializing in VR/XR, game development, simulation, gameplay systems and interactive training applications." />
@@ -57,47 +57,113 @@
     "publisher": {"@type":"Person","name":"Farhan Ramadhani Irsyad"}
   }
   </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b1a17'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%23f4f1ea' text-anchor='middle'%3EFI%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#work">Skip to portfolio content</a>
-  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
-  <div class="noise"></div>
+  <a class="skip-link" href="#work">Skip to work</a>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Home"><span class="brand-mark">FI</span><span class="brand-text" data-content="nameShort"></span></a>
-    <nav><a href="#work">Work</a><a href="#games">Games</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">About</a></nav>
-    <div class="header-links"><a class="header-cta" href="#contact">Contact</a></div>
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" data-content="nameShort">Farhan Irsyad</a>
+      <nav aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#games">Games</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-contact">Contact</a>
+      </nav>
+    </div>
   </header>
+
   <main id="top">
-    <section class="hero section-shell hero-photo-hero">
-      <div class="hero-photo" aria-hidden="true"><img src="assets/hero-mahjong.jpg?v=20260926" alt=""></div>
-      <div class="hero-photo-blur" aria-hidden="true"></div><div class="hero-photo-overlay" aria-hidden="true"></div>
-      <div class="hero-content">
-        <div class="eyebrow"><span class="status-dot"></span><span data-content="availability"></span></div>
-        <h1><span data-content="nameFull">Farhan Ramadhani Irsyad</span><br><span class="accent" data-content="headline">Unity / VR Simulation Developer</span></h1>
-        <p class="hero-copy" data-content="summary">Unity/C# developer specializing in VR, simulation, gameplay systems and interactive training applications.</p>
-        <div class="hero-actions"><a class="button primary" href="#work">View selected work <span>↗</span></a><a class="button secondary" href="assets/FRI-Resume.pdf" target="_blank" rel="noreferrer">Download CV</a></div>
-        <div class="hero-metrics" id="heroMetrics"></div>
+    <section class="hero wrap">
+      <div class="hero-text">
+        <p class="hero-meta"><span data-content="location"></span> · <span data-content="availability"></span></p>
+        <h1><span data-content="nameFull">Farhan Ramadhani Irsyad</span></h1>
+        <p class="hero-role" data-content="headline">Unity / VR Simulation Developer</p>
+        <p class="hero-intro" data-content="intro"></p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#work">See my work</a>
+          <a class="btn" id="emailButton" href="#contact">Email me</a>
+          <a class="btn btn-plain" id="cvButton" href="#" target="_blank" rel="noopener">Portfolio PDF ↗</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/hero-mahjong.jpg" alt="Players around a mahjong table at a community game event" width="1200" height="674" fetchpriority="high">
+      </figure>
+    </section>
+
+    <section id="work" class="section wrap">
+      <header class="section-head">
+        <h2>Selected work</h2>
+        <p>Training simulators, VR and gameplay work from studio and client projects.</p>
+      </header>
+      <div class="projects" id="projectGrid"></div>
+    </section>
+
+    <section id="games" class="section wrap">
+      <header class="section-head">
+        <h2>Games &amp; prototypes</h2>
+        <p>Jam games, side projects and team releases. Use the arrows to flip through screenshots; the title opens the itch.io page.</p>
+      </header>
+      <div class="games" id="gameGallery"></div>
+      <p class="more-link"><a href="https://thelegokid4455.itch.io/" target="_blank" rel="noopener">All games on itch.io ↗</a></p>
+    </section>
+
+    <section id="art" class="section wrap">
+      <header class="section-head">
+        <h2>Art &amp; 3D</h2>
+        <p>Models, game art and experiments live on Sketchfab and Instagram.</p>
+      </header>
+      <div class="art-links">
+        <a class="art-card" href="https://sketchfab.com/thelegokid4455" target="_blank" rel="noopener">
+          <img src="assets/visual-lab-models.jpg" alt="Realtime 3D asset models" loading="lazy" decoding="async" width="1919" height="1072">
+          <span class="art-caption"><strong>Sketchfab</strong> 3D models and realtime assets ↗</span>
+        </a>
+        <a class="art-card" href="https://www.instagram.com/fri.devmode/" target="_blank" rel="noopener">
+          <img src="assets/games/necrospore/2.jpg" alt="Necrospore screenshot" loading="lazy" decoding="async">
+          <span class="art-caption"><strong>Instagram</strong> @fri.devmode: game art and work in progress ↗</span>
+        </a>
       </div>
     </section>
-    <section id="work" class="section-shell section"><div class="section-heading"><div><p class="kicker">01 / SELECTED WORK</p><h2>Projects built for <span class="accent">real constraints.</span></h2></div><p class="section-note">Simulation systems, VR experiences, large environments, gameplay and hardware integration.</p></div><div class="project-grid" id="projectGrid"></div></section>
-    <section id="games" class="section-shell section"><div class="section-heading"><div><p class="kicker">02 / GAME PORTFOLIO</p><h2>Games, prototypes &amp; <span class="accent">experiments.</span></h2></div><p class="section-note">Media from the latest GitHub asset archive, with each thumbnail linked to its itch.io project.</p></div><div class="game-gallery" id="gameGallery"></div><div class="hero-actions"><a class="button secondary" href="https://thelegokid4455.itch.io/" target="_blank" rel="noreferrer">Open full itch.io profile ↗</a></div></section>
-    <section id="visuals" class="section-shell section visuals-section"><div class="section-heading"><div><p class="kicker">03 / VISUAL LAB</p><h2>Code, <span class="accent">art</span> &amp; 3D.</h2></div><p class="section-note">A visual layer for game art, 3D work and experiments — with Instagram and Sketchfab as the living archive.</p></div><div class="visual-lab-grid"><a class="visual-feature visual-feature-wide" href="https://www.instagram.com/fri.devmode/" target="_blank" rel="noreferrer"><img src="assets/selected-works/necrospore.jpg" alt="Necrospore game artwork" loading="lazy" decoding="async"><span class="visual-feature-shade"></span><span class="visual-feature-copy"><small>INSTAGRAM / @FRI.DEVMODE</small><strong>Game art, experiments &amp; visual work ↗</strong></span></a><a class="visual-feature" href="https://sketchfab.com/thelegokid4455" target="_blank" rel="noreferrer"><img src="assets/visual-lab-models.jpg?v=20260926" alt="3D realtime asset models" loading="lazy" decoding="async"><span class="visual-feature-shade"></span><span class="visual-feature-copy"><small>SKETCHFAB / 3D</small><strong>Models &amp; realtime assets ↗</strong></span></a><div class="visual-stack"><div class="visual-stat"><span>01</span><strong>Interactive</strong><small>Unity · VR · Simulation</small></div><div class="visual-stat"><span>02</span><strong>Visual</strong><small>Concept · 3D · Game Art</small></div></div></div></section>
-    <section id="experience" class="section-shell section"><div class="section-heading"><div><p class="kicker">04 / EXPERIENCE</p><h2>From <span class="accent">games</span> to production systems.</h2></div></div><div class="timeline" id="experienceTimeline"></div></section>
-    <section id="skills" class="section-shell section split-section tech-stack-section">
-      <div class="tech-stack-photo" aria-hidden="true"></div>
-      <div class="tech-stack-overlay" aria-hidden="true"></div>
-      <div><p class="kicker">05 / TECHNICAL STACK</p><h2>Systems first.<br><span class="accent">Performance always.</span></h2><p class="body-copy">I work across gameplay code, simulation systems, VR/XR interaction, optimization, 3D pipelines and real-world hardware integration.</p></div>
-      <div class="skills-panel tech-stack-panel" id="skillsPanel"></div>
+
+    <section id="experience" class="section wrap">
+      <header class="section-head">
+        <h2>Experience</h2>
+      </header>
+      <ol class="timeline" id="experienceTimeline"></ol>
     </section>
-    <section id="about" class="section-shell section about-section"><div><p class="kicker">06 / ABOUT</p><h2>Technical thinking with a <span class="accent">builder mindset.</span></h2></div><div class="about-copy"><p data-content="about"></p><div class="facts" id="facts"></div></div></section>
-    <section id="contact" class="section-shell section contact-section"><div class="contact-card"><p class="kicker">07 / CONTACT</p><h2>Have a game, simulation or interactive system to build?</h2><p>Open to Unity development, simulation, VR/XR and interactive 3D opportunities.</p><div class="contact-links" id="contactLinks"></div></div></section>
+
+    <section id="about" class="section wrap about">
+      <div>
+        <h2>About</h2>
+        <p class="about-text" data-content="about"></p>
+        <h3 class="sub-head">Skills</h3>
+        <dl class="skills" id="skillsPanel"></dl>
+      </div>
+      <dl class="facts" id="facts"></dl>
+    </section>
+
+    <section id="contact" class="section wrap contact">
+      <h2>Get in touch</h2>
+      <p>I'm open to Unity, simulation, VR/XR and interactive 3D work, remote or on-site. Email is the fastest way to reach me.</p>
+      <a class="contact-email" id="contactEmail" href="#"></a>
+      <ul class="contact-links" id="contactLinks"></ul>
+    </section>
   </main>
-  <footer class="footer section-shell"><div class="footer-main"><span>© <span id="year"></span> <span data-content="nameShort"></span></span><span>Built with HTML, CSS & JavaScript.</span><span class="visitor-counter" aria-live="polite"><span class="counter-dot"></span> Portfolio visits <strong id="visitorCount">—</strong></span></div><p class="ai-disclosure"><strong>AI-assisted website development.</strong> This web portfolio was made with AI assistance, while all artwork, 3D assets, visuals, screenshots and creative work presented here were created by me during my work and are human-made.</p></footer>
+
+  <footer class="footer wrap">
+    <div class="footer-row">
+      <span>© <span id="year"></span> <span data-content="nameFull"></span></span>
+      <span class="visitor-counter" aria-live="polite">Visits: <strong id="visitorCount">—</strong></span>
+    </div>
+    <p class="ai-disclosure"><strong>AI-assisted website development.</strong> This web portfolio was made with AI assistance, while all artwork, 3D assets, visuals, screenshots and creative work presented here were created by me during my work and are human-made.</p>
+  </footer>
   <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
-  <script src="content.js"></script><script src="script.js"></script>
+  <script src="content.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
