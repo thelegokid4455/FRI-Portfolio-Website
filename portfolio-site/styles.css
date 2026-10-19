@@ -21,6 +21,7 @@ body {
   color: var(--ink);
   font: 16px/1.6 var(--sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; }
@@ -46,7 +47,10 @@ nav .nav-contact { color: var(--accent-ink); font-weight: 600; }
 .banner { background: #0b0d12; }
 .banner img { width: 100%; max-width: 2000px; height: auto; margin-inline: auto; }
 .hero { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 56px; align-items: end; padding: 56px 0 80px; }
-.hero-character { width: 100%; height: auto; }
+.hero-character { position: relative; margin: 0 0 14px; padding: 14px 14px 22px; border: 1.5px solid var(--ink); }
+.hero-character img { width: 100%; height: auto; }
+.hero-character figcaption { position: absolute; left: 50%; bottom: 0; translate: -50% 50%; padding: 0 10px; background: var(--paper); font: 13px var(--mono); white-space: nowrap; color: var(--ink-2); }
+.hero-character figcaption a { color: var(--accent-ink); }
 .hero-text { padding-bottom: 8px; }
 .hero-meta { font-size: 14px; color: var(--muted); }
 .hero h1 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1.02; margin: 14px 0 12px; max-width: 16em; }
@@ -160,6 +164,19 @@ nav .nav-contact { color: var(--accent-ink); font-weight: 600; }
 .back-to-top.is-visible { opacity: 1; visibility: visible; }
 .back-to-top:hover { background: var(--ink); color: var(--paper); }
 
+.art-feature { margin: 0 0 32px; }
+.art-feature img { width: 100%; height: auto; }
+.art-feature figcaption { margin-top: 12px; color: var(--ink-2); }
+.art-feature a { color: var(--accent-ink); }
+
+/* Decorative sketches */
+.has-deco { position: relative; }
+.has-deco > :not(.deco) { position: relative; }
+.deco { position: absolute; pointer-events: none; mix-blend-mode: multiply; opacity: .55; height: auto; -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent); mask-image: radial-gradient(closest-side, #000 62%, transparent); }
+.deco-robot { width: 250px; right: -20px; top: -6px; }
+.deco-armor { width: 340px; right: -30px; bottom: 10px; opacity: .6; }
+.deco-band { height: clamp(160px, 22vw, 300px); overflow: hidden; }
+.deco-band img { width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
 /* Responsive */
 @media (max-width: 1000px) {
   .games { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -177,13 +194,15 @@ nav .nav-contact { color: var(--accent-ink); font-weight: 600; }
   .job-period { padding-top: 0; }
   .about { grid-template-columns: 1fr; gap: 40px; }
   .about-art { max-width: 420px; }
+  .deco-robot { width: 180px; top: 40px; right: -10px; opacity: .35; }
+  .deco-armor { width: 200px; opacity: .4; }
 }
 @media (max-width: 640px) {
   .wrap { width: min(100% - 32px, var(--max)); }
   nav { gap: 16px; font-size: 14px; }
   nav a[href="#experience"], nav a[href="#about"] { display: none; }
   .hero { grid-template-columns: 1fr; gap: 20px; padding-top: 32px; }
-  .hero-character { width: 130px; }
+  .hero-character { width: 160px; }
   .hero h1 { font-size: clamp(32px, 9vw, 44px); }
   .hero-intro, .about-text, .contact > p { font-size: 17px; }
   .project h3 { font-size: 26px; }
