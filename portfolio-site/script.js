@@ -127,16 +127,185 @@ $('#contactLinks').innerHTML = siteContent.contact.map(link => `
   <li><a href="${esc(link.url)}" ${external}>${esc(link.label)} ↗</a></li>
 `).join('');
 
-/* Header shadow + back to top */
+/* Section pager: one section on screen at a time, switched with tabs, arrows, keys or swipes.
+   Each section still scrolls normally, and scrolling past its end moves on to the next one. */
+const panels = [...document.querySelectorAll('.panel')];
+const tabs = [...document.querySelectorAll('.tabs a')];
 const header = $('.site-header');
-const backToTop = $('#backToTop');
-const onScroll = () => {
-  header.classList.toggle('is-scrolled', window.scrollY > 8);
-  backToTop.classList.toggle('is-visible', window.scrollY > 900);
+const pager = $('#pager');
+const prevBtn = $('#pagerPrev');
+const nextBtn = $('#pagerNext');
+const edgeHint = $('#edgeHint');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let current = -1;
+let lastSwitch = 0;
+
+document.documentElement.classList.add('paged');
+pager.hidden = false;
+
+const counts = {
+  work: `${siteContent.projects.length} projects`,
+  games: `${siteContent.games.length} games`,
+  art: 'Illustration, 3D & sketches',
+  experience: `${siteContent.experience.length} roles`,
+  about: 'Skills & background',
+  contact: 'Email & links'
 };
-window.addEventListener('scroll', onScroll, {passive: true});
-onScroll();
-backToTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+$('#tour').innerHTML = `<p class="tour-label">Jump to</p><div class="tour-links">${panels.slice(1).map((panel, i) => `
+  <a class="tour-link" href="#${panel.id}"><span class="tour-num">${String(i + 1).padStart(2, '0')}</span><strong>${esc(panel.dataset.title)}</strong><small>${esc(counts[panel.id] || '')}</small></a>
+`).join('')}</div>`;
+
+$('#pagerDots').innerHTML = panels.map((panel, i) =>
+  `<button class="pager-dot" type="button" data-index="${i}" aria-label="Go to ${esc(panel.dataset.title)}"></button>`
+).join('');
+const dots = [...document.querySelectorAll('.pager-dot')];
+
+panels.forEach((panel, i) => {
+  panel.tabIndex = -1;
+  const next = panels[i + 1];
+  panel.insertAdjacentHTML('beforeend', next
+    ? `<div class="panel-end wrap"><a class="panel-next" href="#${next.id}"><small>Next</small><span>${esc(next.dataset.title)} →</span></a><p class="panel-end-hint">or keep scrolling</p></div>`
+    : `<div class="panel-end wrap"><a class="panel-next" href="#${panels[0].id}"><small>That's everything</small><span>Back to start ↺</span></a></div>`);
+});
+
+const atTop = (panel) => panel.scrollTop <= 1;
+const atBottom = (panel) => panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 2;
+
+const go = (index, {landAt = 'top', push = true, focus = false} = {}) => {
+  index = Math.max(0, Math.min(panels.length - 1, index));
+  if (index === current) return;
+  const direction = index > current ? 'next' : 'prev';
+  const panel = panels[index];
+
+  panels.forEach((p, i) => {
+    const active = i === index;
+    p.classList.toggle('is-active', active);
+    p.classList.remove('enter-next', 'enter-prev');
+    p.inert = !active;
+  });
+  if (current !== -1 && !reducedMotion) {
+    void panel.offsetWidth; // restart the entrance animation
+    panel.classList.add(`enter-${direction}`);
+  }
+  panel.scrollTop = landAt === 'bottom' ? panel.scrollHeight : 0;
+  current = index;
+  lastSwitch = Date.now();
+  hideHint();
+
+  tabs.forEach(tab => {
+    const on = tab.getAttribute('href') === `#${panel.id}`;
+    if (on) tab.setAttribute('aria-current', 'page'); else tab.removeAttribute('aria-current');
+    if (on) {
+      const nav = tab.parentElement;
+      nav.scrollTo({left: tab.offsetLeft - (nav.clientWidth - tab.offsetWidth) / 2, behavior: reducedMotion ? 'auto' : 'smooth'});
+    }
+  });
+  dots.forEach((dot, i) => dot.setAttribute('aria-current', i === index ? 'true' : 'false'));
+  const prev = panels[index - 1];
+  const next = panels[index + 1];
+  prevBtn.disabled = !prev;
+  nextBtn.disabled = !next;
+  prevBtn.querySelector('.pager-label').textContent = prev ? prev.dataset.title : '';
+  nextBtn.querySelector('.pager-label').textContent = next ? next.dataset.title : '';
+  prevBtn.setAttribute('aria-label', prev ? `Previous section: ${prev.dataset.title}` : 'Previous section');
+  nextBtn.setAttribute('aria-label', next ? `Next section: ${next.dataset.title}` : 'Next section');
+  header.classList.toggle('is-scrolled', panel.scrollTop > 8);
+
+  const hash = `#${panel.id}`;
+  if (push && location.hash !== hash) history.pushState(null, '', hash);
+  if (focus) panel.focus({preventScroll: true});
+};
+
+const step = (delta, options) => go(current + delta, options);
+const indexOf = (hash) => panels.findIndex(p => `#${p.id}` === hash);
+
+prevBtn.addEventListener('click', () => step(-1, {focus: true}));
+nextBtn.addEventListener('click', () => step(1, {focus: true}));
+dots.forEach(dot => dot.addEventListener('click', () => go(Number(dot.dataset.index), {focus: true})));
+
+// Any in-page link to a section (tabs, hero buttons, "Next" links) switches instead of jumping
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link) return;
+  const index = indexOf(link.getAttribute('href'));
+  if (index === -1) return;
+  event.preventDefault();
+  go(index, {focus: true});
+});
+
+window.addEventListener('popstate', () => {
+  const index = indexOf(location.hash);
+  go(index === -1 ? 0 : index, {push: false});
+});
+
+document.addEventListener('keydown', event => {
+  if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+  if (event.target.closest?.('input, textarea, select, [contenteditable]')) return;
+  if (event.key === 'ArrowRight') { event.preventDefault(); step(1, {focus: true}); }
+  if (event.key === 'ArrowLeft') { event.preventDefault(); step(-1, {focus: true}); }
+});
+
+/* Scrolling past the top or bottom of a section moves to the neighbouring one */
+const EDGE_PULL = 260;
+let pull = 0;
+let pullTimer;
+const hideHint = () => { pull = 0; edgeHint.classList.remove('is-visible'); };
+const showHint = (direction) => {
+  const target = panels[current + (direction > 0 ? 1 : -1)];
+  if (!target) return;
+  edgeHint.textContent = direction > 0 ? `Keep scrolling for ${target.dataset.title} ↓` : `Keep scrolling for ${target.dataset.title} ↑`;
+  edgeHint.style.setProperty('--pull', Math.min(1, Math.abs(pull) / EDGE_PULL));
+  edgeHint.classList.toggle('is-top', direction < 0);
+  edgeHint.classList.add('is-visible');
+};
+
+panels.forEach(panel => {
+  panel.addEventListener('scroll', () => {
+    if (panel === panels[current]) header.classList.toggle('is-scrolled', panel.scrollTop > 8);
+  }, {passive: true});
+
+  panel.addEventListener('wheel', event => {
+    if (panel !== panels[current] || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+    if (Date.now() - lastSwitch < 700) return; // let momentum from the last switch die down
+    const down = event.deltaY > 0;
+    if ((down && !atBottom(panel)) || (!down && !atTop(panel))) { hideHint(); return; }
+    if ((down && pull < 0) || (!down && pull > 0)) pull = 0;
+    pull += event.deltaY * (event.deltaMode === 1 ? 33 : 1);
+    clearTimeout(pullTimer);
+    pullTimer = setTimeout(hideHint, 900);
+    if (Math.abs(pull) >= EDGE_PULL) {
+      step(down ? 1 : -1, {landAt: down ? 'top' : 'bottom'});
+    } else {
+      showHint(down ? 1 : -1);
+    }
+  }, {passive: true});
+});
+
+/* Touch: swipe sideways to switch, or keep pulling past the end of a section */
+let touchStart = null;
+$('#stage').addEventListener('touchstart', event => {
+  const panel = panels[current];
+  const t = event.changedTouches[0];
+  touchStart = {x: t.clientX, y: t.clientY, top: atTop(panel), bottom: atBottom(panel), inCarousel: !!event.target.closest('.game-media')};
+}, {passive: true});
+$('#stage').addEventListener('touchend', event => {
+  if (!touchStart) return;
+  const t = event.changedTouches[0];
+  const dx = t.clientX - touchStart.x;
+  const dy = t.clientY - touchStart.y;
+  const panel = panels[current];
+  if (!touchStart.inCarousel && Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    step(dx < 0 ? 1 : -1);
+  } else if (touchStart.bottom && atBottom(panel) && dy < -90) {
+    step(1);
+  } else if (touchStart.top && atTop(panel) && dy > 90 && current > 0) {
+    step(-1, {landAt: 'bottom'});
+  }
+  touchStart = null;
+}, {passive: true});
+
+const startIndex = indexOf(location.hash);
+go(startIndex === -1 ? 0 : startIndex, {push: false});
 
 /* Visit counter (third-party; fails quietly) */
 const visitorCount = $('#visitorCount');

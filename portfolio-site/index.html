@@ -67,125 +67,147 @@
   <a class="skip-link" href="#work">Skip to work</a>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#top" data-content="nameShort">Farhan Irsyad</a>
-      <nav aria-label="Sections">
+      <a class="brand" href="#home" data-content="nameShort">Farhan Irsyad</a>
+      <nav class="tabs" aria-label="Sections">
+        <a href="#home">Home</a>
         <a href="#work">Work</a>
         <a href="#games">Games</a>
+        <a href="#art">Art &amp; 3D</a>
         <a href="#experience">Experience</a>
         <a href="#about">About</a>
-        <a href="#contact" class="nav-contact">Contact</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main id="top">
-    <div class="banner">
-      <picture>
-        <source srcset="assets/brand/banner.webp" type="image/webp">
-        <img src="assets/brand/banner.jpg" alt="Farhan Ramadhani Irsyad, Unity / VR Simulation Developer. Game development, VR/XR, simulation, tools and prototypes. Tech stack: Unity, VR/XR, Blender, Substance 3D, Photoshop, Arduino, Git and GitHub." width="2000" height="667" fetchpriority="high">
-      </picture>
-    </div>
-    <section class="hero wrap">
-      <figure class="hero-character">
-        <img src="assets/brand/character.png" alt="Illustrated portrait of Farhan" width="573" height="745">
-        <figcaption>Art by <a href="https://www.instagram.com/hlw.arts/" target="_blank" rel="noopener">@hlw.arts</a></figcaption>
-      </figure>
-      <div class="hero-text">
-        <p class="hero-meta"><span data-content="location"></span> · <span data-content="availability"></span></p>
-        <h1>Hi, I'm <span data-content="nameFull">Farhan Ramadhani Irsyad</span>.</h1>
-        <p class="hero-role" data-content="headline">Unity / VR Simulation Developer</p>
-        <p class="hero-intro" data-content="intro"></p>
-        <div class="actions">
-          <a class="btn btn-solid" href="#work">See my work</a>
-          <a class="btn" id="emailButton" href="#contact">Email me</a>
-          <a class="btn btn-plain" id="cvButton" href="#" target="_blank" rel="noopener">Portfolio PDF ↗</a>
+  <main id="stage">
+    <section class="panel" id="home" data-title="Home">
+      <div class="banner">
+        <picture>
+          <source srcset="assets/brand/banner.webp" type="image/webp">
+          <img src="assets/brand/banner.jpg" alt="Farhan Ramadhani Irsyad, Unity / VR Simulation Developer. Game development, VR/XR, simulation, tools and prototypes. Tech stack: Unity, VR/XR, Blender, Substance 3D, Photoshop, Arduino, Git and GitHub." width="2000" height="667" fetchpriority="high">
+        </picture>
+      </div>
+      <div class="hero wrap">
+        <figure class="hero-character">
+          <img src="assets/brand/character.png" alt="Illustrated portrait of Farhan" width="573" height="745">
+          <figcaption>Art by <a href="https://www.instagram.com/hlw.arts/" target="_blank" rel="noopener">@hlw.arts</a></figcaption>
+        </figure>
+        <div class="hero-text">
+          <p class="hero-meta"><span data-content="location"></span> · <span data-content="availability"></span></p>
+          <h1>Hi, I'm <span data-content="nameFull">Farhan Ramadhani Irsyad</span>.</h1>
+          <p class="hero-role" data-content="headline">Unity / VR Simulation Developer</p>
+          <p class="hero-intro" data-content="intro"></p>
+          <div class="actions">
+            <a class="btn btn-solid" href="#work">See my work</a>
+            <a class="btn" id="emailButton" href="#contact">Email me</a>
+            <a class="btn btn-plain" id="cvButton" href="#" target="_blank" rel="noopener">Portfolio PDF ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="tour wrap" id="tour"></div>
+    </section>
+
+    <section class="panel" id="work" data-title="Work">
+      <div class="section wrap">
+        <header class="section-head">
+          <h2>Selected work</h2>
+          <p>Training simulators, VR and gameplay work from studio and client projects.</p>
+        </header>
+        <div class="projects" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="games" data-title="Games">
+      <div class="section wrap">
+        <header class="section-head">
+          <h2>Games &amp; prototypes</h2>
+          <p>Jam games, side projects and team releases. Use the arrows on a thumbnail to flip through screenshots; the title opens the itch.io page.</p>
+        </header>
+        <div class="games" id="gameGallery"></div>
+        <p class="more-link"><a href="https://thelegokid4455.itch.io/" target="_blank" rel="noopener">All games on itch.io ↗</a></p>
+      </div>
+    </section>
+
+    <section class="panel" id="art" data-title="Art & 3D">
+      <div class="section wrap">
+        <header class="section-head">
+          <h2>Art &amp; 3D</h2>
+          <p>Models, game art and experiments live on Sketchfab and Instagram.</p>
+        </header>
+        <figure class="art-feature">
+          <img src="assets/art/bounty-hunt-collab.jpg" alt="Illustration of a green-haired girl in headphones holding cables, with a masked gunman in white armor behind her under a bounty poster" loading="lazy" decoding="async" width="2000" height="1051">
+          <figcaption>Illustration by <a href="https://www.instagram.com/hlw.arts/" target="_blank" rel="noopener">@hlw.arts</a> in collaboration with Farhan.</figcaption>
+        </figure>
+        <div class="art-links">
+          <a class="art-card" href="https://sketchfab.com/thelegokid4455" target="_blank" rel="noopener">
+            <img src="assets/visual-lab-models.jpg" alt="Realtime 3D asset models" loading="lazy" decoding="async" width="1919" height="1072">
+            <span class="art-caption"><strong>Sketchfab</strong> 3D models and realtime assets ↗</span>
+          </a>
+          <a class="art-card" href="https://www.instagram.com/fri.devmode/" target="_blank" rel="noopener">
+            <img src="assets/games/necrospore/2.jpg" alt="Necrospore screenshot" loading="lazy" decoding="async">
+            <span class="art-caption"><strong>Instagram</strong> @fri.devmode: game art and work in progress ↗</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section wrap">
-      <header class="section-head">
-        <h2>Selected work</h2>
-        <p>Training simulators, VR and gameplay work from studio and client projects.</p>
-      </header>
-      <div class="projects" id="projectGrid"></div>
-    </section>
-
-    <section id="games" class="section wrap">
-      <header class="section-head">
-        <h2>Games &amp; prototypes</h2>
-        <p>Jam games, side projects and team releases. Use the arrows to flip through screenshots; the title opens the itch.io page.</p>
-      </header>
-      <div class="games" id="gameGallery"></div>
-      <p class="more-link"><a href="https://thelegokid4455.itch.io/" target="_blank" rel="noopener">All games on itch.io ↗</a></p>
-    </section>
-
-    <section id="art" class="section wrap">
-      <header class="section-head">
-        <h2>Art &amp; 3D</h2>
-        <p>Models, game art and experiments live on Sketchfab and Instagram.</p>
-      </header>
-      <figure class="art-feature">
-        <img src="assets/art/bounty-hunt-collab.jpg" alt="Illustration of a green-haired girl in headphones holding cables, with a masked gunman in white armor behind her under a bounty poster" loading="lazy" decoding="async" width="2000" height="1051">
-        <figcaption>Illustration by <a href="https://www.instagram.com/hlw.arts/" target="_blank" rel="noopener">@hlw.arts</a> in collaboration with Farhan.</figcaption>
-      </figure>
-      <div class="art-links">
-        <a class="art-card" href="https://sketchfab.com/thelegokid4455" target="_blank" rel="noopener">
-          <img src="assets/visual-lab-models.jpg" alt="Realtime 3D asset models" loading="lazy" decoding="async" width="1919" height="1072">
-          <span class="art-caption"><strong>Sketchfab</strong> 3D models and realtime assets ↗</span>
-        </a>
-        <a class="art-card" href="https://www.instagram.com/fri.devmode/" target="_blank" rel="noopener">
-          <img src="assets/games/necrospore/2.jpg" alt="Necrospore screenshot" loading="lazy" decoding="async">
-          <span class="art-caption"><strong>Instagram</strong> @fri.devmode: game art and work in progress ↗</span>
-        </a>
+    <section class="panel" id="experience" data-title="Experience">
+      <div class="section wrap has-deco">
+        <img class="deco deco-robot" src="assets/art/robot-sketch.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="1200">
+        <header class="section-head">
+          <h2>Experience</h2>
+        </header>
+        <ol class="timeline" id="experienceTimeline"></ol>
       </div>
     </section>
 
-    <section id="experience" class="section wrap has-deco">
-      <img class="deco deco-robot" src="assets/art/robot-sketch.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="1200">
-      <header class="section-head">
-        <h2>Experience</h2>
-      </header>
-      <ol class="timeline" id="experienceTimeline"></ol>
-    </section>
-
-    <section id="about" class="section wrap about">
-      <div>
-        <h2>About</h2>
-        <p class="about-text" data-content="about"></p>
-        <h3 class="sub-head">Skills</h3>
-        <dl class="skills" id="skillsPanel"></dl>
-      </div>
-      <div class="about-side">
-        <figure class="about-art">
-          <img src="assets/brand/roots-run-deep-art.jpg" alt="Roots Run Deep character art: a wooden figure in a red cape beside a twisting vine" loading="lazy" decoding="async" width="1100" height="1006">
-          <figcaption>Character art from <a href="https://thelegokid4455.itch.io/roots-run-deep" target="_blank" rel="noopener">Roots Run Deep</a>, by DRFT Team.</figcaption>
-        </figure>
-        <dl class="facts" id="facts"></dl>
+    <section class="panel" id="about" data-title="About">
+      <div class="section wrap about">
+        <div>
+          <h2>About</h2>
+          <p class="about-text" data-content="about"></p>
+          <h3 class="sub-head">Skills</h3>
+          <dl class="skills" id="skillsPanel"></dl>
+        </div>
+        <div class="about-side">
+          <figure class="about-art">
+            <img src="assets/brand/roots-run-deep-art.jpg" alt="Roots Run Deep character art: a wooden figure in a red cape beside a twisting vine" loading="lazy" decoding="async" width="1100" height="1006">
+            <figcaption>Character art from <a href="https://thelegokid4455.itch.io/roots-run-deep" target="_blank" rel="noopener">Roots Run Deep</a>, by DRFT Team.</figcaption>
+          </figure>
+          <dl class="facts" id="facts"></dl>
+        </div>
       </div>
     </section>
 
-    <div class="deco-band" aria-hidden="true">
-      <img src="assets/art/train-painting.webp" alt="" loading="lazy" decoding="async" width="1600" height="900">
-    </div>
-
-    <section id="contact" class="section wrap contact has-deco">
-      <img class="deco deco-armor" src="assets/art/gold-armor-sketch.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="1200">
-      <h2>Get in touch</h2>
-      <p>I'm open to Unity, simulation, VR/XR and interactive 3D work, remote or on-site. Email is the fastest way to reach me.</p>
-      <a class="contact-email" id="contactEmail" href="#"></a>
-      <ul class="contact-links" id="contactLinks"></ul>
+    <section class="panel" id="contact" data-title="Contact">
+      <div class="deco-band" aria-hidden="true">
+        <img src="assets/art/train-painting.webp" alt="" loading="lazy" decoding="async" width="1600" height="900">
+      </div>
+      <div class="section wrap contact has-deco">
+        <img class="deco deco-armor" src="assets/art/gold-armor-sketch.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="1200">
+        <h2>Get in touch</h2>
+        <p>I'm open to Unity, simulation, VR/XR and interactive 3D work, remote or on-site. Email is the fastest way to reach me.</p>
+        <a class="contact-email" id="contactEmail" href="#"></a>
+        <ul class="contact-links" id="contactLinks"></ul>
+      </div>
+      <footer class="footer wrap">
+        <div class="footer-row">
+          <span>© <span id="year"></span> <span data-content="nameFull"></span></span>
+          <span class="visitor-counter" aria-live="polite">Visits: <strong id="visitorCount">—</strong></span>
+        </div>
+        <p class="ai-disclosure"><strong>AI-assisted website development.</strong> This web portfolio was made with AI assistance, while all artwork, 3D assets, visuals, screenshots and creative work presented here were created by me during my work and are human-made.</p>
+      </footer>
     </section>
   </main>
 
-  <footer class="footer wrap">
-    <div class="footer-row">
-      <span>© <span id="year"></span> <span data-content="nameFull"></span></span>
-      <span class="visitor-counter" aria-live="polite">Visits: <strong id="visitorCount">—</strong></span>
-    </div>
-    <p class="ai-disclosure"><strong>AI-assisted website development.</strong> This web portfolio was made with AI assistance, while all artwork, 3D assets, visuals, screenshots and creative work presented here were created by me during my work and are human-made.</p>
-  </footer>
-  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">↑</button>
+  <nav class="pager" id="pager" aria-label="Section navigation" hidden>
+    <button class="pager-btn pager-prev" id="pagerPrev" type="button"><span class="pager-arrow" aria-hidden="true">←</span><span class="pager-label"></span></button>
+    <div class="pager-dots" id="pagerDots"></div>
+    <button class="pager-btn pager-next" id="pagerNext" type="button"><span class="pager-label"></span><span class="pager-arrow" aria-hidden="true">→</span></button>
+  </nav>
+  <p class="edge-hint" id="edgeHint" aria-hidden="true"></p>
+
   <script src="content.js"></script>
   <script src="script.js"></script>
 </body>
