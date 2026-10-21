@@ -100,7 +100,10 @@ p { margin: 0; }
 .game-title { font-size: 18px; line-height: 1.2; margin-top: 12px; }
 .game-title a { text-decoration: none; }
 .game-title a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.game-links { font-size: 14px; color: var(--muted); margin-top: 3px; }
+.game-meta { margin-top: 4px; font: 12px var(--mono); text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
+.game-tagline { margin-top: 6px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+.game-credits { margin-top: 6px; font-size: 13px; color: var(--muted); }
+.game-links { font-size: 14px; color: var(--muted); margin-top: 8px; }
 .game-links a { color: var(--accent-ink); }
 .more-link { margin-top: 40px; font-weight: 600; }
 .more-link a { color: var(--accent-ink); text-underline-offset: 4px; }

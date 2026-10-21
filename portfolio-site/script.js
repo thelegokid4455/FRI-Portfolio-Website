@@ -55,6 +55,9 @@ $('#gameGallery').innerHTML = siteContent.games.map(game => {
       ${controls}
     </div>
     <h3 class="game-title"><a href="${esc(game.url)}" ${external}>${esc(game.title)}</a></h3>
+    ${game.genre || game.status ? `<p class="game-meta">${[game.genre, game.status].filter(Boolean).map(esc).join(' · ')}</p>` : ''}
+    ${game.tagline ? `<p class="game-tagline">${esc(game.tagline)}</p>` : ''}
+    ${game.with && game.with.length ? `<p class="game-credits">With ${game.with.map(esc).join(', ')}</p>` : ''}
     <p class="game-links"><a href="${esc(game.url)}" ${external}>itch.io</a>${game.video ? ` · <a href="${esc(game.video)}" ${external}>Trailer</a>` : ''}</p>
   </article>`;
 }).join('');

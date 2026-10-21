@@ -53,29 +53,31 @@ const siteContent = {
       tags: ["Unity", "C#", "Gameplay", "Multiplayer", "Mobile"]
     }
   ],
-  // Game screenshots live in assets/games/<slug>/1.jpg, 2.jpg ... `shots` is how many there are.
+  // Mirrors the itch.io profile (thelegokid4455.itch.io), in the same order.
+  // Screenshots live in assets/games/<slug>/1.jpg, 2.jpg ... `shots` is how many there are.
+  // `with` lists the co-authors credited on the itch.io page.
   games: [
-    {title: "Dagon Shows No Mercy", slug: "dagon-shows-no-mercy", url: "https://ray-ark.itch.io/dagon-shows-no-mercy", shots: 5},
-    {title: "Necrospore", slug: "necrospore", url: "https://ray-ark.itch.io/necrospore", shots: 5, video: "https://www.youtube.com/watch?v=IYZOilgmV9o"},
-    {title: "Nexus Bloom", slug: "nexus-bloom", url: "https://ray-ark.itch.io/nexus-bloom", shots: 4, video: "https://www.youtube.com/watch?v=n9lg_wuROzc"},
-    {title: "Shift-7", slug: "shift-7", url: "https://ray-ark.itch.io/shift-7", shots: 5},
-    {title: "Banyu", slug: "banyu", url: "https://ray-ark.itch.io/banyu", shots: 4},
-    {title: "Salvia's Scroll Atelier", slug: "salvias-scroll-atelier", url: "https://thelegokid4455.itch.io/salvias-scroll-atelier", shots: 5},
-    {title: "Surup", slug: "surup", url: "https://thelegokid4455.itch.io/surup", shots: 5, video: "https://www.youtube.com/watch?v=1TNZnQMSGOc"},
-    {title: "Mangalam", slug: "mangalam", url: "https://thelegokid4455.itch.io/mangalam", shots: 5, video: "https://www.youtube.com/watch?v=PxzA05rdWO8"},
-    {title: "Roots Run Deep", slug: "roots-run-deep", url: "https://thelegokid4455.itch.io/roots-run-deep", shots: 5},
-    {title: "Petaroenk", slug: "petaroenk", url: "https://thelegokid4455.itch.io/petaroenk", shots: 4},
-    {title: "Samurai Suit X", slug: "samurai-suit-x", url: "https://thelegokid4455.itch.io/samurai-suit-x", shots: 4, video: "https://www.youtube.com/watch?v=H0mcQdNvUWk"},
-    {title: "Food Melody: Indonesian Edition", slug: "food-melody-indonesian-edition", url: "https://thelegokid4455.itch.io/food-melody-indonesian-edition", shots: 5, video: "https://www.youtube.com/watch?v=R0_5fiVEPZU"},
-    {title: "Office Backrooms", slug: "office-backrooms", url: "https://thelegokid4455.itch.io/office-backrooms", shots: 5},
-    {title: "Lontara Warrior", slug: "lontara-warrior", url: "https://thelegokid4455.itch.io/lontara-warrior", shots: 1},
-    {title: "Lucid", slug: "lucid", url: "https://thelegokid4455.itch.io/lucid", shots: 4},
-    {title: "Mister Bakso", slug: "mister-bakso", url: "https://thelegokid4455.itch.io/mister-bakso", shots: 1},
-    {title: "Minitank Shooter", slug: "minitank-shooter", url: "https://thelegokid4455.itch.io/minitank-shooter", shots: 2},
-    {title: "Warplanes (demo)", slug: "demo-warplanes", url: "https://thelegokid4455.itch.io/demo-warplanes", shots: 1},
-    {title: "Hitam", slug: "hitam-game", url: "https://thelegokid4455.itch.io/hitam-game", shots: 3},
-    {title: "Upscroll Bullet Hell Starter Pack", slug: "upscroll-bullet-hell-starter-pack", url: "https://thelegokid4455.itch.io/upscroll-bullet-hell-starter-pack", shots: 4},
-    {title: "Frida", slug: "frida", url: "https://thelegokid4455.itch.io/frida", shots: 4}
+    {title: "Dagon Shows No Mercy", slug: "dagon-shows-no-mercy", url: "https://ray-ark.itch.io/dagon-shows-no-mercy", shots: 5, tagline: "An RTS for a new era, set in a Lovecraft-inspired world.", genre: "Strategy", status: "Released", with: ["ray_ark", "Ray557"]},
+    {title: "Shift 7: Gamejam Edition", slug: "shift-7", url: "https://ray-ark.itch.io/shift-7", shots: 5, tagline: "Stop the train before it reaches its final stop … Hell.", genre: "Adventure", status: "Prototype", with: ["ray_ark", "mhakasyah", "ammmmp", "Racky"]},
+    {title: "Banyu: Reclaiming Hope", slug: "banyu", url: "https://ray-ark.itch.io/banyu", shots: 4, tagline: "A cozy sailing journey to reclaim, restore and reshape the future.", genre: "Adventure", status: "Released", with: ["ray_ark", "waimus"]},
+    {title: "Nexus Bloom", slug: "nexus-bloom", url: "https://ray-ark.itch.io/nexus-bloom", shots: 4, tagline: "Seed the Bloom, fight the Void.", genre: "Action, Shooter", status: "Released", with: ["ray_ark"], video: "https://www.youtube.com/watch?v=n9lg_wuROzc"},
+    {title: "Necrospore", slug: "necrospore", url: "https://ray-ark.itch.io/necrospore", shots: 5, genre: "Strategy, Action", status: "Released", with: ["ray_ark", "MintJelly", "munou_"], video: "https://www.youtube.com/watch?v=IYZOilgmV9o"},
+    {title: "Salvia's Scroll Atelier", slug: "salvias-scroll-atelier", url: "https://thelegokid4455.itch.io/salvias-scroll-atelier", shots: 5, tagline: "Learn with Salvia to channel your magic into a scroll and sell it!", genre: "Simulation", status: "In development", with: ["Rexfortis", "Madan", "MegaBite Interactive"]},
+    {title: "Lontara Warrior", slug: "lontara-warrior", url: "https://thelegokid4455.itch.io/lontara-warrior", shots: 1, tagline: "Casual mobile game about the Lontara Makassar script.", genre: "Educational, Fighting", status: "Released"},
+    {title: "Roots Run Deep", slug: "roots-run-deep", url: "https://thelegokid4455.itch.io/roots-run-deep", shots: 5, tagline: "Made for Global Game Jam 2023.", genre: "Platformer", status: "Released", with: ["dwy", "munou_"]},
+    {title: "Petaroenk: Short Fighting Game", slug: "petaroenk", url: "https://thelegokid4455.itch.io/petaroenk", shots: 4, tagline: "A short two-player fighting game.", genre: "Fighting", status: "Released"},
+    {title: "Mangalam", slug: "mangalam", url: "https://thelegokid4455.itch.io/mangalam", shots: 5, tagline: "Floating-island survival simulation.", genre: "Survival, Simulation", status: "Released", with: ["BsXWa369"], video: "https://www.youtube.com/watch?v=PxzA05rdWO8"},
+    {title: "LUCID", slug: "lucid", url: "https://thelegokid4455.itch.io/lucid", shots: 4, tagline: "Made for Binus Game Development 2022.", genre: "Platformer", status: "Released", with: ["Eunoiala", "eve130", "dwy", "iql.dnr"]},
+    {title: "Mister Bakso", slug: "mister-bakso", url: "https://thelegokid4455.itch.io/mister-bakso", shots: 1, tagline: "Indonesian bakso vendor simulator.", genre: "Simulation", status: "In development"},
+    {title: "Food Melody: \"Indonesian Edition\"", slug: "food-melody-indonesian-edition", url: "https://thelegokid4455.itch.io/food-melody-indonesian-edition", shots: 5, tagline: "A rhythm game about Indonesian food.", genre: "Rhythm", status: "Released", with: ["Rexfortis", "zipoxx02"], video: "https://www.youtube.com/watch?v=R0_5fiVEPZU"},
+    {title: "Upscroll Bullet Hell Starter Pack", slug: "upscroll-bullet-hell-starter-pack", url: "https://thelegokid4455.itch.io/upscroll-bullet-hell-starter-pack", shots: 4, tagline: "A starter pack for upscrolling 2D shooters.", genre: "Shooter", status: "Released"},
+    {title: "SURUP! by CUPIL", slug: "surup", url: "https://thelegokid4455.itch.io/surup", shots: 5, tagline: "Made for Indigo Game Startup Incubation 2021.", genre: "Platformer, Visual Novel", status: "Released", with: ["zipoxx02", "BsXWa369", "DeStreak"], video: "https://www.youtube.com/watch?v=1TNZnQMSGOc"},
+    {title: "Samurai Suit X", slug: "samurai-suit-x", url: "https://thelegokid4455.itch.io/samurai-suit-x", shots: 4, tagline: "Hack-and-slash action adventure.", genre: "Action", status: "In development", video: "https://www.youtube.com/watch?v=H0mcQdNvUWk"},
+    {title: "HITAM", slug: "hitam-game", url: "https://thelegokid4455.itch.io/hitam-game", shots: 3, tagline: "A short top-down audio-visual horror game.", genre: "Puzzle", status: "Released"},
+    {title: "Minitank Shooter", slug: "minitank-shooter", url: "https://thelegokid4455.itch.io/minitank-shooter", shots: 2, tagline: "Mini roguelike top-down tank shooter.", genre: "Shooter, Action", status: "In development", video: "https://www.youtube.com/watch?v=PF6yH0qjXQY"},
+    {title: "Office Backrooms", slug: "office-backrooms", url: "https://thelegokid4455.itch.io/office-backrooms", shots: 5, tagline: "FRI's office backroom.", status: "Released"},
+    {title: "Demo Warplanes", slug: "demo-warplanes", url: "https://thelegokid4455.itch.io/demo-warplanes", shots: 1, genre: "Shooter", status: "In development"},
+    {title: "FRIDA", slug: "frida", url: "https://thelegokid4455.itch.io/frida", shots: 4, tagline: "A text-based console RPG.", genre: "Adventure, Role Playing", status: "Released"}
   ],
   experience: [
     {period:"2026 — Present", role:"Director / Founder", company:"Ave Ludum Studio · Makassar", description:"Lead game-development projects and advise clients and developers on technical architecture, production workflows and project execution.", visual:"assets/experience/ave-ludum-logo.svg", visualAlt:"Ave Ludum Studio logo"},
