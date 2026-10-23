@@ -42,7 +42,7 @@ const shotSrc = (game, n) => `assets/games/${game.slug}/${n}.jpg`;
 $('#gameGallery').innerHTML = siteContent.games.map(game => {
   const count = Math.max(1, game.shots || 1);
   const shots = Array.from({length: count}, (_, i) => i === 0
-    ? `<img class="shot is-active" src="${esc(shotSrc(game, 1))}" alt="${esc(game.title)} screenshot 1" loading="lazy" decoding="async">`
+    ? `<img class="shot is-active" src="${esc(shotSrc(game, 1))}" alt="${esc(game.title)} screenshot 1" ${game.focus ? ` style="object-position: ${esc(game.focus)}"` : ''} loading="lazy" decoding="async">`
     : `<img class="shot" data-src="${esc(shotSrc(game, i + 1))}" alt="${esc(game.title)} screenshot ${i + 1}" decoding="async">`
   ).join('');
   const controls = count > 1 ? `
