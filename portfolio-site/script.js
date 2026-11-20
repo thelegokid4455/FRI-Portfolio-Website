@@ -80,7 +80,7 @@ $('#projectGrid').innerHTML = siteContent.projects.map(project => {
   return `
   <article class="project">
     <figure class="project-image">
-      <a href="${esc(caseUrl)}" tabindex="-1" aria-hidden="true"><img src="${esc(project.image)}" alt="${esc(project.imageAlt || project.title)}" loading="lazy" decoding="async"></a>
+      <a href="${esc(caseUrl)}" tabindex="-1" aria-hidden="true"><img src="${esc(project.image)}" alt="${esc(project.imageAlt || project.title)}"${project.imageFocus ? ` style="object-position: ${esc(project.imageFocus)}"` : ''} loading="lazy" decoding="async"></a>
       ${project.imageCaption ? `<figcaption>${esc(project.imageCaption)}</figcaption>` : ''}
     </figure>
     <div class="project-body">

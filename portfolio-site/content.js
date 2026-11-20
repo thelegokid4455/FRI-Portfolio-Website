@@ -281,8 +281,9 @@ const siteContent = {
       kind: "Personal & client projects",
       credit: "Octaverse Studio, Dhelangan Studio and my own projects",
       role: "Junior Game Programmer at Octaverse Studio; Game Programmer at Dhelangan Studio",
-      image: "assets/games/necrospore/1.webp",
-      imageAlt: "Necrospore key art",
+      image: "assets/work/catch-the-doge/title-shiba.webp",
+      imageFocus: "center 42%",
+      imageAlt: "Catch The Doge title screen with a Shiba Inu standing in a park",
       description: "Gameplay systems across mobile and PC: Metaverse FPS, a multiplayer shooter; a strategic ship-battle game; and Catch The Doge, a Dogecoin-inspired endless runner. Plus top-down shooters and prototypes of my own.",
       tags: ["Unity", "C#", "Gameplay", "Multiplayer", "Mobile"],
       caseStudy: {
@@ -291,7 +292,11 @@ const siteContent = {
         contribution: "At Octaverse Studio (April to September 2022) I contributed to mobile and PC projects, including Metaverse FPS, the ship-battle game and Catch The Doge. At Dhelangan Studio (October 2021 to October 2022) I built gameplay systems, supported commissioned and in-house projects, and contributed to 3D asset production."
       },
       media: [
-        {image: "assets/games/necrospore/1.webp", caption: "Necrospore key art.", alt: "Necrospore key art"}
+        {image: "assets/work/catch-the-doge/title-shiba.webp", caption: "Catch The Doge: the title screen.", alt: "Catch The Doge title screen with a Shiba Inu standing in a park, and Tap to Play"},
+        {image: "assets/work/catch-the-doge/title-pup.webp", caption: "Catch The Doge: the arrows on the title screen switch between dogs.", alt: "Catch The Doge title screen showing a smaller Shiba puppy between left and right arrows"},
+        {image: "assets/work/catch-the-doge/countdown.webp", caption: "Catch The Doge: a countdown before the run, with coins on the track.", alt: "A countdown number 2 over a sunny park path with a row of coins"},
+        {image: "assets/work/catch-the-doge/cone.webp", caption: "Catch The Doge: running toward a traffic cone.", alt: "The Shiba runs along a park path toward a traffic cone, score 5"},
+        {image: "assets/work/catch-the-doge/barrier.webp", caption: "Catch The Doge: a wooden barrier ahead, with coins in the next lane.", alt: "The Shiba runs toward a wooden barrier with coins to its right, score 15"}
       ],
       links: [{label: "See all 21 games", url: "index.html#games"}]
     }

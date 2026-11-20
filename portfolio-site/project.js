@@ -160,7 +160,7 @@ if (index === -1) {
 
   const others = projects.filter(o => o.slug !== p.slug).map(o => `
     <a class="more-card" href="project.html?p=${esc(o.slug)}">
-      <img src="${esc(o.image)}" alt="" loading="lazy" decoding="async">
+      <img src="${esc(o.image)}" alt=""${o.imageFocus ? ` style="object-position: ${esc(o.imageFocus)}"` : ''} loading="lazy" decoding="async">
       <strong>${esc(o.title)}</strong>
       <small>${esc(o.category)}</small>
     </a>`).join('');
