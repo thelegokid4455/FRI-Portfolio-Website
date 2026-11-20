@@ -7,9 +7,9 @@ const siteContent = {
   location: "Makassar, Indonesia",
   availability: "Open to remote work and relocation",
   intro: "I write Unity/C# for training simulators, VR and games. Most of my professional work has been government and enterprise training software for PC, VR and Android: heavy-vehicle simulators with physical controls, a ~100 km driving environment of Jakarta, and medical VR.",
-  about: "I build interactive systems that sit between games, simulation and real-world training. My work combines gameplay programming, vehicle and physics systems, VR/XR interaction, performance optimization, 3D pipelines and hardware integration. I enjoy turning complex requirements into modular, usable software and working closely with artists, domain experts and non-technical stakeholders.",
+  about: "I've been writing Unity/C# professionally since 2021. I started on gameplay and medical VR at Dhelangan Studio and Octaverse Studio, then spent a year at PT. Maxxima Innovative building heavy-vehicle and driving simulators for government clients, including Arduino-connected controls and a ~100 km map of Jakarta. I now manage information systems and technology at Universitas Negeri Makassar and lead game projects at Ave Ludum Studio. I work closely with artists, domain experts and clients who aren't technical.",
   // Hero button. To link your CV instead, add it as assets/FRI-Resume.pdf and set url to "assets/FRI-Resume.pdf".
-  cv: {label: "Portfolio PDF", url: "https://shorturl.at/ZeDXY"},
+  cv: {label: "Portfolio (Google Doc)", url: "https://docs.google.com/document/d/12sPx-OYtfmaX9mNVSZ-YitUQzO_cBcccfpRe9RqhPxk/edit"},
   email: "farhan.r.irsyad@gmail.com",
   projects: [
     {
@@ -85,13 +85,13 @@ const siteContent = {
     {period:"2025 — Present", role:"Manager, Information Systems & Technology", company:"Universitas Negeri Makassar · Makassar", description:"Developed 3D simulations and interactive visualizations for institutional projects, and designed a modular CSL/OSCE examination timer system with configurable station rotation, timing and duration.", visual:"assets/experience/unm-phinisi.jpg", visualAlt:"Universitas Negeri Makassar Phinisi building"},
     {period:"Jul 2023 — Jul 2024", role:"Software Programmer", company:"PT. Maxxima Innovative · Surabaya", description:"Developed Unity/C# training simulations for government clients across PC and VR, including heavy-vehicle simulation, a ~100 km real-world driving simulator, hardware integration and performance optimization.", visual:"assets/experience/heavy-vehicle-real.jpg", visualAlt:"Heavy vehicle simulator rig"},
     {period:"Apr 2022 — Sep 2022", role:"Junior Game Programmer", company:"Octaverse Studio · Yogyakarta", description:"Contributed to mobile and PC projects including multiplayer FPS and strategic ship-battle games, plus an endless-runner mobile title.", visual:"assets/experience/octaverse-real.jpg", visualAlt:"Octaverse game artwork"},
-    {period:"Oct 2021 — Oct 2022", role:"Game Programmer", company:"Dhelangan Studio · Yogyakarta", description:"Built medical VR and gameplay systems in Unity/C#, supported commissioned and in-house projects, and contributed to 3D asset production.", visual:"https://www.dhelangan.com/logo.png", visualAlt:"Dhelangan Studio logo"}
+    {period:"Oct 2021 — Oct 2022", role:"Game Programmer", company:"Dhelangan Studio · Yogyakarta", description:"Built medical VR and gameplay systems in Unity/C#, supported commissioned and in-house projects, and contributed to 3D asset production.", visual:"assets/experience/dhelangan-logo.png", visualAlt:"Dhelangan Studio logo"}
   ],
   skills: [
     ["Unity & programming", "Unity, C#, gameplay programming, object-oriented design, simulation systems, prototyping, Git"],
     ["VR & simulation", "VR/XR development, training simulators, vehicle systems, physics, large-scale environments, real-world mapping"],
     ["Optimization & hardware", "Performance optimization, Unity Profiler, 3D optimization, Arduino/hardware integration, PC/VR/Android builds"],
-    ["Also", "Blender, Photoshop, 3D modeling, programmer–artist workflows, technical leadership, client advisory"]
+    ["Art & tools", "Blender, Photoshop, 3D modeling, programmer–artist workflows, technical leadership, client advisory"]
   ],
   facts: [
     ["Based in", "Makassar, Indonesia"],
