@@ -11,14 +11,14 @@ const siteContent = {
   hero: {
     title: "I build training simulators, VR apps and games in Unity.",
     audience: "For studios hiring a Unity programmer, and for teams that need a simulator, VR experience or game built.",
-    intro: "I've built heavy-vehicle and driving simulators for a government institution, VR training for clients, and games from jams to team releases. I'm the director and main programmer at Ave Ludum Studio in Makassar.",
+    intro: "I've built heavy-vehicle and driving simulators for a government institution, VR training for a private client, and games from jams to team releases. I'm the director and main programmer at Ave Ludum Studio in Makassar.",
     primary: {label: "Work with me", href: "#contact"},
     secondary: {label: "See my work", href: "#work"},
     // Recent work: shown as links under the buttons
     recent: [
       {label: "AVELS Heavy Vehicle Simulator", url: "project.html?p=avels-heavy-vehicle-simulator"},
       {label: "The Legend of Toakala", url: "project.html?p=the-legend-of-toakala"},
-      {label: "Supermarket VR", url: "project.html?p=supermarket-vr"}
+      {label: "Pilah Bumi", url: "project.html?p=pilah-bumi"}
     ],
     chips: ["Unity", "C#", "VR / XR", "Multiplayer (Netcode)", "Vehicle physics", "Arduino controls", "Android", "Blender"],
     // Looping, muted clip beside the intro. It only plays when the visitor allows motion.
@@ -51,7 +51,7 @@ const siteContent = {
       title: "VR training & experiences",
       get: "A VR app that walks people through a task step by step, built for the headset you use.",
       for: "Teams that train staff, and anyone who wants a space or process people can step into.",
-      example: "Supermarket VR, Ave Ludum Studio"
+      example: "Medical VR Simulation, Dhelangan Studio"
     },
     {
       title: "Games & gameplay programming",
@@ -204,8 +204,8 @@ const siteContent = {
       category: "VR training simulator",
       kind: "Client project",
       status: "Delivered",
-      credit: "Ave Ludum Studio. I direct the studio and lead programming.",
-      role: "Director and main programmer at Ave Ludum. Studio's role: simulation design, 3D environment, interaction.",
+      credit: "Ave Ludum Studio. I managed the project; a studio programmer built it.",
+      role: "Project lead at Ave Ludum: client contact, gameplay scope, timeline, project management and staffing.",
       image: "assets/work/supermarket-vr/supermarket-vr.webp",
       imageAlt: "A tester wearing a VR headset tries Supermarket VR while the view is mirrored on a laptop",
       description: "A VR recreation of a client's supermarket, built so staff can practise checkout and customer service before they stand at a real till.",
@@ -215,7 +215,7 @@ const siteContent = {
         approach: "Recreate the client's own supermarket in VR, so practice happens in a space that matches the store staff will work in. It was tested with the client on a standalone VR headset.",
         features: ["A VR recreation of the client's store", "Practise checkout", "Practise customer service"],
         statusNote: "Delivered. The client was satisfied and has since asked the studio for a new project, which is under NDA.",
-        contribution: "Built at Ave Ludum, where I'm the director and main programmer. The studio handled the simulation design, the 3D environment and the VR interactions.",
+        contribution: "I didn't build this one myself. As director of Ave Ludum, I connected the client with the studio's programmer, worked out the gameplay details, timeline and project management with them, and found and assigned the people to build it. Then I handed day-to-day development to the studio team, who did the simulation design, the 3D environment and the VR interactions.",
         feedback: {quote: "Good quality project, as initially agreed.", source: "The client"}
       },
       media: [

@@ -29,7 +29,7 @@ Every project in `projects` gets its own page at `project.html?p=<slug>`, built 
 
 ### Games
 
-Each game in `content.js` points at `assets/games/<slug>/1.jpg`, `2.jpg`, ... and `shots` says how many screenshots exist. Keep the screenshots landscape WebP images about 960px wide. Only the first screenshot loads with the page; the rest load when someone flips through. Add `video` with a YouTube link to show a Trailer link.
+Each game in `content.js` points at `assets/games/<slug>/1.webp`, `2.webp`, ... and `shots` says how many screenshots exist. Keep the screenshots landscape WebP images about 960px wide. Only the first screenshot loads with the page; the rest load when someone flips through. Add `video` with a YouTube link to show a Trailer link.
 
 `assets/itch_media_archive/` is the raw itch.io download the thumbnails were made from. The site does not load it.
 
