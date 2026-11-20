@@ -6,16 +6,18 @@ Setup takes about 15 minutes. Do it once.
 
 ## Before you start
 
-**Use your personal Google account, farhan.r.irsyad@gmail.com, and nothing else.** This is your personal portfolio, not Ave Ludum's:
+**Pick one Google account and use only that one.** It matters which:
 
 - Every email the form sends (your notification and the sender's confirmation) comes *from* the account that publishes the web app.
 - The Sheet holding the inquiries lives in that account's Google Drive.
 
-So do every step below in an **incognito window signed in to only that one account**. Apps Script also breaks in confusing ways when a browser is signed in to several Google accounts at once.
+Right now the live form uses a web app published from the Ave Ludum Studio account, so emails come from there. Notifications still go to `OWNER_EMAIL` in `Code.gs` (farhan.r.irsyad@gmail.com). To send from your personal account instead, redo these steps signed in to farhan.r.irsyad@gmail.com, then swap the new `/exec` URL into `content.js`.
+
+Do every step below in an **incognito window signed in to only the chosen account**. Apps Script breaks in confusing ways when a browser is signed in to several Google accounts at once.
 
 1. Open an incognito / private window (Chrome: Ctrl+Shift+N).
-2. Go to <https://accounts.google.com> and sign in with farhan.r.irsyad@gmail.com only.
-3. Check the account picture at the top right of every Google page you open: it should always be your personal account.
+2. Go to <https://accounts.google.com> and sign in with the chosen account only.
+3. Check the account picture at the top right of every Google page you open: it should always be that account.
 
 ## 1. Create the Sheet
 
@@ -51,7 +53,7 @@ So do every step below in an **incognito window signed in to only that one accou
 2. Click the **gear icon** next to "Select type" and choose **Web app**.
 3. Fill in:
    - **Description:** Portfolio contact form
-   - **Execute as:** Me (farhan.r.irsyad@gmail.com). If it shows any other address, stop: you are in the wrong account.
+   - **Execute as:** Me (the account you chose). If it shows a different address, stop: you are in the wrong account.
    - **Who has access:** Anyone
 4. Click **Deploy**.
 5. Copy the **Web app URL**. It looks like `https://script.google.com/macros/s/AKfy…/exec`.
