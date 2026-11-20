@@ -19,6 +19,10 @@ The layout and design are in **`index.html`** and **`styles.css`**. After changi
 
 Set `image` (and `imageAlt`) on a project in `content.js`. Use real images around 1200–1600px wide; small images (320px) look blurry on large screens. Only add `kind` / `status` badges you can confirm.
 
+### Case-study pages
+
+Every project in `projects` gets its own page at `project.html?p=<slug>`, built by `project.js`. Fill in `caseStudy` (overview, challenge, approach, features, statusNote, contribution, feedback); sections without content are skipped. `media` lists the screenshots and clips for the viewer: `{image, caption, alt}` or `{video, poster, caption, alt}`. Clips live in `assets/work/<project>/`.
+
 ### Hero clip
 
 `hero.video` plays muted on a loop, unless the visitor has asked their system to reduce motion. Visitors can always pause it. Keep clips short (6–12 s), H.264, about 960×540, with a WebP poster frame.
