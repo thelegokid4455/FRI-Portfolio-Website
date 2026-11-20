@@ -129,6 +129,29 @@ if (index === -1) {
   setMeta('meta[property="og:title"]', 'content', `${p.title} | Farhan Irsyad`);
   setMeta('meta[property="og:description"]', 'content', desc);
   setMeta('meta[property="og:url"]', 'content', url);
+  setMeta('meta[name="twitter:title"]', 'content', `${p.title} | Farhan Irsyad`);
+  setMeta('meta[name="twitter:description"]', 'content', desc);
+
+  // Structured data: this project as a CreativeWork by Farhan
+  const creativeWork = {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': `${url}#work`,
+    name: p.title,
+    url,
+    description: p.description,
+    genre: p.category,
+    keywords: (p.tags || []).join(', '),
+    image: SITE + p.image,
+    // contributor, not creator: on some studio projects my role was direction or management
+    contributor: {'@type': 'Person', '@id': `${SITE}#person`, name: siteContent.nameFull, url: SITE, jobTitle: p.role || undefined}
+  };
+  if (p.year) creativeWork.dateCreated = p.year.replace(/[^0-9].*$/, '');
+  if (p.organization) creativeWork.sourceOrganization = {'@type': 'Organization', name: p.organization};
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify(creativeWork);
+  document.head.appendChild(ld);
 
   // Sections appear only when there's confirmed content for them
   const sections = [

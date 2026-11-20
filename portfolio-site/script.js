@@ -95,6 +95,23 @@ $('#projectGrid').innerHTML = siteContent.projects.map(project => {
   </article>`;
 }).join('');
 
+
+// Structured data: the Selected Work projects as a list of CreativeWork, from the same content
+const SITE_URL = 'https://thelegokid4455.github.io/FRI-Portfolio-Website/';
+const workList = document.createElement('script');
+workList.type = 'application/ld+json';
+workList.textContent = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Selected work',
+  itemListElement: siteContent.projects.map((p, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `${SITE_URL}project.html?p=${encodeURIComponent(p.slug)}`,
+    name: p.title
+  }))
+});
+document.head.appendChild(workList);
 $('#gamesTitle').textContent = `${siteContent.games.length} games, from game jams to team releases`;
 
 /* Games: only the first screenshot loads up front; the rest load when someone flips through */

@@ -2,8 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/</loc>
-    <lastmod>2026-10-19</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=avels-heavy-vehicle-simulator</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=heavy-vehicle-simulator</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=driving-convoy-simulator</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=the-legend-of-toakala</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=supermarket-vr</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=medical-vr-simulation</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=pilah-bumi</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thelegokid4455.github.io/FRI-Portfolio-Website/project.html?p=gameplay-mobile-projects</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
