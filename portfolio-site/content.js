@@ -42,7 +42,7 @@ const siteContent = {
   // While it's empty, the form opens the visitor's email app with their message filled in.
   // `projectTypes` and `budgets` must match PROJECT_TYPES and BUDGETS in apps-script/Code.gs.
   inquiry: {
-    endpoint: "",
+    endpoint: "https://script.google.com/macros/s/AKfycbwU97jQ_8VwT6f5SWUmyBM6Ccur6tQ-D9V4maVSfFo72Gg6b8fyS-YTgNeOTrzn2mUR/exec",
     projectTypes: [
       "Training simulator",
       "VR training or experience",
