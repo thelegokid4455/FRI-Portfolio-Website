@@ -6,10 +6,16 @@ Setup takes about 15 minutes. Do it once.
 
 ## Before you start
 
-**Use an incognito window signed in to only one Google account** (the one you want inquiries emailed to: farhan.r.irsyad@gmail.com). Apps Script breaks in confusing ways when a browser is signed in to several Google accounts at once.
+**Use your personal Google account, farhan.r.irsyad@gmail.com, and nothing else.** This is your personal portfolio, not Ave Ludum's:
+
+- Every email the form sends (your notification and the sender's confirmation) comes *from* the account that publishes the web app.
+- The Sheet holding the inquiries lives in that account's Google Drive.
+
+So do every step below in an **incognito window signed in to only that one account**. Apps Script also breaks in confusing ways when a browser is signed in to several Google accounts at once.
 
 1. Open an incognito / private window (Chrome: Ctrl+Shift+N).
-2. Go to <https://accounts.google.com> and sign in with that one account.
+2. Go to <https://accounts.google.com> and sign in with farhan.r.irsyad@gmail.com only.
+3. Check the account picture at the top right of every Google page you open: it should always be your personal account.
 
 ## 1. Create the Sheet
 
@@ -45,7 +51,7 @@ Setup takes about 15 minutes. Do it once.
 2. Click the **gear icon** next to "Select type" and choose **Web app**.
 3. Fill in:
    - **Description:** Portfolio contact form
-   - **Execute as:** Me (farhan.r.irsyad@gmail.com)
+   - **Execute as:** Me (farhan.r.irsyad@gmail.com). If it shows any other address, stop: you are in the wrong account.
    - **Who has access:** Anyone
 4. Click **Deploy**.
 5. Copy the **Web app URL**. It looks like `https://script.google.com/macros/s/AKfy…/exec`.
