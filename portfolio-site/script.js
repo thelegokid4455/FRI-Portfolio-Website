@@ -1,40 +1,99 @@
 const $ = (selector) => document.querySelector(selector);
 const esc = (value) => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const external = 'target="_blank" rel="noopener"';
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 document.querySelectorAll('[data-content]').forEach(el => {
   const key = el.dataset.content;
   if (siteContent[key] !== undefined) el.textContent = siteContent[key];
 });
 
-$('#year').textContent = new Date().getFullYear();
-
 const mailto = `mailto:${siteContent.email}`;
-$('#emailButton').href = mailto;
 $('#contactEmail').href = mailto;
 $('#contactEmail').textContent = siteContent.email;
-if (siteContent.cv) {
-  $('#cvButton').href = siteContent.cv.url;
-  $('#cvButton').textContent = `${siteContent.cv.label} ↗`;
+
+/* Home */
+const hero = siteContent.hero;
+$('#heroTitle').textContent = hero.title;
+$('#heroAudience').textContent = hero.audience;
+$('#heroIntro').textContent = hero.intro;
+$('#heroPrimary').textContent = hero.primary.label;
+$('#heroPrimary').href = hero.primary.href;
+$('#heroSecondary').textContent = hero.secondary.label;
+$('#heroSecondary').href = hero.secondary.href;
+$('#heroRecent').innerHTML = hero.recent.map(r => `<a href="${esc(r.url)}" ${external}>${esc(r.title || r.label)}</a>`).join(' · ');
+$('#heroChips').innerHTML = hero.chips.map(c => `<li>${esc(c)}</li>`).join('');
+if (siteContent.portfolio) {
+  $('#pdfLink').href = siteContent.portfolio.pdf;
+  $('#pdfLink').textContent = `Portfolio PDF (${siteContent.portfolio.pages} pages) ↗`;
 } else {
-  $('#cvButton').remove();
+  $('#pdfLink').remove();
 }
+
+// Hero clip: plays muted on a loop, unless the visitor prefers reduced motion. Always pausable.
+if (hero.video) {
+  const v = hero.video;
+  $('#heroMedia').innerHTML = `
+    <div class="hero-video">
+      <video muted loop playsinline preload="metadata" poster="${esc(v.poster)}" aria-label="${esc(v.alt)}">
+        <source src="${esc(v.src)}" type="video/mp4">
+      </video>
+      <button class="video-toggle" type="button" aria-pressed="false">Pause</button>
+    </div>
+    <figcaption>${esc(v.caption)}</figcaption>`;
+  const video = $('#heroMedia video');
+  const toggle = $('#heroMedia .video-toggle');
+  const setState = (playing) => {
+    toggle.textContent = playing ? 'Pause' : 'Play';
+    toggle.setAttribute('aria-pressed', String(!playing));
+    toggle.setAttribute('aria-label', playing ? 'Pause video' : 'Play video');
+  };
+  toggle.addEventListener('click', () => { if (video.paused) video.play(); else video.pause(); });
+  video.addEventListener('play', () => setState(true));
+  video.addEventListener('pause', () => setState(false));
+  if (reducedMotion) setState(false);
+  else video.play().catch(() => setState(false));
+} else {
+  $('#heroMedia').remove();
+}
+
+/* What I do */
+$('#servicesGrid').innerHTML = siteContent.services.map(s => `
+  <article class="service">
+    <h3>${esc(s.title)}</h3>
+    <p class="service-get">${esc(s.get)}</p>
+    <dl>
+      <div><dt>For</dt><dd>${esc(s.for)}</dd></div>
+      <div><dt>Example</dt><dd>${esc(s.example)}</dd></div>
+    </dl>
+  </article>
+`).join('');
+
+/* Process */
+$('#processSteps').innerHTML = siteContent.process.map((s, i) => `
+  <li class="step"><span class="step-num">${i + 1}</span><h3>${esc(s.title)}</h3><p>${esc(s.text)}</p></li>
+`).join('');
 
 /* Selected work */
 $('#projectGrid').innerHTML = siteContent.projects.map(project => `
   <article class="project">
     <figure class="project-image">
       <img src="${esc(project.image)}" alt="${esc(project.imageAlt || project.title)}" loading="lazy" decoding="async">
+      ${project.imageCaption ? `<figcaption>${esc(project.imageCaption)}</figcaption>` : ''}
     </figure>
     <div class="project-body">
-      <p class="project-meta">${esc(project.year)} · ${esc(project.category)}</p>
+      <p class="project-meta">${[project.year, project.category].filter(Boolean).map(esc).join(' · ')}</p>
       <h3>${esc(project.title)}</h3>
-      ${project.client ? `<p class="project-client">${esc(project.client)}</p>` : ''}
+      ${project.kind || project.status ? `<p class="badges">${project.kind ? `<span class="badge">${esc(project.kind)}</span>` : ''}${project.status ? `<span class="badge badge-status">${esc(project.status)}</span>` : ''}</p>` : ''}
+      ${project.credit ? `<p class="project-client">${esc(project.credit)}</p>` : ''}
       <p>${esc(project.description)}</p>
       <p class="project-tags">${project.tags.map(esc).join(', ')}</p>
+      ${project.link ? `<p class="project-link"><a href="${esc(project.link)}" ${external}>Case study on aveludumstudio.com ↗</a></p>` : ''}
     </div>
   </article>
 `).join('');
+
+$('#gamesTitle').textContent = `${siteContent.games.length} games, from game jams to team releases`;
 
 /* Games: only the first screenshot loads up front; the rest load when someone flips through */
 const shotSrc = (game, n) => `assets/games/${game.slug}/${n}.jpg`;
@@ -139,7 +198,6 @@ const pager = $('#pager');
 const prevBtn = $('#pagerPrev');
 const nextBtn = $('#pagerNext');
 const edgeHint = $('#edgeHint');
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let current = -1;
 let lastSwitch = 0;
 
@@ -147,9 +205,11 @@ document.documentElement.classList.add('paged');
 pager.hidden = false;
 
 const counts = {
+  services: `${siteContent.services.length} kinds of work`,
   work: `${siteContent.projects.length} projects`,
   games: `${siteContent.games.length} games`,
   art: 'Illustration, 3D & sketches',
+  process: `${siteContent.process.length} steps`,
   experience: `${siteContent.experience.length} roles`,
   about: 'Skills & background',
   contact: 'Email & links'
@@ -163,12 +223,41 @@ $('#pagerDots').innerHTML = panels.map((panel, i) =>
 ).join('');
 const dots = [...document.querySelectorAll('.pager-dot')];
 
+// Every section ends with a next step and the same small footer
+const footer = `<footer class="footer wrap">
+  <div class="footer-row">
+    <p class="footer-name">© ${new Date().getFullYear()} ${esc(siteContent.nameFull)}</p>
+    <a class="footer-cta" href="#contact">Work with me →</a>
+  </div>
+  <ul class="footer-links">
+    <li><a href="${esc(mailto)}">${esc(siteContent.email)}</a></li>
+    ${siteContent.contact.map(link => `<li><a href="${esc(link.url)}" ${external}>${esc(link.label)}</a></li>`).join('')}
+  </ul>
+</footer>`;
+
 panels.forEach((panel, i) => {
   panel.tabIndex = -1;
   const next = panels[i + 1];
-  panel.insertAdjacentHTML('beforeend', next
-    ? `<div class="panel-end wrap"><a class="panel-next" href="#${next.id}"><small>Next</small><span>${esc(next.dataset.title)} →</span></a><p class="panel-end-hint">or keep scrolling</p></div>`
-    : `<div class="panel-end wrap"><a class="panel-next" href="#${panels[0].id}"><small>That's everything</small><span>Back to start ↺</span></a></div>`);
+  const end = next
+    ? `<div class="panel-end wrap"><a class="panel-next" href="#${next.id}"><small>Next</small><span>${esc(next.dataset.title)} →</span></a><p class="panel-end-hint">${panel.id === 'contact' ? '' : '<a href="#contact">Ready to talk? Work with me</a> · '}or keep scrolling</p></div>`
+    : `<div class="panel-end wrap"><a class="panel-next" href="#${panels[0].id}"><small>That's everything</small><span>Back to start ↺</span></a></div>`;
+  panel.insertAdjacentHTML('beforeend', end + footer);
+});
+
+/* Menu button (below 900 px the section tabs fold into a dropdown) */
+const menuBtn = $('#menuBtn');
+const setMenu = (open) => {
+  header.classList.toggle('menu-open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+  menuBtn.textContent = open ? 'Close' : 'Menu';
+};
+menuBtn.addEventListener('click', () => setMenu(menuBtn.getAttribute('aria-expanded') !== 'true'));
+document.addEventListener('click', event => {
+  if (menuBtn.getAttribute('aria-expanded') !== 'true') return;
+  if (event.target.closest('.tabs a') || !event.target.closest('.site-header')) setMenu(false);
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') { setMenu(false); menuBtn.focus(); }
 });
 
 const atTop = (panel) => panel.scrollTop <= 1;

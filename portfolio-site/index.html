@@ -62,22 +62,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261121">
+  <link rel="stylesheet" href="styles.css?v=20261121-2">
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to work</a>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#home" data-content="nameShort">Farhan Irsyad</a>
-      <nav class="tabs" aria-label="Sections">
+      <nav class="tabs" id="siteNav" aria-label="Sections">
         <a href="#home">Home</a>
+        <a href="#services">What I do</a>
         <a href="#work">Work</a>
         <a href="#games">Games</a>
         <a href="#art">Art &amp; 3D</a>
+        <a href="#process">Process</a>
         <a href="#experience">Experience</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a class="btn btn-solid header-cta" href="#contact">Work with me</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteNav">Menu</button>
     </div>
   </header>
 
@@ -90,30 +94,47 @@
         </picture>
       </div>
       <div class="hero wrap">
-        <figure class="hero-character">
-          <img src="assets/brand/character.png" alt="Illustrated portrait of Farhan" width="573" height="745">
-          <figcaption>Art by <a href="https://www.instagram.com/hlw.arts/" target="_blank" rel="noopener">@hlw.arts</a></figcaption>
-        </figure>
         <div class="hero-text">
-          <p class="hero-meta"><span data-content="location"></span> · <span data-content="availability"></span></p>
-          <h1>Hi, I'm <span data-content="nameFull">Farhan Ramadhani Irsyad</span>.</h1>
-          <p class="hero-role" data-content="headline">Unity / VR Simulation Developer</p>
-          <p class="hero-intro" data-content="intro"></p>
-          <div class="actions">
-            <a class="btn btn-solid" href="#work">See my work</a>
-            <a class="btn" id="emailButton" href="#contact">Email me</a>
-            <a class="btn btn-plain" id="cvButton" href="#" target="_blank" rel="noopener">Portfolio PDF ↗</a>
+          <div class="hero-id">
+            <figure class="hero-character">
+              <img src="assets/brand/character.png" alt="Illustrated portrait of Farhan" width="573" height="745">
+              <figcaption>Art by <a href="https://www.instagram.com/hlw.arts/" target="_blank" rel="noopener">@hlw.arts</a></figcaption>
+            </figure>
+            <div>
+              <p class="label"><span data-content="nameFull"></span> · <span data-content="headline"></span></p>
+              <h1 id="heroTitle"></h1>
+            </div>
           </div>
+          <p class="hero-audience" id="heroAudience"></p>
+          <div class="actions">
+            <a class="btn btn-solid" id="heroPrimary" href="#contact">Work with me</a>
+            <a class="btn" id="heroSecondary" href="#work">See my work</a>
+          </div>
+          <p class="hero-intro" id="heroIntro"></p>
+          <p class="hero-recent"><span class="label">Recent work</span> <span id="heroRecent"></span></p>
+          <ul class="chips" id="heroChips" aria-label="Skills"></ul>
+          <p class="hero-meta"><span data-content="location"></span> · <span data-content="availability"></span> · <a id="pdfLink" href="#" target="_blank" rel="noopener">Portfolio PDF ↗</a></p>
         </div>
+        <figure class="hero-media" id="heroMedia"></figure>
       </div>
       <div class="tour wrap" id="tour"></div>
+    </section>
+
+    <section class="panel" id="services" data-title="What I do">
+      <div class="section wrap">
+        <header class="section-head">
+          <div><p class="label">What I do</p><h2>Unity software people can practise on, play and learn from</h2></div>
+          <p>Four kinds of work I take on, who each is for, and a project where I've already done it.</p>
+        </header>
+        <div class="services" id="servicesGrid"></div>
+      </div>
     </section>
 
     <section class="panel" id="work" data-title="Work">
       <div class="section wrap">
         <header class="section-head">
-          <h2>Selected work</h2>
-          <p>Training simulators, VR and gameplay work from studio and client projects.</p>
+          <div><p class="label">Selected work</p><h2>Simulators, VR and games, from client work to my own studio</h2></div>
+          <p>Each card says who it was built for, and its status where that's confirmed.</p>
         </header>
         <div class="projects" id="projectGrid"></div>
       </div>
@@ -122,8 +143,8 @@
     <section class="panel" id="games" data-title="Games">
       <div class="section wrap">
         <header class="section-head">
-          <h2>Games &amp; prototypes</h2>
-          <p>Jam games, side projects and team releases. Use the arrows on a thumbnail to flip through screenshots; the title opens the itch.io page.</p>
+          <div><p class="label">Games &amp; prototypes</p><h2 id="gamesTitle">Games from jams, side projects and team releases</h2></div>
+          <p>Use the arrows on a thumbnail to flip through screenshots. The title opens the game's itch.io page.</p>
         </header>
         <div class="games" id="gameGallery"></div>
         <p class="more-link"><a href="https://thelegokid4455.itch.io/" target="_blank" rel="noopener">All games on itch.io ↗</a></p>
@@ -133,7 +154,7 @@
     <section class="panel" id="art" data-title="Art & 3D">
       <div class="section wrap">
         <header class="section-head">
-          <h2>Art &amp; 3D</h2>
+          <div><p class="label">Art &amp; 3D</p><h2>I draw and model too, so I speak artists' language</h2></div>
           <p>Models, game art and experiments live on Sketchfab and Instagram.</p>
         </header>
         <figure class="art-feature">
@@ -153,11 +174,21 @@
       </div>
     </section>
 
+    <section class="panel" id="process" data-title="Process">
+      <div class="section wrap">
+        <header class="section-head">
+          <div><p class="label">How I work</p><h2>From the first call to a build you can test</h2></div>
+          <p>What working together looks like, step by step.</p>
+        </header>
+        <ol class="process" id="processSteps"></ol>
+      </div>
+    </section>
+
     <section class="panel" id="experience" data-title="Experience">
       <div class="section wrap has-deco">
         <img class="deco deco-robot" src="assets/art/robot-sketch.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="1200">
         <header class="section-head">
-          <h2>Experience</h2>
+          <div><p class="label">Experience</p><h2>Unity work since 2021, across studios, simulators and a university</h2></div>
         </header>
         <ol class="timeline" id="experienceTimeline"></ol>
       </div>
@@ -166,7 +197,8 @@
     <section class="panel" id="about" data-title="About">
       <div class="section wrap about">
         <div>
-          <h2>About</h2>
+          <p class="label">About</p>
+          <h2>A programmer who works well with artists and clients</h2>
           <p class="about-text" data-content="about"></p>
           <h3 class="sub-head">Skills</h3>
           <dl class="skills" id="skillsPanel"></dl>
@@ -187,18 +219,16 @@
       </div>
       <div class="section wrap contact has-deco">
         <img class="deco deco-armor" src="assets/art/gold-armor-sketch.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="1200">
-        <h2>Get in touch</h2>
-        <p>I'm open to Unity, simulation, VR/XR and interactive 3D work, remote or on-site. Email is the fastest way to reach me.</p>
+        <p class="label">Contact</p>
+        <h2>Have a simulator, VR app or game to build? Let's talk.</h2>
+        <p>Hiring for a Unity role, or need a project built? I take on both, remote or on-site. Email is the fastest way to reach me; tell me what you need and when.</p>
         <a class="contact-email" id="contactEmail" href="#"></a>
         <ul class="contact-links" id="contactLinks"></ul>
       </div>
-      <footer class="footer wrap">
-        <div class="footer-row">
-          <span>© <span id="year"></span> <span data-content="nameFull"></span></span>
-          <span class="visitor-counter" aria-live="polite">Visits: <strong id="visitorCount">—</strong></span>
-        </div>
-        <p class="ai-disclosure"><strong>AI-assisted website development.</strong> This web portfolio was made with AI assistance, while all artwork, 3D assets, visuals, screenshots and creative work presented here were created by me during my work and are human-made.</p>
-      </footer>
+      <div class="wrap site-credits">
+        <p><span class="visitor-counter" aria-live="polite">Visits: <strong id="visitorCount">—</strong></span></p>
+        <p class="ai-disclosure"><strong>AI-assisted website development.</strong> This web portfolio was made with AI assistance. The artwork, 3D assets, visuals, screenshots and other creative work shown here are human-made, by me or by the collaborators credited next to them.</p>
+      </div>
     </section>
   </main>
 
@@ -209,7 +239,7 @@
   </nav>
   <p class="edge-hint" id="edgeHint" aria-hidden="true"></p>
 
-  <script src="content.js?v=20261121"></script>
-  <script src="script.js?v=20261121"></script>
+  <script src="content.js?v=20261121-2"></script>
+  <script src="script.js?v=20261121-2"></script>
 </body>
 </html>

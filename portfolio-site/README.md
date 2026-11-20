@@ -6,28 +6,28 @@ A lightweight, responsive, dependency-free portfolio website for a Unity / VR Si
 
 The main editable content is in **`content.js`**. You can change:
 
-- name, headline, intro and about text
-- the hero button (`cv`) and email address
-- project titles, descriptions, images and tags
+- `hero`: the headline, who it's for, intro, both buttons, "Recent work" links, skill chips and the looping clip
+- `services` ("What I do" cards) and `process` ("How I work" steps)
+- `projects`: Selected Work cards, with optional `kind` and `status` badges, `credit`, `imageCaption` and a case-study `link`
 - the games list
-- work experience
-- skills, facts and contact links
+- work experience, about text, skills, facts and contact links
+- `portfolio`: the portfolio document (`pdf` downloads it, `doc` opens it in Google Docs)
 
-The layout and design are in **`index.html`** and **`styles.css`**.
+The layout and design are in **`index.html`** and **`styles.css`**. After changing either of those (or `content.js` / `script.js`), bump the `?v=` number on their links in `index.html` so browsers fetch the new version.
 
 ### Project images
 
-Set `image` (and `imageAlt`) on a project in `content.js`. Use real JPEGs around 1200–1600px wide; small images (320px) look blurry on large screens.
+Set `image` (and `imageAlt`) on a project in `content.js`. Use real images around 1200–1600px wide; small images (320px) look blurry on large screens. Only add `kind` / `status` badges you can confirm.
+
+### Hero clip
+
+`hero.video` plays muted on a loop, unless the visitor has asked their system to reduce motion. Visitors can always pause it. Keep clips short (6–12 s), H.264, about 960×540, with a WebP poster frame.
 
 ### Games
 
 Each game in `content.js` points at `assets/games/<slug>/1.jpg`, `2.jpg`, ... and `shots` says how many screenshots exist. Keep the screenshots landscape JPEGs about 960px wide. Only the first screenshot loads with the page; the rest load when someone flips through. Add `video` with a YouTube link to show a Trailer link.
 
 `assets/itch_media_archive/` is the raw itch.io download the thumbnails were made from. The site does not load it.
-
-### CV
-
-To link a CV from the hero, add it as `assets/FRI-Resume.pdf` and set `cv` in `content.js` to `{label: "Download CV", url: "assets/FRI-Resume.pdf"}`.
 
 ## Publish
 

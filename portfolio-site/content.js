@@ -6,17 +6,96 @@ const siteContent = {
   headline: "Unity / VR Simulation Developer",
   location: "Makassar, Indonesia",
   availability: "Open to remote work and relocation",
-  intro: "I write Unity/C# for training simulators, VR and games. Most of my professional work has been government and enterprise training software for PC, VR and Android: heavy-vehicle simulators with physical controls, a ~100 km driving environment of Jakarta, and medical VR.",
-  about: "I've been writing Unity/C# professionally since 2021. I started on gameplay and medical VR at Dhelangan Studio and Octaverse Studio, then spent a year at PT. Maxxima Innovative building heavy-vehicle and driving simulators for government clients, including Arduino-connected controls and a ~100 km map of Jakarta. I now manage information systems and technology at Universitas Negeri Makassar and lead game projects at Ave Ludum Studio. I work closely with artists, domain experts and clients who aren't technical.",
-  // Hero button. To link your CV instead, add it as assets/FRI-Resume.pdf and set url to "assets/FRI-Resume.pdf".
-  cv: {label: "Portfolio (Google Doc)", url: "https://docs.google.com/document/d/12sPx-OYtfmaX9mNVSZ-YitUQzO_cBcccfpRe9RqhPxk/edit"},
+
+  // Home: the first thing visitors read
+  hero: {
+    title: "I build training simulators, VR apps and games in Unity.",
+    audience: "For studios hiring a Unity programmer, and for teams that need a simulator, VR experience or game built.",
+    intro: "I've built heavy-vehicle and driving simulators for a government institution, VR training for clients, and games from jams to team releases. I'm the director and main programmer at Ave Ludum Studio in Makassar.",
+    primary: {label: "Work with me", href: "#contact"},
+    secondary: {label: "See my work", href: "#work"},
+    // Recent work: shown as links under the buttons
+    recent: [
+      {label: "AVELS Heavy Vehicle Simulator", url: "https://aveludumstudio.com/project.html?p=avels-heavy-vehicle-simulator"},
+      {label: "The Legend of Toakala", url: "https://aveludumstudio.com/project.html?p=the-legend-of-toakala"},
+      {label: "Supermarket VR", url: "https://aveludumstudio.com/project.html?p=supermarket-vr"}
+    ],
+    chips: ["Unity", "C#", "VR / XR", "Multiplayer (Netcode)", "Vehicle physics", "Arduino controls", "Android", "Blender"],
+    // Looping, muted clip beside the intro. It only plays when the visitor allows motion.
+    video: {
+      src: "assets/work/avels-loading.mp4",
+      poster: "assets/work/avels-loading.webp",
+      caption: "AVELS: loading a dump truck with a wheel loader in a shared multiplayer session.",
+      alt: "A wheel loader raises its bucket over a dump truck in the AVELS simulator"
+    }
+  },
+
+  about: "I've been writing Unity/C# professionally since 2021. I started on gameplay and medical VR at Dhelangan Studio and Octaverse Studio, then spent a year at PT. Maxxima Innovative building heavy-vehicle and driving simulators for a government institution, including Arduino-connected controls and a ~100 km map of Jakarta. I now manage information systems and technology at Universitas Negeri Makassar, and I'm the director and main programmer at Ave Ludum Studio. I work closely with artists, domain experts and clients who aren't technical.",
+  // Portfolio document: `pdf` downloads it as a PDF, `doc` opens it in Google Docs
+  portfolio: {
+    pdf: "https://docs.google.com/document/d/12sPx-OYtfmaX9mNVSZ-YitUQzO_cBcccfpRe9RqhPxk/export?format=pdf",
+    doc: "https://docs.google.com/document/d/12sPx-OYtfmaX9mNVSZ-YitUQzO_cBcccfpRe9RqhPxk/edit",
+    pages: 51
+  },
   email: "farhan.r.irsyad@gmail.com",
+
+  // "What I do" cards: what you get, who it's for, and a real example
+  services: [
+    {
+      title: "Training simulators",
+      get: "A Unity simulator people can practise on: vehicles, equipment or procedures, on PC, in VR or with real controls wired in.",
+      for: "Training centres, institutions and companies with risky or expensive tasks to teach.",
+      example: "Heavy Vehicle Simulator, PT. Maxxima Innovative"
+    },
+    {
+      title: "VR training & experiences",
+      get: "A VR app that walks people through a task step by step, built for the headset you use.",
+      for: "Teams that train staff, and anyone who wants a space or process people can step into.",
+      example: "Supermarket VR, Ave Ludum Studio"
+    },
+    {
+      title: "Games & gameplay programming",
+      get: "Gameplay systems, prototypes or a full game in Unity for PC or mobile.",
+      for: "Studios that need a Unity programmer, and teams with a game idea to build.",
+      example: "The Legend of Toakala, Ave Ludum Studio"
+    },
+    {
+      title: "Multiplayer & hardware",
+      get: "Shared sessions with voice chat, or physical controls such as joysticks connected through Arduino.",
+      for: "Projects where several people train together, or where a keyboard isn't realistic enough.",
+      example: "AVELS Heavy Vehicle Simulator, Ave Ludum Studio"
+    }
+  ],
+
+  // "How I work" steps (please check these match how you actually work)
+  process: [
+    {title: "Talk it through", text: "We go over what you need, who will use it, which platform it runs on and when you need it."},
+    {title: "Plan and quote", text: "You get a written scope with milestones and a price before any work starts."},
+    {title: "Build in playable steps", text: "You get regular builds to try, so feedback comes early, while it's still cheap to change things."},
+    {title: "Hand over", text: "The final build, plus anything else we agreed on, such as source files or documentation."}
+  ],
+
+  // Selected work. `kind` and `status` show as badges; leave them out if unconfirmed.
+  // `credit` says who it was built with or for. `link` is an optional case-study page.
   projects: [
+    {
+      title: "AVELS Heavy Vehicle Simulator",
+      category: "Multiplayer training simulator",
+      kind: "Internal prototype",
+      status: "Ready for testing",
+      credit: "Ave Ludum Studio. I direct the studio and lead programming.",
+      image: "assets/work/avels-loading.webp",
+      imageAlt: "A wheel loader loading a dump truck in the AVELS simulator",
+      description: "A multiplayer PC simulator for heavy equipment. Trainees drive dump trucks, wheel loaders and backhoes around a work yard, guided by spotters on foot using hand signals and push-to-talk voice chat.",
+      tags: ["Unity 6", "C#", "Netcode for GameObjects", "Vivox voice chat", "PC"],
+      link: "https://aveludumstudio.com/project.html?p=avels-heavy-vehicle-simulator"
+    },
     {
       title: "Heavy Vehicle Simulator",
       year: "2023",
       category: "Training · VR",
-      client: "PT. Maxxima Innovative, for a government client",
+      kind: "Client project",
+      credit: "PT. Maxxima Innovative, for a government institution",
       image: "assets/experience/heavy-vehicle-real.jpg",
       imageAlt: "Triple-monitor simulator rig with joysticks and a steering wheel, showing an excavator cab view",
       description: "Training simulator for heavy and construction vehicles used in runway-repair scenarios. Runs on a triple-monitor rig or in VR, with physical joysticks and controls wired in through Arduino.",
@@ -26,27 +105,66 @@ const siteContent = {
       title: "Driving & Convoy Simulator",
       year: "2024",
       category: "Large-scale simulation",
-      client: "PT. Maxxima Innovative, for a government client",
-      image: "assets/selected-works/driving-simulator-hero.jpg",
-      imageAlt: "Instructor view of the driving simulator showing open terrain and scenario controls",
+      kind: "Client project",
+      credit: "PT. Maxxima Innovative, for a government institution",
+      image: "assets/work/avels-rain-truck.webp",
+      imageAlt: "Two dump trucks parked in the rain outside a brick warehouse",
+      imageCaption: "Image: driving in AVELS, Ave Ludum's heavy vehicle simulator. No footage of this project is available.",
       description: "Driving simulator built on a real-world-scale, ~100 km environment of Jakarta, with route selection, vehicle handling, convoy scenarios and an instructor console. A lot of the work went into keeping a map that size running smoothly.",
       tags: ["Unity", "C#", "Optimization", "Large environments", "VR"]
+    },
+    {
+      title: "The Legend of Toakala",
+      category: "Mobile folklore adventure",
+      kind: "Original IP",
+      status: "In development",
+      credit: "Ave Ludum Studio. I direct the studio and lead programming.",
+      image: "assets/work/tk-explore.webp",
+      imageAlt: "Exploring a forest in The Legend of Toakala",
+      description: "A 3D mobile adventure that retells the Toa Kala folktale from Maros, South Sulawesi, as something you can walk through and play, with puzzles drawn from local culture.",
+      tags: ["Unity 6", "C#", "Android"],
+      link: "https://aveludumstudio.com/project.html?p=the-legend-of-toakala"
+    },
+    {
+      title: "Supermarket VR",
+      category: "VR training simulator",
+      kind: "Client project",
+      status: "Delivered",
+      credit: "Ave Ludum Studio. I direct the studio and lead programming.",
+      image: "assets/work/supermarket-vr.webp",
+      imageAlt: "A tester wearing a VR headset tries Supermarket VR while the view is mirrored on a laptop",
+      description: "A VR recreation of a client's supermarket, built so staff can practise checkout and customer service before they stand at a real till.",
+      tags: ["Unity", "C#", "VR"],
+      link: "https://aveludumstudio.com/project.html?p=supermarket-vr"
     },
     {
       title: "Medical VR Simulation",
       year: "2022",
       category: "Medical · VR",
-      client: "Dhelangan Studio, for a pharmaceutical client",
+      kind: "Client project",
+      credit: "Dhelangan Studio, for a private client",
       image: "assets/selected-works/medical-vr-simulation.jpg",
       imageAlt: "VR scene of a vial filling machine with volume controls and a Next button",
       description: "Step-by-step interactive training on pharmaceutical production equipment, built in Unity/C# with Android deployment in mind.",
       tags: ["Unity", "C#", "VR", "Android"]
     },
     {
+      title: "Pilah Bumi",
+      category: "Environmental mobile game",
+      status: "Base game complete",
+      credit: "Ave Ludum Studio. I direct the studio and lead programming.",
+      image: "assets/work/pilah-bumi.webp",
+      imageAlt: "Pilah Bumi title screen",
+      description: "A free-roam waste-sorting game for mobile. You pick up litter scattered around an open 3D map and sort it into the right bins.",
+      tags: ["Unity 6", "C#", "Mobile"],
+      link: "https://aveludumstudio.com/project.html?p=pilah-bumi"
+    },
+    {
       title: "Gameplay & Mobile Projects",
       year: "2021–2022",
       category: "Game development",
-      client: "Octaverse Studio, Dhelangan Studio and personal projects",
+      kind: "Personal & client projects",
+      credit: "Octaverse Studio, Dhelangan Studio and my own projects",
       image: "assets/games/necrospore/1.jpg",
       imageAlt: "Necrospore key art",
       description: "Gameplay systems and prototypes across mobile and PC: a multiplayer FPS, a strategic ship-battle game, top-down shooters and an endless runner.",
