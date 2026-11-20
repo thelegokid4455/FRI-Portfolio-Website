@@ -17,7 +17,7 @@ The layout and design are in **`index.html`** and **`styles.css`**. After changi
 
 ### Project images
 
-Set `image` (and `imageAlt`) on a project in `content.js`. Use real images around 1200–1600px wide; small images (320px) look blurry on large screens. Only add `kind` / `status` badges you can confirm.
+Set `image` (and `imageAlt`) on a project in `content.js`. Use real images (WebP) around 1200–1600px wide; small images (320px) look blurry on large screens. Only add `kind` / `status` badges you can confirm.
 
 ### Case-study pages
 
@@ -29,7 +29,7 @@ Every project in `projects` gets its own page at `project.html?p=<slug>`, built 
 
 ### Games
 
-Each game in `content.js` points at `assets/games/<slug>/1.jpg`, `2.jpg`, ... and `shots` says how many screenshots exist. Keep the screenshots landscape JPEGs about 960px wide. Only the first screenshot loads with the page; the rest load when someone flips through. Add `video` with a YouTube link to show a Trailer link.
+Each game in `content.js` points at `assets/games/<slug>/1.jpg`, `2.jpg`, ... and `shots` says how many screenshots exist. Keep the screenshots landscape WebP images about 960px wide. Only the first screenshot loads with the page; the rest load when someone flips through. Add `video` with a YouTube link to show a Trailer link.
 
 `assets/itch_media_archive/` is the raw itch.io download the thumbnails were made from. The site does not load it.
 

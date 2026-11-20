@@ -119,18 +119,22 @@ const siteContent = {
       year: "2023",
       category: "Training · VR",
       kind: "Client project",
+      status: "Delivered",
       credit: "PT. Maxxima Innovative, for a government institution",
-      role: "Software Programmer at PT. Maxxima Innovative",
-      image: "assets/experience/heavy-vehicle-real.jpg",
+      role: "Programmer, PT. Maxxima Innovative",
+      image: "assets/experience/heavy-vehicle-real.webp",
       imageAlt: "Triple-monitor simulator rig with joysticks and a steering wheel, showing an excavator cab view",
       description: "Training simulator for heavy and construction vehicles used in runway-repair scenarios. Runs on a triple-monitor rig or in VR, with physical joysticks and controls wired in through Arduino.",
       tags: ["Unity", "C#", "VR", "Arduino", "Vehicle physics"],
       caseStudy: {
+        challenge: "New vehicle mechanics had to be learned and built on the spot, then revised as the client's needs changed. Work also moved slowly between modelling, programming and integration in the game engine, across several office branches.",
+        approach: "I raised the workflow problem with my supervisor, then met the CEO and the other office branches and set up a three-way meeting between them to agree how modelling, programming and engine integration should hand work to each other.",
         features: ["Heavy and construction vehicles for runway-repair training", "Runs on a triple-monitor rig or in a VR headset", "Physical joysticks and controls connected through Arduino"],
-        contribution: "As a Software Programmer at PT. Maxxima Innovative (July 2023 to July 2024), I developed Unity/C# training simulations for PC and VR, including hardware integration and performance optimization."
+        statusNote: "Delivered to the client. The new cross-branch workflow made programmers' work between branches significantly smoother.",
+        contribution: "I was a programmer on this simulator during my time as a Software Programmer at PT. Maxxima Innovative (July 2023 to July 2024), working on the vehicle mechanics, hardware integration and performance optimization."
       },
       media: [
-        {image: "assets/experience/heavy-vehicle-real.jpg", caption: "The simulator rig: three monitors, joysticks, a steering wheel and a tablet.", alt: "Triple-monitor simulator rig with joysticks and a steering wheel, showing an excavator cab view"}
+        {image: "assets/experience/heavy-vehicle-real.webp", caption: "The simulator rig: three monitors, joysticks, a steering wheel and a tablet.", alt: "Triple-monitor simulator rig with joysticks and a steering wheel, showing an excavator cab view"}
       ]
     },
     {
@@ -139,17 +143,20 @@ const siteContent = {
       year: "2024",
       category: "Large-scale simulation",
       kind: "Client project",
+      status: "Delivered",
       credit: "PT. Maxxima Innovative, for a government institution",
-      role: "Software Programmer at PT. Maxxima Innovative",
+      role: "Lead programmer, PT. Maxxima Innovative",
       image: "assets/work/avels/avels-rain-truck.webp",
       imageAlt: "Two dump trucks parked in the rain outside a brick warehouse",
       imageCaption: "Image: driving in AVELS, Ave Ludum's heavy vehicle simulator. No footage of this project is available.",
       description: "Driving simulator built on a real-world-scale, ~100 km environment of Jakarta, with route selection, vehicle handling, convoy scenarios and an instructor console. A lot of the work went into keeping a map that size running smoothly.",
       tags: ["Unity", "C#", "Optimization", "Large environments", "VR"],
       caseStudy: {
-        challenge: "Keeping a real-world-scale, ~100 km environment of Jakarta running smoothly while trainees drive through it.",
+        challenge: "Keeping a real-world-scale, ~100 km environment of Jakarta running smoothly while trainees drive through it, while learning new mechanics on the spot and revising them as the client's needs changed. The hand-off from modelling to programming to engine integration also had to get faster across several office branches.",
+        approach: "I raised the workflow problem with my supervisor, then met the CEO and the other office branches and set up a three-way meeting between them to agree how modelling, programming and engine integration should hand work to each other.",
         features: ["Route selection", "Vehicle handling", "Convoy training scenarios", "An instructor console"],
-        contribution: "As a Software Programmer at PT. Maxxima Innovative (July 2023 to July 2024), I developed Unity/C# training simulations for PC and VR, including the ~100 km real-world driving simulator and its performance optimization."
+        statusNote: "Delivered to the client. The new cross-branch workflow made programmers' work between branches significantly smoother.",
+        contribution: "I was the lead programmer on this simulator during my time as a Software Programmer at PT. Maxxima Innovative (July 2023 to July 2024), including the ~100 km environment and its performance optimization."
       },
       media: [
         {image: "assets/work/avels/avels-rain-truck.webp", caption: "Driving in AVELS, Ave Ludum's heavy vehicle simulator. Shown here because no footage of this project is available.", alt: "Two dump trucks parked in the rain outside a brick warehouse"}
@@ -220,20 +227,22 @@ const siteContent = {
       slug: "medical-vr-simulation",
       title: "Medical VR Simulation",
       year: "2022",
-      category: "Medical · VR",
+      category: "Medical · VR evaluation",
       kind: "Client project",
+      status: "Delivered",
       credit: "Dhelangan Studio, for a private client",
-      role: "Game Programmer at Dhelangan Studio",
-      image: "assets/selected-works/medical-vr-simulation.jpg",
+      role: "Game Programmer, Dhelangan Studio",
+      image: "assets/selected-works/medical-vr-simulation.webp",
       imageAlt: "VR scene of a vial filling machine with volume controls and a Next button",
-      description: "Step-by-step interactive training on pharmaceutical production equipment, built in Unity/C# with Android deployment in mind.",
+      description: "A VR evaluation for students learning pharmaceutical production. Testers run the equipment step by step, choose materials and recipes, and work against the clock; how they do counts toward their final score.",
       tags: ["Unity", "C#", "VR", "Android"],
       caseStudy: {
-        features: ["Step-by-step training on pharmaceutical production equipment", "Adjustable machine settings, like fill volume, with on-screen controls", "Built with Android deployment in mind"],
-        contribution: "As a Game Programmer at Dhelangan Studio (October 2021 to October 2022), I built medical VR and gameplay systems in Unity/C#."
+        features: ["Step-by-step operation of pharmaceutical production equipment", "Adjustable machine settings, like fill volume, with on-screen controls", "Material and recipe selection", "A working-time limit", "Each tester's result contributes to their final score", "Built with Android deployment in mind"],
+        statusNote: "Delivered to the client, who uses it to evaluate students.",
+        contribution: "As a Game Programmer at Dhelangan Studio (October 2021 to October 2022), I built medical VR and gameplay systems in Unity/C#, including this evaluation."
       },
       media: [
-        {image: "assets/selected-works/medical-vr-simulation.jpg", caption: "A vial filling machine, with volume controls and a Next button to move through the steps.", alt: "VR scene of a vial filling machine with volume controls and a Next button"}
+        {image: "assets/selected-works/medical-vr-simulation.webp", caption: "A vial filling machine, with volume controls and a Next button to move through the steps.", alt: "VR scene of a vial filling machine with volume controls and a Next button"}
       ]
     },
     {
@@ -272,21 +281,23 @@ const siteContent = {
       kind: "Personal & client projects",
       credit: "Octaverse Studio, Dhelangan Studio and my own projects",
       role: "Junior Game Programmer at Octaverse Studio; Game Programmer at Dhelangan Studio",
-      image: "assets/games/necrospore/1.jpg",
+      image: "assets/games/necrospore/1.webp",
       imageAlt: "Necrospore key art",
-      description: "Gameplay systems and prototypes across mobile and PC: a multiplayer FPS, a strategic ship-battle game, top-down shooters and an endless runner.",
+      description: "Gameplay systems across mobile and PC: Metaverse FPS, a multiplayer shooter; a strategic ship-battle game; and Catch The Doge, a Dogecoin-inspired endless runner. Plus top-down shooters and prototypes of my own.",
       tags: ["Unity", "C#", "Gameplay", "Multiplayer", "Mobile"],
       caseStudy: {
-        contribution: "At Octaverse Studio (April to September 2022) I contributed to mobile and PC projects, including multiplayer FPS and strategic ship-battle games and an endless-runner mobile title. At Dhelangan Studio (October 2021 to October 2022) I built gameplay systems, supported commissioned and in-house projects, and contributed to 3D asset production. My own games and jam entries are in the Games section."
+        features: ["Metaverse FPS: multiplayer first-person shooter", "A strategic ship-battle game", "Catch The Doge: an endless runner inspired by Dogecoin", "Top-down shooters and other prototypes of my own"],
+        statusNote: "Catch The Doge was left unfinished. My own games and jam entries are in the Games section, with their current status on itch.io.",
+        contribution: "At Octaverse Studio (April to September 2022) I contributed to mobile and PC projects, including Metaverse FPS, the ship-battle game and Catch The Doge. At Dhelangan Studio (October 2021 to October 2022) I built gameplay systems, supported commissioned and in-house projects, and contributed to 3D asset production."
       },
       media: [
-        {image: "assets/games/necrospore/1.jpg", caption: "Necrospore key art.", alt: "Necrospore key art"}
+        {image: "assets/games/necrospore/1.webp", caption: "Necrospore key art.", alt: "Necrospore key art"}
       ],
       links: [{label: "See all 21 games", url: "index.html#games"}]
     }
   ],
   // Mirrors the itch.io profile (thelegokid4455.itch.io), in the same order.
-  // Screenshots live in assets/games/<slug>/1.jpg, 2.jpg ... `shots` is how many there are.
+  // Screenshots live in assets/games/<slug>/1.webp, 2.webp ... `shots` is how many there are.
   // `with` lists the co-authors credited on the itch.io page.
   // `focus` (optional) sets which part of a tall image shows in the thumbnail, e.g. "center 75%".
   games: [
@@ -314,10 +325,10 @@ const siteContent = {
   ],
   experience: [
     {period:"2026 — Present", role:"Director / Founder", company:"Ave Ludum Studio · Makassar", description:"Lead game-development projects and advise clients and developers on technical architecture, production workflows and project execution.", visual:"assets/experience/ave-ludum-logo.svg", visualAlt:"Ave Ludum Studio logo"},
-    {period:"2025 — Present", role:"Manager, Information Systems & Technology", company:"Universitas Negeri Makassar · Makassar", description:"Developed 3D simulations and interactive visualizations for institutional projects, and designed a modular CSL/OSCE examination timer system with configurable station rotation, timing and duration.", visual:"assets/experience/unm-phinisi.jpg", visualAlt:"Universitas Negeri Makassar Phinisi building"},
-    {period:"Jul 2023 — Jul 2024", role:"Software Programmer", company:"PT. Maxxima Innovative · Surabaya", description:"Developed Unity/C# training simulations for government clients across PC and VR, including heavy-vehicle simulation, a ~100 km real-world driving simulator, hardware integration and performance optimization.", visual:"assets/experience/heavy-vehicle-real.jpg", visualAlt:"Heavy vehicle simulator rig"},
-    {period:"Apr 2022 — Sep 2022", role:"Junior Game Programmer", company:"Octaverse Studio · Yogyakarta", description:"Contributed to mobile and PC projects including multiplayer FPS and strategic ship-battle games, plus an endless-runner mobile title.", visual:"assets/experience/octaverse-real.jpg", visualAlt:"Octaverse game artwork"},
-    {period:"Oct 2021 — Oct 2022", role:"Game Programmer", company:"Dhelangan Studio · Yogyakarta", description:"Built medical VR and gameplay systems in Unity/C#, supported commissioned and in-house projects, and contributed to 3D asset production.", visual:"assets/experience/dhelangan-logo.png", visualAlt:"Dhelangan Studio logo"}
+    {period:"2025 — Present", role:"Manager, Information Systems & Technology", company:"Universitas Negeri Makassar · Makassar", description:"Developed 3D simulations and interactive visualizations for institutional projects, and designed a modular CSL/OSCE examination timer system with configurable station rotation, timing and duration.", visual:"assets/experience/unm-phinisi.webp", visualAlt:"Universitas Negeri Makassar Phinisi building"},
+    {period:"Jul 2023 — Jul 2024", role:"Software Programmer", company:"PT. Maxxima Innovative · Surabaya", description:"Developed Unity/C# training simulations for government clients across PC and VR, including heavy-vehicle simulation, a ~100 km real-world driving simulator, hardware integration and performance optimization.", visual:"assets/experience/heavy-vehicle-real.webp", visualAlt:"Heavy vehicle simulator rig"},
+    {period:"Apr 2022 — Sep 2022", role:"Junior Game Programmer", company:"Octaverse Studio · Yogyakarta", description:"Contributed to mobile and PC projects including multiplayer FPS and strategic ship-battle games, plus an endless-runner mobile title.", visual:"assets/experience/octaverse-real.webp", visualAlt:"Octaverse game artwork"},
+    {period:"Oct 2021 — Oct 2022", role:"Game Programmer", company:"Dhelangan Studio · Yogyakarta", description:"Built medical VR and gameplay systems in Unity/C#, supported commissioned and in-house projects, and contributed to 3D asset production.", visual:"assets/experience/dhelangan-logo.webp", visualAlt:"Dhelangan Studio logo"}
   ],
   skills: [
     ["Unity & programming", "Unity, C#, gameplay programming, object-oriented design, simulation systems, prototyping, Git"],

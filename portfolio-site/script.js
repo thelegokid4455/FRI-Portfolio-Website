@@ -98,7 +98,7 @@ $('#projectGrid').innerHTML = siteContent.projects.map(project => {
 $('#gamesTitle').textContent = `${siteContent.games.length} games, from game jams to team releases`;
 
 /* Games: only the first screenshot loads up front; the rest load when someone flips through */
-const shotSrc = (game, n) => `assets/games/${game.slug}/${n}.jpg`;
+const shotSrc = (game, n) => `assets/games/${game.slug}/${n}.webp`;
 
 $('#gameGallery').innerHTML = siteContent.games.map(game => {
   const count = Math.max(1, game.shots || 1);

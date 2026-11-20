@@ -129,7 +129,6 @@ if (index === -1) {
   setMeta('meta[property="og:title"]', 'content', `${p.title} | Farhan Irsyad`);
   setMeta('meta[property="og:description"]', 'content', desc);
   setMeta('meta[property="og:url"]', 'content', url);
-  setMeta('meta[property="og:image"]', 'content', SITE + (media.find(m => m.image || m.poster)?.image || media.find(m => m.poster)?.poster || p.image));
 
   // Sections appear only when there's confirmed content for them
   const sections = [
