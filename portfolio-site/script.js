@@ -191,6 +191,147 @@ $('#contactLinks').innerHTML = siteContent.contact.map(link => `
   <li><a href="${esc(link.url)}" ${external}>${esc(link.label)} ↗</a></li>
 `).join('');
 
+/* Contact form: sends to the Apps Script web app, or falls back to the visitor's email app */
+const form = $('#inquiryForm');
+const inquiry = siteContent.inquiry || {projectTypes: [], budgets: []};
+const formResult = $('#formResult');
+const submitBtn = $('#formSubmit');
+const endpoint = (inquiry.endpoint || '').trim();
+const connected = /^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(endpoint);
+
+const addOptions = (select, options) => select.insertAdjacentHTML('beforeend', options.map(o => `<option>${esc(o)}</option>`).join(''));
+addOptions($('#f-projectType'), inquiry.projectTypes);
+addOptions($('#f-budget'), inquiry.budgets);
+
+if (!connected) {
+  $('#formMode').hidden = false;
+  $('#formMode').textContent = "This form isn't connected to my inbox yet. Sending opens your email app with your message filled in, so you can check it and press send.";
+  submitBtn.textContent = 'Open in my email app';
+}
+
+const formData = () => ({
+  name: $('#f-name').value.trim(),
+  email: $('#f-email').value.trim(),
+  organization: $('#f-organization').value.trim(),
+  projectType: $('#f-projectType').value,
+  budget: $('#f-budget').value,
+  timeline: $('#f-timeline').value.trim(),
+  description: $('#f-description').value.trim(),
+  links: $('#f-links').value.trim(),
+  consent: $('#f-consent').checked,
+  website: $('#f-website').value,
+  page: location.href
+});
+
+const rules = {
+  name: d => d.name.length >= 2 || 'Please enter your name.',
+  email: d => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email) || 'Please enter a valid email address, like name@example.com.',
+  projectType: d => !!d.projectType || 'Please choose what you need.',
+  budget: d => !!d.budget || 'Please choose a budget. "Not sure yet" is fine.',
+  description: d => d.description.length >= 20 || `Please add a bit more detail (${d.description.length} of at least 20 characters).`,
+  consent: d => d.consent || 'Please tick this box so I can store your details and reply.'
+};
+
+const setFieldError = (name, message) => {
+  const input = $(`#f-${name}`);
+  const error = $(`#e-${name}`);
+  input.setAttribute('aria-invalid', message ? 'true' : 'false');
+  error.textContent = message || '';
+};
+
+const checkField = (name, data = formData()) => {
+  const result = rules[name](data);
+  setFieldError(name, result === true ? '' : result);
+  return result === true;
+};
+
+// Check a field when the visitor leaves it, then live once it has shown an error
+Object.keys(rules).forEach(name => {
+  const input = $(`#f-${name}`);
+  const evt = input.type === 'checkbox' || input.tagName === 'SELECT' ? 'change' : 'blur';
+  input.addEventListener(evt, () => checkField(name));
+  input.addEventListener('input', () => { if (input.getAttribute('aria-invalid') === 'true') checkField(name); });
+});
+
+const showResult = (kind, html, focus = true) => {
+  formResult.className = `form-result is-${kind}`;
+  formResult.innerHTML = html;
+  if (focus) formResult.focus({preventScroll: true});
+  formResult.scrollIntoView({block: 'nearest', behavior: reducedMotion ? 'auto' : 'smooth'});
+};
+
+const mailtoFor = (d) => {
+  const body = [
+    d.description, '',
+    `Name: ${d.name}`,
+    d.organization && `Organization: ${d.organization}`,
+    `Project type: ${d.projectType}`,
+    `Budget: ${d.budget}`,
+    d.timeline && `Timeline: ${d.timeline}`,
+    d.links && `Links: ${d.links}`
+  ].filter(line => line !== '' && line !== undefined && line !== false).join('\n');
+  return `mailto:${siteContent.email}?subject=${encodeURIComponent(`${d.projectType} from ${d.name}`)}&body=${encodeURIComponent(body)}`;
+};
+
+const setBusy = (busy) => {
+  submitBtn.disabled = busy;
+  form.setAttribute('aria-busy', String(busy));
+  submitBtn.textContent = busy ? 'Sending…' : (connected ? 'Send message' : 'Open in my email app');
+};
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  const data = formData();
+  const invalid = Object.keys(rules).filter(name => !checkField(name, data));
+  if (invalid.length) {
+    showResult('error', `<p>Please fix the ${invalid.length === 1 ? 'highlighted field' : `${invalid.length} highlighted fields`} and send again.</p>`, false);
+    $(`#f-${invalid[0]}`).focus();
+    return;
+  }
+  if (data.website) return; // honeypot filled: almost certainly a bot
+
+  if (!connected) {
+    window.location.href = mailtoFor(data);
+    showResult('info', `<p><strong>Your email app should open now</strong> with your message filled in. Press send there to reach me.</p>
+      <p>Nothing opened? Email me at <a href="mailto:${esc(siteContent.email)}">${esc(siteContent.email)}</a>.</p>`);
+    return;
+  }
+
+  setBusy(true);
+  formResult.className = 'form-result';
+  formResult.textContent = '';
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 20000);
+  try {
+    // text/plain keeps this a "simple" request: Apps Script can't answer CORS preflights
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify(data),
+      signal: controller.signal
+    });
+    const result = await response.json();
+    if (result.ok) {
+      form.reset();
+      Object.keys(rules).forEach(name => setFieldError(name, ''));
+      showResult('success', `<p><strong>Thanks, ${esc(data.name)}. Your message is in.</strong></p>
+        <p>Your reference number is <strong class="ref">${esc(result.id)}</strong>. I'll reply to ${esc(data.email)}.</p>`);
+    } else if (result.error === 'invalid' && Array.isArray(result.fields)) {
+      result.fields.forEach(name => { if (rules[name]) setFieldError(name, 'Please check this field.'); });
+      showResult('error', '<p>Some details need another look. Please fix the highlighted fields and send again.</p>');
+    } else if (result.error === 'rate_limited') {
+      showResult('error', `<p>You've sent a few messages in the last hour, so this one wasn't sent. Please <a href="${esc(mailtoFor(data))}">email me directly</a> instead.</p>`);
+    } else {
+      throw new Error(result.error || 'unknown');
+    }
+  } catch (error) {
+    showResult('error', `<p><strong>Your message couldn't be sent</strong>, so nothing was saved. Please try again, or <a href="${esc(mailtoFor(data))}">send it by email</a> instead; your details are filled in.</p>`);
+  } finally {
+    clearTimeout(timer);
+    setBusy(false);
+  }
+});
+
 /* Section pager: one section on screen at a time, switched with tabs, arrows, keys or swipes.
    Each section still scrolls normally, and scrolling past its end moves on to the next one. */
 const panels = [...document.querySelectorAll('.panel')];
@@ -380,7 +521,7 @@ let touchStart = null;
 $('#stage').addEventListener('touchstart', event => {
   const panel = panels[current];
   const t = event.changedTouches[0];
-  touchStart = {x: t.clientX, y: t.clientY, top: atTop(panel), bottom: atBottom(panel), inCarousel: !!event.target.closest('.game-media')};
+  touchStart = {x: t.clientX, y: t.clientY, top: atTop(panel), bottom: atBottom(panel), inCarousel: !!event.target.closest('.game-media, .inquiry')};
 }, {passive: true});
 $('#stage').addEventListener('touchend', event => {
   if (!touchStart) return;

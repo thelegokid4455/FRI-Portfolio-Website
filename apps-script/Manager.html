@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    body { font: 13px/1.45 Arial, sans-serif; color: #1b1a17; margin: 0; padding: 12px; }
+    h2 { font-size: 15px; margin: 0 0 8px; }
+    label { display: block; font-weight: bold; margin: 10px 0 4px; }
+    input, select, textarea, button { font: inherit; box-sizing: border-box; width: 100%; }
+    input, select, textarea { padding: 6px; border: 1px solid #bbb; }
+    textarea { min-height: 90px; resize: vertical; }
+    .row { display: flex; gap: 6px; }
+    .row > * { flex: 1; }
+    button { padding: 7px; border: 1px solid #1b1a17; background: #fff; cursor: pointer; }
+    button.primary { background: #1b1a17; color: #fff; }
+    button:disabled { opacity: .5; cursor: default; }
+    .list { margin: 10px 0; border-top: 1px solid #ddd; max-height: 260px; overflow: auto; }
+    .item { padding: 8px 4px; border-bottom: 1px solid #eee; cursor: pointer; }
+    .item:hover, .item.active { background: #f4f1ea; }
+    .item small { color: #6e685e; display: block; }
+    .badge { display: inline-block; padding: 0 5px; border: 1px solid #1b1a17; font-size: 11px; margin-left: 4px; }
+    .detail { border-top: 2px solid #1b1a17; margin-top: 10px; padding-top: 8px; }
+    .msg { white-space: pre-wrap; background: #f4f1ea; padding: 8px; margin: 6px 0; }
+    .status { margin-top: 8px; color: #9a3412; }
+    .muted { color: #6e685e; }
+  </style>
+</head>
+<body>
+  <h2>Inquiries</h2>
+  <div class="row">
+    <select id="filter"><option value="">All statuses</option></select>
+    <input id="search" placeholder="Search name, email, text">
+  </div>
+  <div class="list" id="list"><p class="muted">Loading…</p></div>
+  <div class="detail" id="detail" hidden>
+    <div id="info"></div>
+    <label for="status">Status</label>
+    <select id="status"></select>
+    <label for="notes">Notes (only you see these)</label>
+    <textarea id="notes"></textarea>
+    <button id="save">Save status and notes</button>
+    <label for="template">Reply</label>
+    <div class="row">
+      <button id="useReply" type="button">Reply template</button>
+      <button id="useQuote" type="button">Quote template</button>
+    </div>
+    <label for="subject">Subject</label>
+    <input id="subject">
+    <label for="body">Message</label>
+    <textarea id="body" style="min-height:180px"></textarea>
+    <button class="primary" id="send">Send as me</button>
+    <p class="status" id="status-msg" role="status"></p>
+  </div>
+
+  <script>
+    let data = {items: [], statuses: []};
+    let current = null;
+    let kind = 'reply';
+    const $ = id => document.getElementById(id);
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const say = t => { $('status-msg').textContent = t; };
+    const fail = e => say('Error: ' + (e && e.message ? e.message : e));
+
+    function load() {
+      google.script.run.withSuccessHandler(res => {
+        data = res;
+        $('filter').innerHTML = '<option value="">All statuses</option>' + res.statuses.map(s => `<option>${esc(s)}</option>`).join('');
+        $('status').innerHTML = res.statuses.map(s => `<option>${esc(s)}</option>`).join('');
+        render();
+      }).withFailureHandler(fail).listInquiries();
+    }
+
+    function render() {
+      const f = $('filter').value;
+      const q = $('search').value.toLowerCase();
+      const items = data.items.filter(i => (!f || i.Status === f) &&
+        (!q || [i.Name, i.Email, i.Organization, i.Description, i.ID].join(' ').toLowerCase().includes(q)));
+      $('list').innerHTML = items.length ? items.map(i => `
+        <div class="item${current && current.ID === i.ID ? ' active' : ''}" data-id="${esc(i.ID)}">
+          <strong>${esc(i.Name)}</strong><span class="badge">${esc(i.Status)}</span>
+          <small>${esc(i.ID)} · ${esc(i['Project type'])} · ${esc(i.Received)}</small>
+        </div>`).join('') : '<p class="muted">No inquiries match.</p>';
+      document.querySelectorAll('.item').forEach(el => el.onclick = () => open(el.dataset.id));
+    }
+
+    function open(id) {
+      current = data.items.find(i => i.ID === id);
+      $('detail').hidden = false;
+      $('info').innerHTML = `
+        <strong>${esc(current.Name)}</strong> &lt;${esc(current.Email)}&gt;<br>
+        <span class="muted">${esc(current.Organization || 'No organization')} · ${esc(current['Project type'])} · ${esc(current.Budget)}
+        · Timeline: ${esc(current.Timeline || '-')}</span>
+        <div class="msg">${esc(current.Description)}</div>
+        ${current.Links ? `<div class="muted">Links: ${esc(current.Links)}</div>` : ''}
+        ${current['Last reply'] ? `<div class="muted">Last reply: ${esc(current['Last reply'])}</div>` : ''}`;
+      $('status').value = current.Status;
+      $('notes').value = current.Notes || '';
+      $('subject').value = '';
+      $('body').value = '';
+      say('');
+      render();
+    }
+
+    function useTemplate(k) {
+      kind = k;
+      google.script.run.withSuccessHandler(t => { $('subject').value = t.subject; $('body').value = t.body; })
+        .withFailureHandler(fail).getTemplate(current.ID, k);
+    }
+
+    $('filter').onchange = render;
+    $('search').oninput = render;
+    $('useReply').onclick = () => useTemplate('reply');
+    $('useQuote').onclick = () => useTemplate('quote');
+    $('save').onclick = () => {
+      say('Saving…');
+      google.script.run.withSuccessHandler(() => { say('Saved.'); load(); })
+        .withFailureHandler(fail).saveInquiry(current.ID, $('status').value, $('notes').value);
+    };
+    $('send').onclick = () => {
+      if (!confirm('Send this email to ' + current.Email + '?')) return;
+      $('send').disabled = true;
+      say('Sending…');
+      google.script.run.withSuccessHandler(() => { $('send').disabled = false; say('Sent and logged in the Replies sheet.'); load(); })
+        .withFailureHandler(e => { $('send').disabled = false; fail(e); })
+        .sendReply(current.ID, kind, $('subject').value, $('body').value);
+    };
+    load();
+  </script>
+</body>
+</html>

@@ -62,7 +62,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261121-7">
+  <link rel="stylesheet" href="styles.css?v=20261121-8">
 </head>
 <body>
   <a class="skip-link" href="#work">Skip to work</a>
@@ -221,9 +221,70 @@
         <img class="deco deco-armor" src="assets/art/gold-armor-sketch.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1200" height="1200">
         <p class="label">Contact</p>
         <h2>Have a simulator, VR app or game to build? Let's talk.</h2>
-        <p>Hiring for a Unity role, or need a project built? I take on both, remote or on-site. Email is the fastest way to reach me; tell me what you need and when.</p>
-        <a class="contact-email" id="contactEmail" href="#"></a>
-        <ul class="contact-links" id="contactLinks"></ul>
+        <p>Hiring for a Unity role, or need a project built? I take on both, remote or on-site. Tell me what you need and when, and I'll reply by email.</p>
+        <div class="contact-grid">
+          <form class="inquiry" id="inquiryForm" novalidate>
+            <p class="form-mode" id="formMode" hidden></p>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-name">Your name</label>
+                <input id="f-name" name="name" type="text" autocomplete="name" maxlength="100" required aria-describedby="e-name">
+                <p class="field-error" id="e-name"></p>
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" maxlength="200" required aria-describedby="e-email">
+                <p class="field-error" id="e-email"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-organization">Organization <span class="optional">(optional)</span></label>
+              <input id="f-organization" name="organization" type="text" autocomplete="organization" maxlength="150">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="f-projectType">What do you need?</label>
+                <select id="f-projectType" name="projectType" required aria-describedby="e-projectType"><option value="">Choose one</option></select>
+                <p class="field-error" id="e-projectType"></p>
+              </div>
+              <div class="field">
+                <label for="f-budget">Budget</label>
+                <select id="f-budget" name="budget" required aria-describedby="e-budget"><option value="">Choose one</option></select>
+                <p class="field-error" id="e-budget"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-timeline">Timeline <span class="optional">(optional)</span></label>
+              <input id="f-timeline" name="timeline" type="text" maxlength="100" placeholder="For example: a demo by March">
+            </div>
+            <div class="field">
+              <label for="f-description">Tell me about it</label>
+              <textarea id="f-description" name="description" rows="6" maxlength="5000" required aria-describedby="e-description h-description" placeholder="Who will use it, on what device, and what should they be able to do?"></textarea>
+              <p class="field-hint" id="h-description">At least 20 characters.</p>
+              <p class="field-error" id="e-description"></p>
+            </div>
+            <div class="field">
+              <label for="f-links">Links <span class="optional">(optional)</span></label>
+              <input id="f-links" name="links" type="text" maxlength="1000" placeholder="A brief, reference, or job post">
+            </div>
+            <div class="field field-hp" aria-hidden="true">
+              <label for="f-website">Leave this empty</label>
+              <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="field field-check">
+              <input id="f-consent" name="consent" type="checkbox" required aria-describedby="e-consent">
+              <label for="f-consent">I agree that my details are stored so Farhan can reply to me.</label>
+              <p class="field-error" id="e-consent"></p>
+            </div>
+            <button class="btn btn-solid form-submit" id="formSubmit" type="submit">Send message</button>
+            <div class="form-result" id="formResult" role="status" aria-live="polite" tabindex="-1"></div>
+          </form>
+          <aside class="contact-direct">
+            <h3>Prefer email?</h3>
+            <a class="contact-email" id="contactEmail" href="#"></a>
+            <ul class="contact-links" id="contactLinks"></ul>
+          </aside>
+        </div>
       </div>
       <div class="wrap site-credits">
         <p><span class="visitor-counter" aria-live="polite">Visits: <strong id="visitorCount">—</strong></span></p>
@@ -239,7 +300,7 @@
   </nav>
   <p class="edge-hint" id="edgeHint" aria-hidden="true"></p>
 
-  <script src="content.js?v=20261121-7"></script>
-  <script src="script.js?v=20261121-7"></script>
+  <script src="content.js?v=20261121-8"></script>
+  <script src="script.js?v=20261121-8"></script>
 </body>
 </html>

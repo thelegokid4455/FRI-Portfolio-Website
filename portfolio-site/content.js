@@ -17,8 +17,7 @@ const siteContent = {
     // Recent work: shown as links under the buttons
     recent: [
       {label: "AVELS Heavy Vehicle Simulator", url: "project.html?p=avels-heavy-vehicle-simulator"},
-      {label: "The Legend of Toakala", url: "project.html?p=the-legend-of-toakala"},
-      {label: "Pilah Bumi", url: "project.html?p=pilah-bumi"}
+      {label: "The Legend of Toakala", url: "project.html?p=the-legend-of-toakala"}
     ],
     chips: ["Unity", "C#", "VR / XR", "Multiplayer (Netcode)", "Vehicle physics", "Arduino controls", "Android", "Blender"],
     // Looping, muted clip beside the intro. It only plays when the visitor allows motion.
@@ -38,6 +37,29 @@ const siteContent = {
     pages: 51
   },
   email: "farhan.r.irsyad@gmail.com",
+
+  // Contact form. Paste your Apps Script web app URL (ends in /exec) into `endpoint`.
+  // While it's empty, the form opens the visitor's email app with their message filled in.
+  // `projectTypes` and `budgets` must match PROJECT_TYPES and BUDGETS in apps-script/Code.gs.
+  inquiry: {
+    endpoint: "",
+    projectTypes: [
+      "Training simulator",
+      "VR training or experience",
+      "Game or gameplay programming",
+      "Multiplayer or hardware integration",
+      "Job opening (full-time or contract)",
+      "Something else"
+    ],
+    budgets: [
+      "Not sure yet",
+      "Under $1,000",
+      "$1,000 – $5,000",
+      "$5,000 – $15,000",
+      "Over $15,000",
+      "Salaried role"
+    ]
+  },
 
   // "What I do" cards: what you get, who it's for, and a real example
   services: [
@@ -250,8 +272,8 @@ const siteContent = {
       title: "Pilah Bumi",
       category: "Environmental mobile game",
       status: "Base game complete",
-      credit: "Ave Ludum Studio. I direct the studio and lead programming.",
-      role: "Director and main programmer at Ave Ludum. Studio's role: game design, systems, 3D.",
+      credit: "Ave Ludum Studio. I guided the game's direction and reviewed it as studio director.",
+      role: "Studio director at Ave Ludum: game direction and review.",
       image: "assets/work/pilah-bumi/pilah-title.webp",
       imageAlt: "Pilah Bumi title screen",
       description: "A free-roam waste-sorting game for mobile. You pick up litter scattered around an open 3D map and sort it into the right bins.",
@@ -261,7 +283,7 @@ const siteContent = {
         approach: "A first-person, free-roam neighbourhood with litter scattered around it. Players grab or pick up items, carry them in an inventory, and drop each one into the matching bin until the area is clean.",
         features: ["Free-roam 3D neighbourhood", "Grab or pick up litter", "Carry items in a storage inventory and hotbar", "Sort each item into the right bin", "An objective counter that tracks the clean-up", "Day and night"],
         statusNote: "The base game is complete. An expansion with a new island map has been proposed to a client and is in progress.",
-        contribution: "Built at Ave Ludum, where I'm the director and main programmer. The studio handled the game design, the gameplay systems and the 3D world."
+        contribution: "I wasn't the main programmer on this one. As Ave Ludum's director I guided the game's direction and reviewed the work as it came together; the studio team handled the game design, the gameplay systems and the 3D world."
       },
       media: [
         {video: "assets/work/pilah-bumi/pilah-sorting.mp4", poster: "assets/work/pilah-bumi/pilah-sorting.webp", caption: "Sorting litter into the right bin.", alt: "Dropping a banana peel into a green bin"},
