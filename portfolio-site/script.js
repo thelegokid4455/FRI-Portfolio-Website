@@ -21,7 +21,7 @@ $('#heroPrimary').textContent = hero.primary.label;
 $('#heroPrimary').href = hero.primary.href;
 $('#heroSecondary').textContent = hero.secondary.label;
 $('#heroSecondary').href = hero.secondary.href;
-$('#heroRecent').innerHTML = hero.recent.map(r => `<a href="${esc(r.url)}" ${external}>${esc(r.title || r.label)}</a>`).join(' · ');
+$('#heroRecent').innerHTML = hero.recent.map(r => `<a href="${esc(r.url)}"${/^https?:/.test(r.url) ? ' ' + external : ''}>${esc(r.title || r.label)}</a>`).join(' · ');
 $('#heroChips').innerHTML = hero.chips.map(c => `<li>${esc(c)}</li>`).join('');
 if (siteContent.portfolio) {
   $('#pdfLink').href = siteContent.portfolio.pdf;
@@ -75,23 +75,25 @@ $('#processSteps').innerHTML = siteContent.process.map((s, i) => `
 `).join('');
 
 /* Selected work */
-$('#projectGrid').innerHTML = siteContent.projects.map(project => `
+$('#projectGrid').innerHTML = siteContent.projects.map(project => {
+  const caseUrl = `project.html?p=${encodeURIComponent(project.slug)}`;
+  return `
   <article class="project">
     <figure class="project-image">
-      <img src="${esc(project.image)}" alt="${esc(project.imageAlt || project.title)}" loading="lazy" decoding="async">
+      <a href="${esc(caseUrl)}" tabindex="-1" aria-hidden="true"><img src="${esc(project.image)}" alt="${esc(project.imageAlt || project.title)}" loading="lazy" decoding="async"></a>
       ${project.imageCaption ? `<figcaption>${esc(project.imageCaption)}</figcaption>` : ''}
     </figure>
     <div class="project-body">
       <p class="project-meta">${[project.year, project.category].filter(Boolean).map(esc).join(' · ')}</p>
-      <h3>${esc(project.title)}</h3>
+      <h3><a class="project-title-link" href="${esc(caseUrl)}">${esc(project.title)}</a></h3>
       ${project.kind || project.status ? `<p class="badges">${project.kind ? `<span class="badge">${esc(project.kind)}</span>` : ''}${project.status ? `<span class="badge badge-status">${esc(project.status)}</span>` : ''}</p>` : ''}
       ${project.credit ? `<p class="project-client">${esc(project.credit)}</p>` : ''}
       <p>${esc(project.description)}</p>
       <p class="project-tags">${project.tags.map(esc).join(', ')}</p>
-      ${project.link ? `<p class="project-link"><a href="${esc(project.link)}" ${external}>Case study on aveludumstudio.com ↗</a></p>` : ''}
+      <p class="project-link"><a href="${esc(caseUrl)}">Read the case study →</a></p>
     </div>
-  </article>
-`).join('');
+  </article>`;
+}).join('');
 
 $('#gamesTitle').textContent = `${siteContent.games.length} games, from game jams to team releases`;
 
